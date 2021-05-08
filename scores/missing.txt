@@ -5,4 +5,5 @@ Ant.	Hodie Christus.			23.
 Resp.	Sancte Dei preciose.		24.
 Resp.   Tria sunt munera.		45.
 Resp.	Afflicti pro peccatis.		76.
-
+Ant.	Ecce Salvator venit.		110.
+Ant.	Ecce appropinquabit.		111.
