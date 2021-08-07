@@ -11,7 +11,6 @@
 \usepackage[autocompile]{gregoriotex}
 \usepackage{unicode-math}
 \usepackage{microtype}
-\usepackage{embrac}
 \usepackage[open]{bookmark}
 \usepackage{xurl}
 \usepackage{marginnote}
@@ -34,7 +33,7 @@
 \addtokomafont{caption}{\color{gregoriocolor}}
 \addtokomafont{pageheadfoot}{\color{gregoriocolor}}
 \addtokomafont{pagenumber}{\color{gregoriocolor}}
-\renewcommand*{\marginfont}{\scriptsize}
+\renewcommand*{\marginfont}{\noindent\rule{0pt}{0.7\baselineskip}\color{black}\footnotesize}
 
 % title page formatting
 \addtokomafont{subject}{\normalfont\scshape\addfontfeatures{Letters=UppercaseSmallCaps}\Huge}
@@ -94,6 +93,9 @@
 \newunicodechar{℣}{{\scshape\addfontfeatures{Letters=UppercaseSmallCaps} ℣}}
 \newunicodechar{℟}{{\scshape\addfontfeatures{Letters=UppercaseSmallCaps} ℟}}
 
+\newunicodechar{†}{{\color{gregoriocolor} †}}
+\newunicodechar{‡}{{\color{gregoriocolor} ‡}}
+
 \newfontfamily{\jenson}{Adobe Jenson Pro}
 \newunicodechar{¶}{{\jenson ¶}}
 
@@ -134,9 +136,13 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+
 % Gregorio settings
 \gresetgregpath{{./scores/}}
+
 \grechangestaffsize{20} % larger staff
+\grechangedim{spacebeneathtext}{1ex}{scalable}
+
 \gresetlinecolor{gregoriocolor} % staff lines in red
 \renewcommand{\GreItalic}[1]{{\color{gregoriocolor}{#1}}} % use red for italics in scores
 \grechangestyle{initial}{\woodcut\fontsize{90}{90}\selectfont}
@@ -147,6 +153,9 @@
 \grechangedim{annotationraise}{0mm}{scalable}
 \grechangedim{commentaryraise}{5mm}{scalable}
 \grechangedim{abovelinestextraise}{5mm}{scalable}
+
+% set chant symbols
+\renewcommand{\GreStar}{{\color{gregoriocolor}*}}
 
 \newcommand\noinitial{\gresetinitiallines{0}\grechangestyle{firstsyllableinitial}{}}
 
@@ -244,20 +253,21 @@ Images courtesy of the Bodleian Library, University of Oxford.
 
 \chapter{Benedictio salis et aque.}
 
-\marginnote{2r}\lettrine{O}{}\emph{Mnibus dominicis diebus per annum post primam et capitulum~: nisi in duplicibus festis et in dominica ramis palmarum, a sacerdote ebdomadario alba et cum cappa serica induto cum diacono et subdiacono textum deferentibus cum thuribulario et duobus ceroferariis~: et acolito crucem deferente omnibus albis cum amictibus indutis et in medio presbyterii ad altare conversis~: et {[}cum{]}\footnote{Barlow 7:1r; 1882:1.} duobus pueris quorum unus\footnote{`\emph{alter}', 1882:1.} scilicet puer\footnote{`\emph{quorum alter scilicet}', Barlow 7:1r.} qui ad aquam scribitur in tabula in sale\footnote{`\emph{salem}', 1882:1.} tenendo et aquam benedictam gestando~: alter puer scilicet\footnote{`\emph{scilicet puer}', 1882:2.} ebdomadarius lector ad manus in libro tenendo eidem sacerdoti in superpellicio ministrent ad gradum chori fiat benedictio salis et aqua sic incipiente.\footnote{`\emph{hoc modo}', Barlow 7:1r; `\emph{incipiendo}', 1882:2.} ✠}
+\marginnote{2r}\lettrine[lines=7,image=true,findent=.5em]{images/2r-initial.png}{}\emph{Mnibus dominicis diebus per annum post primam et capitulum~: nisi in duplicibus festis et in dominica ramis palmarum, a sacerdote ebdomadario alba et cum cappa serica induto cum diacono et subdiacono textum deferentibus cum thuribulario et duobus ceroferariis~: et acolito crucem deferente omnibus albis cum amictibus indutis et in medio presbyterii ad altare conversis~: et {[}cum{]}\footnote{Barlow 7:1r; 1882:1.} duobus pueris quorum unus\footnote{`\emph{alter}', 1882:1.} scilicet puer\footnote{`\emph{quorum alter scilicet}', Barlow 7:1r.} qui ad aquam scribitur in tabula in sale\footnote{`\emph{salem}', 1882:1.} tenendo et aquam benedictam gestando~: alter puer scilicet\footnote{`\emph{scilicet puer}', 1882:2.} ebdomadarius lector ad manus in libro tenendo eidem sacerdoti in superpellicio ministrent ad gradum chori fiat benedictio salis et aqua sic incipiente.\footnote{`\emph{hoc modo}', Barlow 7:1r; `\emph{incipiendo}', 1882:2.} ✠}
 
 \grecommentary{1519:2r.\footnote{In Barlow 7:1r ff. the versicles appear a fifth higher, in the C clef.}}
 
-\gabcsnippet{(f3) Ex(hv)or(h)cí(h)zo(h) te(hv) cre(hv)a(h)tú(h)ra(h) sa(hv)lis(h) per(hv) De(hv)um(h) vi(hv)✠vum(h)}
+{
+\grechangestyle{initial}{\woodcut\fontsize{120}{120}\selectfont}
+\gabcsnippet{(f3) Ex(hv)or(h)cí(h)zo(h) te(hv) cre(hv)a(h)tú(h)ra(h) sa(hv)lis(h) per(hv) De(hv)um(h) vi(hv)✠vum(h)}}
 
 \begin{lesson}
 \noindent per Deum ve✠rum\footnote{In Balrow 7:1r. the three crosses are a later addition.} per Deum sanc✠tum~: per Deum qui te per Helíseum prophétam in aquam mitti jussit~: ut sanarétur sterílitas aque ut efficiáris sal exorcizátus\footnote{`exorcizátum', Barlow 7:1r; 1882:2.} in salútem credéntium, et sis\footnote{`ut sit', Barlow 7:1r.} ómnibus te suméntibus sánitas ánime et córporis~: et effúgiat atque discédat ab eo loco quo aspérsus\footnote{`aspérsum', Barlow 7:1r; 1882:2.} fúeris~: omnis fantásia et nequítia vel versútia diabólice fraudis~: omnísque spíritus immúndus adjurátus. Per eum qui ventúrus est judicáre vivos et mórtuos et
+\end{lesson}
 
 {\noinitial
 \gabcsnippet{(f3) sé(hv)cu(h)lum(h) per(hv) ig(hv)nem.<v>\footnote{SP:2r. has no flat. 1519:2r. has no flat.}</v>(dxd) (::)}
 }
-
-\end{lesson}
 
 \emph{Chorus respondeat sic.}
 
@@ -276,11 +286,18 @@ Images courtesy of the Bodleian Library, University of Oxford.
 \lettrine{I}{m}ménsam cleméntiam tuam omnípotens etérne Deus humíliter implorámus~: ut hanc creatúram salis\footnote{1517: \emph{hic respiciat salem.} {[}1882:2.{]}} quam in usum géneris humáni\footnote{`humáni géneris', Balrow 7:1r.} tribúisti, bene✠dícere et sanctificáre\footnote{1517---sancti✠ficáre. {[}1882:2.{]} In Barlow 7:1r. a second cross has been added here in a later hand.} tua pietáte dignéris~: ut sit\footnote{`sis', Barlow 7:1r.} ómnibus suméntibus salus men\marginnote{2v}tis et córporis~: ut\footnote{`et', Barlow 7:1r; 1882:3.} quicquid ex eo tactum vel respérsum fúerit cáreat omni immundícia~: omníque impugnatióne spirituális \emph{{[}qui finietur hoc modo{]}\footnote{Barlow 7:1r.}}
 \end{lesson}
 
-1519:2v.\footnote{SP:2v. has no flats. 1519--2v. has no flats.}
+{\noinitial
+\grecommentary{1519:2v.\footnote{SP:2v. has no flats. 1519--2v. has no flats.}}
+\gabcsnippet{(f3) ne(hv)quí(h)ti(dxd)e.(d) (:)
+Per(hv) Dó(h)mi(h)num(hv) nos(hv)trum(h) Je(h)sum(hv) Chris(h)tum(h) Fí(hv)li(h)um(h) tu(h)um(f) (,)
+qui(h) te(h)cum(h) vi(h)vit(h) et(h) reg(h)nat(h) in(hv) u(h)ni(h)tá(h)te(h) Spí(h)ri(h)tus(h) Sanc(hv)ti(h) De(h)us(h) (,)
+per(h) óm(h)ni(h)a(h) sé(h)cu(h)la(h)
+se(h)cu(h)ló(h)rum.(dxd) (::)}
 
-Score000
+\emph{Chorus respondeat sic}
 
-\emph{Chorus respondeat sic} Score000
+\gabcsnippet{(f3) A(gh)men.(hv) (::)}
+}
 
 \emph{¶ Sub eodem tono finiantur omnes orationes sequentes {[}et etiam oratio post aspersionem aque{]}.\footnote{‡ 1517, \&c.~add---Sub eodem tono finiantur omnes orationes sequentes et etiam oratio post aspersionem aque. {[}1882:2.{]}; also Barlow 7:1r.}}
 
@@ -302,9 +319,12 @@ Score000
 
 \emph{¶ Sequitur benedictio salis et aque pariter hoc modo.\footnote{`\emph{hoc modo incipiens}', 1882:3.}}
 
-1519:3r.\footnote{Barlow 7:1v. omits `Dóminus vobíscum \ldots{} Orémus.'}
-
-Score000 Score000
+{\noinitial
+\grecommentary{1519:3r.\footnote{Barlow 7:1v. omits `Dóminus vobíscum \ldots{} Orémus.'}}
+\gabcsnippet{(f3) Dó(hv)mi(h)nus(h) vo(hv)bís(h)cum.(f) (::)
+<i>℟.</i> Et(hv) cum(h) spí(hv)ri(h)tu(h) tu(hv)o.(f) (::Z)
+<i>℣.</i> O(hv)ré(h)mus.(f) (::)}
+}
 
 \begin{lesson}
 \subsubsection[Oratio.]{Oratio.\footnote{1882:3.}}
@@ -351,23 +371,32 @@ Score000
 
 \emph{Post aspersionem aque\footnote{`\emph{aque aspersionem}', 1882:5.} dicat sacerdos {[}hunc versum{]}\footnote{1882:5.} ad gradum chori.}
 
-1519:4r.\footnote{In 1519:4r. and the other printed processionals `nostrum' is set C.F. Here the edition follows Cam-Queens-MS-28:9, which accords with usual prayer endings.}
+{\noinitial
+\gregorioscore{008166-ostende-nobis}
 
-Score000 \emph{sine}\footnote{`\emph{Non dicatur}', 1882:5.} Dóminus vobíscum. \emph{sed tantum cum} Score000
+\emph{sine\footnote{`\emph{Non dicatur}', 1882:5.}} Dóminus vobíscum. \emph{sed tantum cum}
+
+\gabcsnippet{(c3) O(h)ré(hv)mus.(f) (::)}
+}
 
 \begin{lesson}
 \lettrine{E}{x}áudi nos Dómine sancte Pater omnípotens etérne Deus~: et míttere dignáre sanctum ángelum tuum de celis~: qui custódiat fóveat prótegat vísitet et deféndat omnes habitántes in hoc
 \end{lesson}
 
-Score000
+{\noinitial
+\gabcsnippet{(c3) ha(hv)bi(h)tá(h)cu(d)lo.(d) (:)
+Per(h) Chris(h)tum(h) Dó(h)mi(h)num(h) nos(hv)trum.(f) (::)}
 
-\emph{Chorus respondeat sic.} Score000
+\emph{Chorus respondeat sic.}
+
+\gabcsnippet{(c3) A(gh)men.(hv) (::)}
+}
 
 \emph{Deinde eat processio hoc ordine. In primis\footnote{`\emph{Imprimis}', 1882:5.} procedat ministri virga\footnote{`\emph{virgam}', 1882:5.} manu gestans locum faciens processio.\footnote{`\emph{processioni}', 1882:5. Barlow 7:2r. omits the verger.} Deinde pueri in superpelliceis cum aqua benedicta gestante,\footnote{`\emph{puer in super pelliceo aquam benedictam gestans}', 1882:5.} deinde accolitus crucem ferens~: et post ipsum duo ceroferarii pariter incedentes deinde thuribularius~: \marginnote{4v}post eum subdiaconus, deinde diaconus omnes albis cum amictibus induti, et absque tunicis vel casulis et post diaconum~: eat sacerdos in simili habitu cum cappa serica. Deinde sequantur pueri et clerici de secunda forma habitu non mutato non bini et bini~: sed ex duabus partibus juxta ordinem quo disponuntur in choro. Et clerici\footnote{`\emph{reliqui clerici}', note, 1901:21.} de superiori gradu eodem ordine quo disponuntur in capitulo\footnote{`\emph{capite}', 1528:4r; 1544:5r; 1554:4v.} habitu non mutato~: sed excellentioribus sequentur per ordinem quod in omnibus dominicis non duplicibus observetur per totum annum.}
 
 \emph{Et exeat processio per hostium presbyterii septentrionale, circuiens presbyterium. Episcopus si presens fuerit mitram gerat et baculum in fine processionis. Sacerdos vero sive presens fuerit episcopus sive non in anteriori parte post suos ministros procedat et in eundo singula altaria aspergat.}
 
-\emph{¶ In duplicibus tamen festis que in dominica contingunt in procedendo altaria non aspergat~: sed eat post diaconum in habitu antedicto. Deinde ab australi parte ipsius ecclesie per fontes venientes procedant ad crucem, sacerdote cum suis ministris predictis {[}in{]}\footnote{1882:6.} medio suo ordine stante. Ita quod puer deferens aquam et accolitus stent juxta\footnote{`\emph{ad}', 1882:6.} gradum ante crucem. Omnes autem clerici interesse possunt processioni totius anni~: licet nulle hore diei precedentis interfuerint.\footnote{`\emph{Quilibet autem processionem totius anni intrare possunt, licet nulli hore diei precedenti interfuerint.}' Consuetudinary (Cap. xiv. ad fin.) {[}1882:xv.{]} Henderson declares that the text of the Consuetudinary is correct here.}}
+\newrubric \emph{¶ In duplicibus tamen festis que in dominica contingunt in procedendo altaria non aspergat~: sed eat post diaconum in habitu antedicto. Deinde ab australi parte ipsius ecclesie per fontes venientes procedant ad crucem, sacerdote cum suis ministris predictis {[}in{]}\footnote{1882:6.} medio suo ordine stante. Ita quod puer deferens aquam et accolitus stent juxta\footnote{`\emph{ad}', 1882:6.} gradum ante crucem. Omnes autem clerici interesse possunt processioni totius anni~: licet nulle hore diei precedentis interfuerint.\footnote{`\emph{Quilibet autem processionem totius anni intrare possunt, licet nulli hore diei precedenti interfuerint.}' Consuetudinary (Cap. xiv. ad fin.) {[}1882:xv.{]} Henderson declares that the text of the Consuetudinary is correct here.}}
 
 \end{document}
 
