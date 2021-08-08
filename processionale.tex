@@ -2,9 +2,7 @@
   fontsize=14pt,
   paper=letter,
   DIV=12,
-  % twoside=semi,
-  % openany,
-  % headsepline,
+  headings=normal,
   parskip=never]
 {scrbook}
 
@@ -16,6 +14,11 @@
 \usepackage{marginnote}
 
 \usepackage[canadian, latin]{babel}
+
+\addto\captionslatin{
+  \renewcommand{\contentsname}
+    {Tabula contentorum}
+}
 
 \defaultfontfeatures{Scale=MatchLowercase}
 \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
@@ -95,6 +98,7 @@
 
 \newunicodechar{†}{{\color{gregoriocolor} †}}
 \newunicodechar{‡}{{\color{gregoriocolor} ‡}}
+\newunicodechar{⹋}{{\color{gregoriocolor} ⹋}}
 
 \newfontfamily{\jenson}{Adobe Jenson Pro}
 \newunicodechar{¶}{{\jenson ¶}}
@@ -147,7 +151,7 @@
 \renewcommand{\GreItalic}[1]{{\color{gregoriocolor}{#1}}} % use red for italics in scores
 \grechangestyle{initial}{\woodcut\fontsize{90}{90}\selectfont}
 \grechangestyle{commentary}{\footnotesize}
-\grechangestyle{annotation}{\color{gregoriocolor}\footnotesize}
+\grechangestyle{annotation}{\footnotesize}
 \grechangestyle{abovelinestext}{\scriptsize}
 \grechangestyle{firstsyllableinitial}{\MakeUppercase}
 \grechangedim{annotationraise}{0mm}{scalable}
@@ -208,7 +212,7 @@
 
 \title{Processionale ad usum Sarum}
 
-\author{edited by William Renwick\\with Andrew Dunning and Brandon Hawk}
+\author{edited by\\William Renwick\\Brandon Wild\\Andrew Dunning}
 
 \date{MMXXI}
 
@@ -219,6 +223,8 @@
 
 \begin{otherlanguage}{canadian}
 © 2021 Gregorian Institute of Canada
+
+School of the Arts, McMaster University, 1280 Main Street West, Hamilton, Ontario, \textsc{L8S 4L8}, Canada
 
 \url{http://sarum-chant.ca}
 
@@ -236,7 +242,7 @@ Images courtesy of the Bodleian Library, University of Oxford.
 
 \section{Sources}
 
-\textit{Processionale ad vsum insignis ac preclare ecclesie Sarum nouiter castigatum per dominum episcopum de vuynton̄. feliciter incipit.} Par. venundātur Lond. apud F. byrckman (1519). STC 16235. The only surviving copy is Oxford, Bodleian Library, Gough Missals 75. Missing fol.~000.
+\textit{Processionale ad vsum insignis ac preclare ecclesie Sarum nouiter castigatum per dominum episcopum de vuynton̄. feliciter incipit.} Par. venundātur Lond. apud F. byrckman (1519). STC 16235. The only surviving copy is Oxford, Bodleian Library, Gough Missals 75. Missing fol.~123.
 
 \section{Editorial Method}
 
@@ -263,11 +269,11 @@ Images courtesy of the Bodleian Library, University of Oxford.
 
 \begin{lesson}
 \noindent per Deum ve✠rum\footnote{In Balrow 7:1r. the three crosses are a later addition.} per Deum sanc✠tum~: per Deum qui te per Helíseum prophétam in aquam mitti jussit~: ut sanarétur sterílitas aque ut efficiáris sal exorcizátus\footnote{`exorcizátum', Barlow 7:1r; 1882:2.} in salútem credéntium, et sis\footnote{`ut sit', Barlow 7:1r.} ómnibus te suméntibus sánitas ánime et córporis~: et effúgiat atque discédat ab eo loco quo aspérsus\footnote{`aspérsum', Barlow 7:1r; 1882:2.} fúeris~: omnis fantásia et nequítia vel versútia diabólice fraudis~: omnísque spíritus immúndus adjurátus. Per eum qui ventúrus est judicáre vivos et mórtuos et
-\end{lesson}
 
 {\noinitial
 \gabcsnippet{(f3) sé(hv)cu(h)lum(h) per(hv) ig(hv)nem.<v>\footnote{SP:2r. has no flat. 1519:2r. has no flat.}</v>(dxd) (::)}
 }
+\end{lesson}
 
 \emph{Chorus respondeat sic.}
 
@@ -301,7 +307,7 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 
 \emph{¶ Sub eodem tono finiantur omnes orationes sequentes {[}et etiam oratio post aspersionem aque{]}.\footnote{‡ 1517, \&c.~add---Sub eodem tono finiantur omnes orationes sequentes et etiam oratio post aspersionem aque. {[}1882:2.{]}; also Barlow 7:1r.}}
 
-\subsection[¶ Sequatur exorcismus aque ita incipiens.]{¶ Sequatur exorcismus aque ita incipiens.\footnote{`\emph{incipiendo}', 1882:2.}}
+\subsubsection[¶ Sequatur exorcismus aque ita incipiens.]{¶ Sequatur exorcismus aque ita incipiens.\footnote{`\emph{incipiendo}', 1882:2.}}
 
 \begin{lesson}
 \lettrine{E}{x}orcízo te creatúra aque in nómine Dei Patris omnipo✠téntis~: et in nómine Jesu Christi ✠ fílii ejus Dómini nostri et in virtúte Spíritus ✠ Sancti\footnote{Barlow 7:1r-1v. omits the crosses.}~: ut fias aqua exorcizáta ad effugándam omnem potestátem inimíci~: et ipsum inimícum eradicáre et explantáre váleas cum ángelis suis apostáticis, per virtútem ejúsdem Dómini nostri Jesu Christi qui ventúrus est judicáre vivos et mórtuos et séculum per ignem. \emph{Chorus.} Amen.
@@ -317,7 +323,7 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 
 \emph{¶ Hic mittat sacerdos sal in aquam in modum crucis ita per se privatim dicens.\footnote{`\emph{dicens per se privatim}', 1882:3.}} Commíxtio salis et aque páriter fiat in nómine Patris et Fílii et Spíritus Sancti. Amen.
 
-\emph{¶ Sequitur benedictio salis et aque pariter hoc modo.\footnote{`\emph{hoc modo incipiens}', 1882:3.}}
+\subsubsection[¶ Sequitur benedictio salis et aque pariter hoc modo.]{¶ Sequitur benedictio salis et aque pariter hoc modo.\footnote{`\emph{hoc modo incipiens}', 1882:3.}}
 
 {\noinitial
 \grecommentary{1519:3r.\footnote{Barlow 7:1v. omits `Dóminus vobíscum \ldots{} Orémus.'}}
@@ -355,17 +361,17 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 
 \emph{{[}Et in hoc tempore dicatur sequens antiphona.}
 
-1502:2r; 1530:4r; 1519:88r; GS:116; Grad-1508:110r.\footnote{In the processionals `salvi' is st GBD.C. {[}In 1508:110r. `pervénit' is set Ba.AC.C; `salvi' is set GCCD.C; at `dicent' the letter `e' is missing; the first `allelúya' is set AG.G.GAABa.A. GS:116. gives only beginning of Psalm-Verse, plus the word `Amen' along with the Psalm-Tone ending.{]} In Rylands-24:34. `pervénit' is set BG.BC.C; `salvi' is set GCCDc.C. Rylands-24:34. has a flat at the second Allelúya'.}
-
-Score000
+\gregorioscore{005403-vidi-aquam-1}
 
 \emph{Deinde repetatur antiphona.}
 
-Score000
+{\noinitial
+\gregorioscore{005403-vidi-aquam-2}
 
 \emph{Deinde repetatur sic.}
 
-Score000
+\gregorioscore{005403-vidi-aquam-3}
+}
 
 \emph{Hec antiphona predicta dicatur in aspersione aque in die pasche et omnibus dominicis a pascha usque ad festum Trinitatis.{]}\footnote{1530:4r.}}
 
@@ -386,9 +392,12 @@ Score000
 {\noinitial
 \gabcsnippet{(c3) ha(hv)bi(h)tá(h)cu(d)lo.(d) (:)
 Per(h) Chris(h)tum(h) Dó(h)mi(h)num(h) nos(hv)trum.(f) (::)}
+}
+
 
 \emph{Chorus respondeat sic.}
 
+{\noinitial
 \gabcsnippet{(c3) A(gh)men.(hv) (::)}
 }
 
@@ -398,26 +407,20 @@ Per(h) Chris(h)tum(h) Dó(h)mi(h)num(h) nos(hv)trum.(f) (::)}
 
 \newrubric \emph{¶ In duplicibus tamen festis que in dominica contingunt in procedendo altaria non aspergat~: sed eat post diaconum in habitu antedicto. Deinde ab australi parte ipsius ecclesie per fontes venientes procedant ad crucem, sacerdote cum suis ministris predictis {[}in{]}\footnote{1882:6.} medio suo ordine stante. Ita quod puer deferens aquam et accolitus stent juxta\footnote{`\emph{ad}', 1882:6.} gradum ante crucem. Omnes autem clerici interesse possunt processioni totius anni~: licet nulle hore diei precedentis interfuerint.\footnote{`\emph{Quilibet autem processionem totius anni intrare possunt, licet nulli hore diei precedenti interfuerint.}' Consuetudinary (Cap. xiv. ad fin.) {[}1882:xv.{]} Henderson declares that the text of the Consuetudinary is correct here.}}
 
-\end{document}
-
 \chapter{{[}¶ Dominica prima adventus.{]}}
 
 \emph{¶ Omnibus dominicis diebus per adventum ad processionem in eundo dicatur ista antiphonam hoc modo.}
 
-1519:4v.
-
 \gregorioscore{003792-missus-est}
 
-% Missing text from 5v
+% TODO: Missing text from 5v
 \marginnote{5r}\emph{¶ Quando vero pervenerit processio ante magnam crucem in ecclesia nisi fieri debeat statio non dicatur antiphona de cruce usque ad inceptionem\footnote{Barlow 7:2r-2v. breaks of the rubric at this point.} historie} Deus ómnium. \emph{Sed statim post antiphonam vertat se sacerdos ad populum et dicat in lingua materna sic.}\footnote{Here Barlow 7:2v. includes a later marginal notation that appears to say `X. Ecclesia Salisburiensis orationes? et officium.' Then follows a form of the bidding of the bedes in English. See Appendix.}
 
-\begin{lesson}
-Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et speciáliter pro epíscopo nostro \emph{N.} et pro decáno nostro \emph{vel} pro rectóre hujus ecclésie \emph{scilicet in ecclesiis parochialibus}~: et pro terra sancta, pro pace ecclésie et terre et {[}pro{]}\footnote{1882:6.} rege\footnote{1528:5r. omits `\emph{et rege}.'} et regína et eórum\footnote{`suis', Dickinson:37**.} líberis.\footnote{`Let us pray for the church of Rome, and ⟨for⟩ the pope and ⟨for⟩ the archbishops, and ⟨for⟩ the bishops, and especially for our bishop \emph{N.} and for the dean \emph{or} for the rector of this church, \emph{of course in parish churches}~: and for the holy land, and for the peace of the church and ⟨these⟩ lands and {[}for{]} the king and queen and their children.' trans. ed.
+Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et speciáliter pro epíscopo nostro \emph{N.} et pro decáno nostro \emph{vel} pro rectóre hujus ecclésie \emph{scilicet in ecclesiis parochialibus}~: et pro terra sancta, pro pace ecclésie et terre et {[}pro{]}\footnote{1882:6.} rege\footnote{1528:5r. omits `\emph{et rege}.'} et regína et eórum\footnote{`suis', Dickinson:37**.} líberis.\footnote{`Let us pray for the church of Rome, and ⟨for⟩ the pope and ⟨for⟩ the archbishops, and ⟨for⟩ the bishops, and especially for our bishop \emph{N.} and for the dean \emph{or} for the rector of this church, \emph{of course in parish churches}~: and for the holy land, and for the peace of the church and ⟨these⟩ lands and {[}for{]} the king and queen and their children.' (trans. ed.)
 
   The form found in 1544:6r. is `Orémus pro ecclésia Anglicána et pro rege nostro et archiepíscopis, epíscopis et speciáliter pro epíscopo nostro \emph{N.} et pro decáno \emph{vel} rectóre hujus ecclésie, \emph{scilicet in ecclesiis parochialibus} et pro terra sancta pro pace ecclésie et terre et regína et suis líberis.' `Let us pray for the church of England, and ⟨for⟩ our kinge and ⟨for⟩ the archbishops, ⟨and for⟩ the bishops, and especially for our bishop \emph{N.} and for the dean \emph{or} rector of this church, \emph{of course in parish churches}~: and for the holy land, ⟨and⟩ for the peace of the church and ⟨these⟩ lands and ⟨for⟩ the queen and their children.' trans. ed.
 
   The rubric `\emph{et cetera more solito}' suggests that particular prayers would be added here according to local circumstances, as shown in the extract from Salisbury Cathedral MS 152:12r. given below. A simple order derived from MS 152 would be: `and for \emph{N.} and \emph{N.} (benefactors), and for our friends, for our brethren and sistren, and for all our parishioners, with all those that doth any good to this church, and for all true Christian people.'} \emph{et cetera more solito.}\footnote{MS 152:12r. indicates here an additional `Pater noster' before the psalm.}
-\end{lesson}
 
 \emph{Deinde vertat se sacerdos et dicatur\footnote{`\emph{dicatur et}', 1519:5v.} iste psalmus} Deus misereátur nostri. Brev:{[}51{]}. \emph{ex utraque parte chori more solito sine nota~: ex parte chori principali incipiatur. Finito psalmo cum} Glória Patri. \emph{et} Sicut {[}erat{]}.\footnote{1882:6.} \emph{sequatur} Kyrieléyson. Christeléyson. Kyrieléyson. Pater noster. Brev:{[}5{]}. \emph{Deinde dicat sacerdos in audientia~: sed sine nota}
 
@@ -461,7 +464,7 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 \lettrine{D}{e}us qui charitátis dona per grátiam Sancti Spíritus tuórum córdibus fidélium infúndis~: da fámulis et famulábus tuis~: pro quibus tuam deprecámur cleméntiam salútem mentis et córporis~: ut te tota virtúte díligant~: et que tibi plácita sunt tota dilectióne perfíciant~: et pacem tuam nostris concéde tempóribus. Per Christum Dominum nostrum. \emph{{[}℟.{]}} Amen.
 \end{lesson}
 
-\emph{¶ Item\footnote{`\emph{Deinde}', 1882:7.} conversus ad populum dicat sacerdos in lingua materna,} Orémus pro animábus \emph{N.} et \emph{N.\footnote{`Let us pray for the souls of \emph{N.} and \emph{N.}' trans. Ed.
+\newrubric \emph{¶ Item\footnote{`\emph{Deinde}', 1882:7.} conversus ad populum dicat sacerdos in lingua materna,} Orémus pro animábus \emph{N.} et \emph{N.\footnote{`Let us pray for the souls of \emph{N.} and \emph{N.}' trans. Ed.
 
   The rubric `\emph{more solito}' again suggests that particular prayers would be added here according to local circumstances, as shown in the extract from Salisbury Cathedral MS 152:12r. given below. A simple order derived from MS 152 would be: `For the souls of all bishops whose bodies rest in this holy place, especially \emph{N.} and \emph{N.} which bishops have in their time honoured this church with precious vestements and many other jewels. And for the souls of all the patrons of this church, and all other lords that have honoured it with their bodies, rents, or any other jewels, especially for \emph{N.} and \emph{N.} And for the souls of all other servants of this church which have truly serve it or done any good therero in their days, especially for \emph{N.} and \emph{N.} And for all the souls whose bones rest in this church and churchyard. And for the souls of all those that have given to this church rents, vestments, or any other goods, whereby God is more worshipped in this church, and the ministers thereof better sustained. And for the souls of all our friends, our brethren and our sistren, and for the souls of all our parishioners. And for the souls of all that have done any good to this church. And for all Christian souls.'} more solito\footnote{Ms 152:15r. again inserts and additional `Pater noster' here.}~: et postea vertat se sacerdos et dicat psalmum}\footnote{`\emph{dicatur iste psalmus}', 1882:7.} De profúndis clamávi. Brev:{[}340{]}. \emph{supradicto modo sine} Glória Patri. \emph{{[}et{]}\footnote{1882:7.} cum} Kyrieléyson. Christeléyson. Kyrieléyson. Pater noster. Brev:{[}5{]}.
 
@@ -480,8 +483,9 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 \begin{lesson}
 \lettrine{A}{b}sólve quésumus Dómine ánimas famulórum tuórum pontíficum et sacerdótum~: et ánimas famulórum familarúmque tuárum paréntum parrochianórum amicórum et\footnote{Barlow 7:3v. omits `et ánimas \ldots{} amicorum et.'} benefactórum nostrórum et ánimas\footnote{Barlow 7:3v. omits `ánimas.'} ómnium fidélium defunctórum ab omni vínculo delictórum~: ut in resurrectiónis glória inter sanctos eléctos\footnote{`el eléctos', 1519:6r.} resuscitári respírent. Per Christum {[}Dóminum nostrum{]}.\footnote{Barlow 7:3v.}
 
-\emph{{[}℣.{]}} Requiéscant in pace. \emph{{[}℟.{]}} Amen.
 \end{lesson}
+
+\emph{{[}℣.{]}} Requiéscant in pace. \emph{{[}℟.{]}} Amen.
 
 \emph{Hec preces predicta dicuntur supradicto modo omnibus dominicis per annum~: sive de dominica~: sive {[}de{]}\footnote{1882:8.} aliquo festo fit servitium~: nisi duplex festum fuerit~: et nisi in sexta die a nativitate Domini et in die sancti Silvestri si in dominica evenerit et nisi in dominica {[}in{]}\footnote{1882:8.} ramispalmarum.}
 
@@ -489,14 +493,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Finitis precibus intrent chorum cantore incipiente.}\footnote{`\emph{In introitu chori vel citius cantor incipiat responsorium.}' 1882:8. In Cam-Queens-MS-28 (Gradual):10.: `I\emph{n stacione ante crucem nulla dicatur antiphona usque ad incepcionem} Deus ómnium. \emph{Finiatur antiphona statim incipiatur ℟. in introitu chori hoc modo.}' Beginning at \emph{Deus ómnium} the chant for the entry into the chancel is an \emph{antiphon} to the Virgin.}
 
-1519:6r; AS:13; Ant-1519:13r; Brev-1531:5r.\footnote{In the breviaries this appears a fifth lower, in the F clef.}
-
 \gregorioscore{007068-letentur-celi-1}
 
 \emph{Et {[}dicatur{]}\footnote{1882:8.} cum versu vel sine versu per dispositione cantoris.}
 
 {\noinitial
-
 \gregorioscore{007068-letentur-celi-2}
 }
 
@@ -504,39 +505,43 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Deinde dicat sacerdos ad gradum chori versiculum sequentem.}
 
-1519:6v.
+{\noinitial
+\gregorioscore{008246-vox-clamantis}
 
-Score000
+\emph{Non dicatur} Dóminus vobíscum \emph{post processionem, similiter fiat per totum annum sed tantum cum.}
 
-\emph{Non dicatur} Dóminus vobíscum. \emph{post processionem, similiter fiat per totum annum sed tantum cum.}
+\grecommentary{1519:6v}
 
-1519:6v.
-
-Score000
+\gabcsnippet{(c3) O(hv)ré(h)mus.(f) (::)}
 
 \begin{lesson}
 \lettrine{E}{x}cita quésumus\footnote{1882:8. omits `quésumus.'} Dómine poténtiam tuam et veni~: ut ab imminéntibus peccatórum nostrórum perículis~: te mereámur protegénte éripi~: te liberánte salvári. Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti Deus. Per ómnia
 \end{lesson}
 
-1519:6v.
+\grecommentary{1519:6v}
 
-Score000
+\gabcsnippet{(c3) sé(hv)cu(h)la(h) sé(h)cu(h)ló(h)rum.(d) (::)
+<i>℟.</i> A(gh)men.(hv) (::)}
+}
 
 \emph{Deinde eat sacerdos cum suis ministris in cimiterium canonicorum, aspergendo et orando pro defunctis cum isto psalmo} De profúndis. Brev:{[}340{]}. \emph{et cum oratione.}
 
 \begin{lesson}
 \lettrine{D}{e}us cujus miseratióne ánime fidélium {[}defunctórum{]}\footnote{1882:8.} requiéscunt animábus famulórum famularúmque tuárum~: hic et ubíque in Christo quiescéntium~: da propícius suórum véniam peccatórum~: ut a cunctis reátibus absolúte~: tecum sine fine leténtur. Per eúndem Christum Dóminum nostrum. \emph{{[}℟.{]}} Amen.
 
-\emph{{[}℣.{]}} Requiéscant in pace. \emph{{[}℟.{]}} Amen.
 \end{lesson}
 
-\emph{¶ Iste modus et ordo processionis servetur generaliter omnibus dominicis non duplicibus per {[}totum{]}\footnote{1882:9.} annum cum suis antiphonis vel responsoriis, cum oratione et ℣.}\footnote{`\emph{et versibus, et orationibus ipsis dominicis diversimode intitulatis.}' 1882:9.}
+\emph{{[}℣.{]}} Requiéscant in pace. \emph{{[}℟.{]}} Amen.
+
+\newrubric \emph{¶ Iste modus et ordo processionis servetur generaliter omnibus dominicis non duplicibus per {[}totum{]}\footnote{1882:9.} annum cum suis antiphonis vel responsoriis, cum oratione et ℣.}\footnote{`\emph{et versibus, et orationibus ipsis dominicis diversimode intitulatis.}' 1882:9.}
 
 \emph{¶ In dominicis {[}tamen{]}\footnote{1882:9.} a lxx. usque ad lx. dicatur ℣. post antiphonam in ipsa statione ad gradum ante crucem a duobus clericis de ij. forma ad populum conversis habitu non mutato.}
 
 \emph{¶ Similiter a dominica ab octavis pasche usque ad proximam dominicam ante ascensionem Domini dicatur versus a ij. clericis de ij. forma ad populum conversus in superpelliceis coram cruce.\footnote{`\emph{ad populum conversis, ut supra.}' 1882:9.}}
 
 \emph{¶ In proxima dominica ante ascensionem Domini dicatur ℣. a iij. de superiori gradu in pulpito conversis ad populum. Et si episcopus in hac dominica vel in quacunque alia officium \marginnote{7r}exequatur~: ipse indutus in cappa serica cum mitra et baculo ac omnibus supradictis ministris ad benedictionem aque chorum solet intrare~: qui dum fit benedictio salis et aque~: sacerdos ut predicitur ad hoc induto in sedem recipiat episcopalem~: ibique post aspersionem principali altaris a sacerdote factam tam canonicos quam ceteros clericos~: ad sedem episcopalem accedente~: modo et ordine prenotato aspergat~: et tam versiculum quam orationem post antiphonam} Aspérges me. \emph{et post reversionem processionis in chorum dicat ubi debet~: ipse similiter in dominicis per estatem si officium secutus sit misse, vel cum oratione dicatur in statione ante crucem. Sacerdos cum predictis ad processionem vestitus~: preces cum orationibus sequentibus easdem dicet more solito~: et post reversionem in chorum dum hore tertia et sexta cantate fuerint~: pontifex induet se pro missa. Si vero episcopus executor officii non fuerit tunc in habitu clericali cum cirotecis tamen et baculo, clericos ut supra aspergat~: sed in processione cum cappa serica cum mitra et baculo semper in fine procedat~: et predictus sacerdos ebdomadarius super omnia exequatur que ad processionem pertinent loco et habitu consueto.}
+
+\end{document}
 
 \chapter{¶ Dominica secunda adventus.}
 
@@ -675,9 +680,9 @@ Score000
 
 1519:10v; AS:54; Ant-1519:61r; Brev-1531:31v.\footnote{1519:10v. has no flats.}
 
-Score000
+\gregorioscore{}
 
-\emph{Si hec antiphona non sufficiat ad introitum chori~: tunc repetitur in predicta antiphona} †Hódie in terra canunt ángeli.
+\emph{Si hec antiphona non sufficiat ad introitum chori~: tunc repetitur in predicta antiphona} † Hódie in terra canunt ángeli.
 
 \emph{℣.} Benedíctus qui venit {[}in nómine Dómini{]}.\footnote{1882:14.}
 
@@ -695,27 +700,27 @@ Score000
 
 1519:11r; AS:60; Ant-1519:61v; Brev-1531:31v.\footnote{1519:11r. has no flats. In 1519:11r. `Dóminum' is set DFFG.DDCD.D; inimíco is set FGA.GF.GA.CAA; `funde' is set ABC.GA; `nos purgátos' is set GA G.B♭.AB♭C.AGF.}
 
-Score000
+\gregorioscore{}
 
 \emph{Tres diaconi dicant simul hunc ℣.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Omnes\footnote{1508---tres. {[}1882:14.{]}} diaconi dicant simul hanc prosam.}
 
 1519:11v; AS:60; Ant-1519:62r; Brev-1531:31v.\footnote{In 1519:11v. a flat appears only in first phrase. 1519:12r. has `sequens' for sequéris'. In 1519:12r. there appears to be a missing C-clef at'crímina', making the music a third higher. In 1519:12r. `vénia' is set G.E.C.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus vel organa respondeat cantum prose super litteram} 𝕬. \emph{post unumquemque versum.}
 
-Score000
+\gregorioscore{}
 
 \emph{Ad hanc processionem {[}non{]}\footnote{Most editions omit `\emph{non}', but compare with the \emph{Noted breviary}, p.~334. The 1555 \emph{Processional} (unpaged) includes `\emph{non}.' `\emph{non dicitur}', 1882:15.} dicatur} Glória Patri. \emph{sed dum prosa canitur~: thurificet sacerdos altare~: deinde imaginem sancti Stephani~: et postea dicat modesta voce {[}versiculum{]}.}\footnote{1882:15.}
 
 1519:12r.\footnote{1519:12r. omits the response.}
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \subsubsection{Oratio.}
@@ -727,7 +732,7 @@ Score000
 
 1519:12r; AS:519; Ant-1520-S:105v; Brev-1531-S:8r.\footnote{The barline and capital at `Almus' (also found in 1523:12v, 1528:11v. and 1544:15r) may indicate an optional repeat. 1519:12v. has `Virgo Dei génitrix virga est.' In 1519:12v. `ejus' is set thus:
 
-  Score000}
+  \gregorioscore{}}
 
 \gregorioscore{007709-stirps-jesse}
 
@@ -753,7 +758,7 @@ Score000
 
 1519:13r.\footnote{1519:13r. has no flat.}
 
-Score000
+\gregorioscore{}
 
 \emph{In redeundo ant.} Hódie Christus natus. 23.
 
@@ -846,8 +851,6 @@ Score000
 
 \emph{Post hec episcopus puerorum in sede sua benedicat populum in hunc modum. Cruciferarius accipiat baculum episcopi in manu conversus ad episcopum~: et incipiat hanc antiphonam sequentem in hunc modum.}
 
-1519:15v; 1519:77r; Brev-1531:37v.\footnote{1519:15v. has no flats. In 1519:15v. `pastor óvilis' is set DE.FE FEDC.ABG.ABG; `benedícere' appears one note lower. In 1519:16r, 1528:15r; 1530:17r. and 1544:19v. the versicle is divided thus: `Qui vos emit et rédemit sue/carnis précio.' the break is after sue. In 1519 `sue' is set D.EF; `carnis précio. Amen.' appears a fourth higher.}
-
 \gregorioscore{000000-princeps-ecclesie-1}
 
 \emph{Hic convertat se ad populum sic dicendo.}
@@ -863,45 +866,45 @@ Score000
 
 \emph{Deinde tradat baculum episcopo et tunc episcopus puerorum primo signando se in fronte sic dicendo.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus respondeat sic.}
 
-Score000
+\gregorioscore{}
 
 \emph{Item episcopus signando se in pectore dicat sic.}
 
-Score000
+\gregorioscore{}
 
 \emph{Deinde episcopus puerorum conversus ad clerum~: elevet brachium suum~: et dicat hanc benedictionem hoc modo.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic convertat se ad populum dicendo sic.}\footnote{`Nostra', 1882:19.}
 
-Score000
+\gregorioscore{}
 
 \emph{Deinde convertat se ad altare sic dicendo.}\footnote{`Nos', 1882:19. and 1519. `vos' appears in the Breviary-1531.}
 
-Score000
+\gregorioscore{}
 
 \emph{Postea ad seipsum reversus ponat manum super pectus suum dicendo.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus respondeat sic.}
 
-Score000
+\gregorioscore{}
 
 \emph{His itaque peractis incipiat episcopus puerorum completorium more solito et post completorium dicat episcopus puerorum ad chorum conversus sub tono supradicto modo}\footnote{cf.~Breviarium, 408.} Adjutórium nostrum. \emph{et} Sit nomen Dómini. 35. \emph{Deinde dicat episcopus.} Benedícat vos omnípotens Deus Pater et Fílius et
 
 1519:16v.\footnote{1519:16v. has no flat.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Chorus respondeat sic.{]}}\footnote{1519:78r.}
 
-Score000{[}Score000{]}\footnote{1519:77v; 1531:37v.}
+\gregorioscore{}{[}\gregorioscore{}{]}\footnote{1519:77v; 1531:37v.}
 
 \chapter{¶ In die sanctorum innocentium.}
 
@@ -909,7 +912,7 @@ Score000{[}Score000{]}\footnote{1519:77v; 1531:37v.}
 
 \emph{In eundo ℟.} Centum quadragínta. 31. \emph{℣.} Hi empti. \emph{Prosa.} Sedéntem in supérne. \emph{Sequatur}
 
-1519:16v.\footnote{1519:16v. has no flat; `sancto' is set GEFD.DFDE. `†Ideo' is set DEFGAG.}
+1519:16v.\footnote{1519:16v. has no flat; `sancto' is set GEFD.DFDE. `† Ideo' is set DEFGAG.}
 
 {\noinitial
 
@@ -922,7 +925,7 @@ Score000{[}Score000{]}\footnote{1519:77v; 1531:37v.}
 
 \emph{Deinde\footnote{This and the Procession for S. Thomes' day are omitted in 1544 and later edd. {[}1882:20.{]}} eat processio ad altare sancti Thome martyris habitu non mutato absque cereis in manibus cantando ℟. cantore incipiente hoc modo.}
 
-1519:16v; Ant-1519:83v; Brev-1531:39v.\footnote{In 1519:16v. the first two notes of `lútea' are included at the end of `cómmutans.' 1519:16v. omits the flats at `lútea.' In 1528:15v. and 1530:17v. in place of `cómmutans' is `commutántes', set F.GA.AG.B♭AAFAB♭C. In 1519:18r. the repeat of `†Celum' is set FAAB♭. 1544 omits the procession for St.~Thomas.}
+1519:16v; Ant-1519:83v; Brev-1531:39v.\footnote{In 1519:16v. the first two notes of `lútea' are included at the end of `cómmutans.' 1519:16v. omits the flats at `lútea.' In 1528:15v. and 1530:17v. in place of `cómmutans' is `commutántes', set F.GA.AG.B♭AAFAB♭C. In 1519:18r. the repeat of `† Celum' is set FAAB♭. 1544 omits the procession for St.~Thomas.}
 
 \gregorioscore{601260-jacet-granum}
 
@@ -965,7 +968,7 @@ Score000{[}Score000{]}\footnote{1519:77v; 1531:37v.}
 
 1519:18r.
 
-Score000
+\gregorioscore{}
 
 \emph{\&c.~sine prosa cum} Glória Patri.\footnote{`\emph{vel ℟}. Verbum caro. \emph{℣}. In princípio. \emph{sine prosa}.' GS:18.} 21.
 
@@ -1002,11 +1005,11 @@ AS:50; Ant-1519:56r; Brev-1531:30r.\footnote{1519:18v. has here only the text-cu
 
 1519:18v; AS:49; Ant-1519:54v; Brev-1531:29r.\footnote{In 1519:18v. `ángeli' is set F.EEGFEFED.ED; `Dei' is set GAE.FGAGFABA. 1519:18v. has a flat only at `cognovísti'; `cognovísti is set A.AG.AB♭AGA.AGGEFE; `aurem' is set AB♭AGAAGG.EFE; `Dóminum nostrum' is set EGAG.FEDC.DEDC DEF.EDFFE; `genuísti' is set DG.A.AB♭.A.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Cum versu vel sine versu pro dispositione cantoris.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Post partum {[}virgo invioláta permansísti.
 
@@ -1034,13 +1037,13 @@ Score000
 
 1519:19v; AS:86; Ant-1519:106v; Brev-1531:52v.\footnote{In 1519:19v. `Tria sunt' is set D.F GA; `consídera' is set A.GA.FED.DFDDC. 1519:19v. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Sequitur{]}\footnote{1882:23.} aliud ℟.}
 
 1519:20r; AS:85; Ant-1519:105v; Brev-1531:51v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 420. ‡Dómino Deo.
 
@@ -1048,7 +1051,7 @@ Score000
 
 1519:20r; AS:87; Ant-1519:107v; Brev-1531:53r.\footnote{In 1519:20r. `audíte' is set BCDECDCB.ABCBC.BA.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Vox Dómini super aquas.\footnote{1519:20v; 1523:20v; 1528:19v; 1544:23v; and 1554:21r. have `aquas multas.'}
 
@@ -1080,9 +1083,9 @@ Score000
 
 1519:20r; AS:105; Ant-1519:118v; Brev-1531:65r.\footnote{1519:20r. has no flats. In 1519:20r. `peccávi' is set FGB♭.B♭GB♭AGGAGFG.GF.}
 
-Score000
+\gregorioscore{}
 
-\emph{℣.} Glória. 421. †Miserére.
+\emph{℣.} Glória. 421. † Miserére.
 
 \emph{In introitu chori usque ad purificationem dicatur de sancta Maria ℟.} Te laudant. \emph{ut supra.} 43. \emph{Post purificationem vero usque ad septuagesimam dicatur in introitu chori antiphona} Ave regína {[}celórum{]}.\footnote{1882:24. `\emph{vel} Alma redemptóris', GS:20.} 292. \emph{vel alia antiphona de sancta Maria cum hoc versu} Post partum {[}virgo invioláta permansísti{]}.\footnote{1882:24.} 44.
 
@@ -1098,23 +1101,19 @@ Orémus.
 
 \emph{Ad processionem {[}dicatur antiphona que sequitur{]}.}\footnote{1882:24.}
 
-Rylands-24:76; 1519:21v.\footnote{In Rylands-24:76. `nostri et' is set DD.EDDCD DDE. In Rylands-24:76. `hortátur' is set DEd.CFEFEFDDECD.D. The flats appear in Rylands-24:76. In Rylands-24:76. `regna' is set thus:
-
-  Score000
-
-  In Rylands-24:76. `afféctu' is set D.FE.DFFC; `veníte ad me' is set F.GAG.AGFGAG FED CD.}
-
-Score000
+\gregorioscore{002497-ecce-charissimi}
 
 \emph{Duo clerici de secunda forma in statione ante crucem ad populum conversi habitu non mutato cantant {[}versum{]}.}\footnote{1882:24.}
 
-Score000
+{\noinitial
+\gregorioscore{002497a-ecce-mater}
+}
 
 \emph{In introitu chori ante purificationem dicatur {[}responsorium{]}}\footnote{1882:24.} Te laudant. 22. \emph{Si post dicatur {[}hoc responsorium sequens{]}.}\footnote{1882:24.}
 
 1519:22v; AS:131; Ant-1519:131r; Brev-1531:77v.\footnote{In 1519:22v. `fecísti ? ‡Ecce vox sánguis fratris tui' appears a third lower, due to a misplaced clef; the second `ad' is set GAGG; `suum' is set CD.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{Versus.} Dómine refúgium factus es nobis.
 
@@ -1136,7 +1135,7 @@ Score000
 
 1519:23r; AS:139; Ant-1519:137v; Brev-1531:81v.\footnote{1519:23r. and 1523:23r. have flats on the F at `ergo', at `homo', and at `hoc erit', as if the clef were an F-clef. These sources also omit the B♭ key signature. But it would appear that the purpose of the transposed mode is precisely to admit the B♭ sub-tonic. In 1519:23r. (transposed) `terre' is set CABAGAC.D. GS:26. has `℟. Volens Noe scire.'}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Dómine refúgium factus es nobis.
 
@@ -1158,7 +1157,7 @@ Score000
 
 1519:23v; AS:145; Ant-1519:142r; Brev-1531:85v.\footnote{1519:23v. has no flats. In 1519:23v. `temptávit' is set DfeG.CDFEDE.ED; `eum' is set DEFEDE.ED. GS:27. has `℟. Reverténti Abraham.'}
 
-Score000
+\gregorioscore{}
 
 \emph{Versus.} Dómine refúgium factus es nobis.
 
@@ -1478,7 +1477,7 @@ Pater noster. Brev:{[}5{]}.
 
 1519:27r.\footnote{SP:27r. has one less note than required for the next.}
 
-Score000
+\gregorioscore{}
 
 \emph{Clerici respondeant.}\footnote{`\emph{Chorus respondeat}', 1882:26.} Sed líbera nos a malo.
 
@@ -1584,23 +1583,17 @@ Score000
 
 \emph{Et interim cantentur iste sequens antiphone sequente.}
 
-Rylands-24:82; 1519:28v; GS:29; Grad-1508:47r; Missal-1513:30r.\footnote{1519:28v. has a flat before the first F. The tone of the psalm is that of the Officium. The processionals omit the flat at `misericórdia.' {[}According {[}SM:134{]}, 8RM, 13, and 26. omit the first `nos.' However, `nos' does in fact appear in 1513:30r. GS:29. gives only the first part of the Psalm verse, followed by the Psalm tone ending, accompanied by the word `Amen.' GS:29. and SP:28v. have no flat at `misericórdia', nor does the \emph{Graduale Romanum} (1908):68. The flat appears in Rylands-24:82, 1508:47r (albeit after the note and on the wrong space), and the \emph{Sarum Processional} (Byrckman) 1530:32v.{]}}
-
-Score000
+\gregorioscore{002770-exaudi-nos}
 
 \emph{Non dicatur nisi primus ℣. psalmi sed statim sequatur} Glória Patri. 428. \emph{Deinde repetatur antiphona} Exáudi nos.\footnote{Rylands-24:82. indicates `\emph{repetatur ant.} Glória Patri.'}
 
 \emph{Alia antiphona.}
 
-Rylands-24:82; 1519:29r; GS:30; Grad-1508:47r; Missal-1513:30r.\footnote{Some Sarum sources have `plorábunt'; the Sarum Graduals, Petre's Gradual:35v. and Rylands-24:82. have `et dicent' where the Sarum printed Missals are consistent in having `dicéntes.' (The \emph{Vulgate} has `plorábunt' and `et dicent', as does the \emph{Graduale Romanum} (1908):69.) This edition sets the text `dicéntes' to the music given for `et dicent.' In 1508:47r. B♭ is indicated at `tuo.' GS:30 has no flat at `tuo', but includes a ♭-clef from `et ne' to the end.}
-
-Score000
+\gregorioscore{003554-juxta-vestibulum}
 
 \emph{{[}Alia{]}\footnote{1882:29.} antiphona.}
 
-Rylands-24:83; 1519:29r; GS:30; Grad-1508:47r; Missal-1513:30r.\footnote{Accordng to The Sarum Missal (Legg):51. Rylands-24:83. has `Immuitémur.' The processionals have no flats. `et cínere', GS:30. In 1508:47r. `jejunémus' is set D.DF.DDC.DED; `multum' is set B♭Cb♭.AG. In GS:30. a ♭-clef appears beginning at the second syllable of `plorémus'; `noster is set GFGAB♭.AG. The flats also appear in Bodleian Library MS. Rawl. liturg. d.~4:29. Petre's Gradual:25v. has flats only from 'miséricors' to the end.}
-
-Score000
+\gregorioscore{003193-immutemur-habitu}
 
 \emph{¶ Peracto officio dicat sacerdos ad gradum chori sic} Dóminus vobíscum.
 
@@ -1630,17 +1623,17 @@ Score000
 
 1519:30r; AS:130; Ant-1519:131r; Brev-1531:77v.\footnote{1519:30r. has no flat.}
 
-Score000
+\gregorioscore{}
 
 1519:30v; AS:132; Ant-1519:132r; Brev-1531:78r.
 
-Score000
+\gregorioscore{}
 
 \emph{Ejectis penitentibus claudatur ostium ecclesie et redeundo processio more solito cantore incipiente hoc modo.}
 
 1519:31r; AS:152; Ant-1519:148r; Brev-1531:89r.\footnote{In 1519:31v. `injúste' is set A.GA.AG. {[}In 1519:148r. `mortis' is set CDD.A.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{Sine} Glória Patri.
 
@@ -1650,15 +1643,13 @@ Score000
 
 \emph{Ad processionem.}
 
-Rylands-24:89; 1519:31v; 1525:30v.\footnote{In Rylands-24:89, `mílium' is set GACBCABGA.A.A. In 1519:31v. `angelórum' is set Ed.FEDCCD.D; `séraphin' is set FE.FEFGFED.D. Rylands-24:89. has `ibi', not `ubi.' In 1525:31r. `sanctórum' appears to be set AAA.GD.CDC. In Rylands-24:89. `prophetárum' is set A.AG.A.GAGE; `eléctis' is set EG.GFED.GACAGAEFED. In 1525:31v. `eléctis' is set EG.GFE.CAGAEFED. Rylands-24:89. omits the final C of melisma of the melisma on `eternitátis.'}
-
-Score000
+\gregorioscore{002042-cum-venerimus}
 
 \emph{In redeundo cantatur ℟. {[}ut sequitur{]}.}
 
 1519:32v; AS:154; Ant-1519:149v; Brev-1531:89v.\footnote{In 1519:149v. `Si' is set G.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Scuto circúndabit te véritas ejus.
 
@@ -1678,7 +1669,7 @@ Score000
 
 1519:33r;l AS:106; Brev-1531:65r.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Resp.} Eméndemus in mélius. \emph{et cetera ut supra in statione cinerum.} 72.
 
@@ -1686,7 +1677,7 @@ Score000
 
 1519:33v; AS:152; Ant-1519:148r; Brev-1531:86r.\footnote{In 1519:33v. `portas' is set CBCDCCD.D. {[}In 1531 this ℟. and the two that follow appear on Ash Wednesday. In 1519:148r. `apériet' is set DD.DFF.DC.D.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{Aliud ℟.}
 
@@ -1696,7 +1687,7 @@ Score000
 
 1519:34r; AS:153; Ant-1519:148v; Brev-1531:86v.
 
-Score000
+\gregorioscore{}
 
 \emph{Finito Responsorio cum ℣. {[}et{]}\footnote{1882:32.} absque} Glória Patri. \emph{clerici eodem modo quo in processione ordinantur prostrationem faciant. Ita quod sacerdos ad gradum altaris cum diacono a dextris et subdyacono a sinistris et ceroferariis cereis interim super altare dimissis suam faciant prostrationem cum dicitur sine\footnote{`\emph{sine}', 1530:39v; 1555; 1882:32; 1901:65. `\emph{cum}', 1519:34v.} nota.}
 
@@ -1708,7 +1699,7 @@ Pater noster. Brev:{[}5{]}.
 
 1519:34v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Osténde nobis Dómine misericórdiam tuam.
 
@@ -1740,7 +1731,7 @@ Score000
 
 1519:35r.
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \lettrine{P}{r}eces nostras quésumus Dómine cleménter exáudi~: ut qui juste pro peccátis nostris afflígimur, pro tui nóminis glória misericórditer liberémur. Per Christum Dóminum.
@@ -1752,7 +1743,7 @@ Score000
 
 1519:35v; Ant-1519-P:172r; SP:164r.; Brev-1531-P:48v.
 
-Score000
+\gregorioscore{}
 
 Pater de celis {[}audi nos{]}. \emph{{[}ij.{]}}
 
@@ -1764,13 +1755,13 @@ Sancta Trínitas Unus Deus{[}audi nos{]}. \emph{{[}ij.{]}}
 
 1519:35v.\footnote{In 1555. `pro' is set B. This is the melodic form that was taken up in the English Litany of 1544.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et processio presbyterorum circumeundo chorum intret~: et clerici predicti prosequantur de ceteris ordinibus quantum sufficit iter, scilicet tres} \emph{vel quattuor~: et si tantum restat iter sub} \emph{tono predicto ita quod ad gradum chori finiatur sic.}
 
 1519:35v.\footnote{In 1555. `pro' is set B.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic ordo letaniarum servetur in processionibus faciendis per totam quadragesimam scilicet in quartam feriam et sextam.}
 
@@ -2279,7 +2270,7 @@ Omnes sancti. Oráte pro nobis.
 
 1519:38r; AS:164; Ant-1519:158r; Brev-1531:98v.\footnote{The Sarum antiphoners and processionals clearly separate the dipthong `a--u' in `Esau.'}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Scuto circúndabit te véritas ejus.
 
@@ -2299,13 +2290,13 @@ Score000
 
 Rylands-24:116; 1519:38v.\footnote{1519:38. has a flat only at `Dómine nímium' (line 8). The flat at `ante' appears in Rylands-24:116. The other flats printed directly on the staff are found in 1544:45r. The final two flats appear in Bodleian Library MS Rawl. liturg. D. 4:36. Rylands-24:116. omits the low A at `celéstium.' In the printed processionals `sanctórum' is set AGACDDCBA.GA.A. In Rylands-24:116. `ac' is set DG. In some printed processionals `ibi' is set A.AG. In Rylands-24:116. `tantam' is set Ba.G; both `illa's are set ACC.BA; 'tribulatiónis' is set B.C.D.CB.A.A. 1544:45v. has a flat at `illa nímium.' Rylands-24:116. has no flats at `illa nímium.' In Rylands-24:116. `Dómini' is set A.GA.GFE. In some printed processionals `mei' is set G.A.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori dicatur {[}hoc responsorium sequens{]}.}\footnote{1882:42.}
 
 1519:39v; AS:175; Ant-1519:166v; Brev-1531:103v.\footnote{1519:39v. has a flat only at `fletu.' In 1519:39v. `timére' is set BGA.AGAG.FE. {[}1531:103v. has `frátribus suis~: dixit.' In 1519:166v. `dixit' is set DEF.ED.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Scuto circúndabit te véritas ejus.
 
@@ -2327,7 +2318,7 @@ Score000
 
 In 1519:40r; AS:185; Ant-1519:174v; Brev-1531:108r.\footnote{In 1519:40r. `corde' is set FGA.AG; `ero' is set CD.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Scuto circúndabit te véritas ejus.
 
@@ -2347,7 +2338,7 @@ Score000
 
 1519:40v; AS:189; Ant-1519:178v; Brev-1531:110v.\footnote{In 1519:40v. `flagéllis' is set AB.CEDEDCDc.CB.}
 
-Score000
+\gregorioscore{}
 
 \emph{Non dicatur} Glória Patri. \emph{Si necesse fuerit repetatur ℟. cum versu.}
 
@@ -2355,7 +2346,7 @@ Score000
 
 \textsc{1519:40v;} AS:194; Ant-1519:183r; Brev-1531:113r.\footnote{1519:40v. omits `et' of `et non est.' 1519:40v. has `fódeant' for `fódiant.' In 1519:40f. `pedes' is set DC.DE; `líbera me' is set D.C.C A.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Eripe me de inimícis meis Deus meus.
 
@@ -2405,7 +2396,7 @@ Score000
 
 1519:42v.
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Deinde dicantur omnes orationes sine} Dóminus vobíscum. \emph{sed tantum cum} Orémus.
 
@@ -2419,7 +2410,7 @@ Score000
 
 1519:42v.
 
-Score000
+\gregorioscore{}
 
 \emph{Et omnes orationes dicantur cum} Orémus. \emph{sub tono supradicto.}
 
@@ -2445,15 +2436,11 @@ Score000
 
 \emph{¶ His itaque peractis statim distribuantur palme, et interim cantentur hee sequentes antiphone cantore incipiente antiphonam hoc modo.}
 
-Rylands-24:156; GS:78; 1519:43v; AS:207; Ant-1519:192r; Brev-1531:118r.\footnote{In Arsenal:71v. `tolléntes' is set A.A.C; `olivárum' is set AG.F.GA.A; `clamántes' is set F.FFe.DC.}
-
-Score000
+\gregorioscore{004415-pueri-hebreorum-tollentes}
 
 \emph{{[}Sequitur{]}\footnote{1882:47.} alius cantus.}
 
-Rylands-24:156; GS:78; 1519:43v; AS:206; Ant-1519:192r; Brev-1531:118r.\footnote{In Arsenal:71v. `vestiménta' is set A.A.C.A; `David' is set E.G.}
-
-Score000
+\gregorioscore{004416-pueri-hebreorum-vestimenta}
 
 \emph{¶ Dum} \emph{distribuuntur rami benedicti preparetur feretrum cum reliquiis in quo corpus Christi dependeat~: et ad locum prime stationis a duobus clericis de secunda forma non tamen processionem sequendo sed ad locum prime stationis obviam veniendo habitu non mutato deferatur lumen in lanterna precedente, cum cruce et duobus vexillis precedentibus~: deinde exeat processio ad locum prime stationis sintque ministri processionis albis cum amictibus ahsque tunicis vel casulis. Ita tamen quod sacerdos eat in cappa serica rubea ut supra, choro itaque sequente habitu non mutato. Si tamen assit episcopus mitram et baculum in fine proccessionis.}\footnote{`\emph{Deinde per medium chori et ecclesie exeat processio per ostium chori occidentale usque ad locum prime stationis, videlicet ante crucem septentrionali cimiterio, precedente cruce sine imagine, ut in aliis dominicis quadragesime, episcopo vel excellentiore sacerdote exsequente officium processionis, sintque ministri albis cum amictibus induti absque tunicis vel casulis~: ita tamen quod exsecutor officii processionis eat in capa serica rubea, ckoro itaque sequente habitu non mutato. Si tamen assit episcopus, mitram gerat et baculum in fine proccessionis.}' 1882:47.}
 
@@ -2461,31 +2448,23 @@ Score000
 
 Rylands-24:156; 1519:44r; GS:78.\footnote{The first `eis' is omitted in the \emph{Vulgate}. `sicut constítuit illis Jesus', \emph{Vulgate}. In some printed processonals `discípuli' is set A.C.CDCA.A; `comédere' is set A.C.CB.CB. Rylands-24:156. has `Jesus dicit.' In GS:79. discípuli' is set G.CC.AGC.C.}
 
-Score000
+\gregorioscore{}
 
 \emph{Unde\footnote{1517---Unde cum hec, \&c.~1544, \&c.---Cum autem. {[}1882:48.{]}} hec antiphona canitur cum sequentibus, exeat processio per ostium occidentale~: et sic circa claustrum, et ita per portam canonicorum usque ad locum prime stationis que fit ex parte ecclesie borealis, in extrema parte orientalis tunc laicorum\footnote{`should run--- \emph{in extrema parte orientali cimiterii laicorum.}' {[}1882:xv.{]}} legetur evangelium.}\footnote{\emph{{[}cimiterii laicorum, ubi legetur evangelium modo quo sequitur.{]}} So 1517 ; but 1508, \&c.---in extrema parte orientalis. Tunc laicorum legetur evangelium. 1528---leaf wanting. {[}1882:48.{]}}
 
-Rylands-24:156; 1519:44v; GS:79.\footnote{The B-natural at `suis' is indicated in Pro-1544:52v. The other sources are ambiguous. The flat at `Dómini' appears in Rylands-24:156, 1525:45v. and 1544:53r. In Rylands-24:156. the final `et' is set ADDCBAC.}
-
-Score000
+\gregorioscore{001976-cum-appropinquaret}
 
 \emph{Si {[}autem{]}\footnote{1882:48.} non sufficiant hee due antiphone usque ad locum prime stationis~: tunc dicantur hee sequentes antiphone.}
 
-Rylands-24:157; 1519:45v; GS:80.\footnote{The processionals and Rylands-24:157. have `Jesus venit.' Copenhagen, DK-Kk 3449 80 V:109v. gives this antiphon in another, related version, much of which appears a tone higher, as does CH-P 18:157.---these examples provide for the flattened note at the end of `Hierúsalem.' GS:80 has a flat clef, except for the second line: `-limam \ldots{} exiérunt ei.' In the processionals `-nit Hierosólyman accepérunt ramos' appears a third higher. In 1519:45v. the text is misaligned at `et exiérunt'; the second `est' is set DFCB♭DCA. In Rylands-24:157. the first syllable of Hierúsalem is set A. In 1519:45v. `palmárum' is st CD.DB♭CG.GAB♭CB♭. In Rylands-24:157. `nostra is set DB♭.CAB♭FGAB♭CB♭B♭A. In GS:80. 'Israel' appears to be set BDECD.ACCA.A. In 1519:45v. `occúrrunt' is set EFCDC.ACCA.A. In Rylands-24:157. `scriptum' is set GABAGF.G. In Rylands-24:157. `salve Rex fabricátor' appears a third lower.}
-
-Score000
+\gregorioscore{001983-cum-audisset}
 
 \emph{{[}Sequitur{]}} \emph{alia antiphona.}
 
-Rylands-24:157; 1519:46r; GS:80.\footnote{1513:71v. gives no indication of this Antiphon. In GS:80. `dies' is set G.GAGFEDEDCDC. In Rylands-24:157. `dies' is set G.GAFEFEDED. Bodleian Library, MS. Rawl. Liturg. D. 4:43v. agrees with the printed processionals here. Rylands-24:157. has `portábant.' In 1519:46v. `Osanna' begins AC.CBC.BAGFG etc.}
-
-Score000
+\gregorioscore{001437-ante-sollennitatis}
 
 \emph{{[}Item{]}\footnote{1882:49.} alia antiphona.}
 
-Rylands-24:157; 1519:46v; GS:81.\footnote{In 1519:46r. `dies' is set GAFFEDE.ED. In Rylands-24:157. `passiónis' is set DFA.ACCA.FGAGFGA.G. GS:81. has no note for the first `et.' In Rylands-24:157. `civitátem' is set GF.AC.C.CDDC. In Rylands-24:157. dicéntes' is set F.Ga.ABA. In Rylands-24:157. the first `Osánna' is set F.AC.CABCBAGAFGAGACBCDC. In 1519:46v. `benedíctus' is set D.DEF.GAG.G. In Rylands-24:157. `benedíctus' is set D.EF.GAG.G.}
-
-Score000
+\gregorioscore{001437-ante-passionis}
 
 \emph{¶ Hic fiat prima statio ex parte ecclesie boreali in extrema parte orientalis~: et legatur evangelium} Cum appropinquásset Jesus. \emph{ab ipso diacono induto ad processionem non juxta crucem sed ante sacerdotem loco parumper secus stationem illius diaconi mutato, ab ipso diacono ad boreale\footnote{1517---oriéntem. {[}1882:49.{]}} converso. Et legatur more simplicis festi ix. lectionum post acceptam benedictionem cum} Dóminus vobíscum. \emph{et} Glória tibi Dómine.
 
@@ -2499,51 +2478,49 @@ Score000
 
 \emph{¶ Finito evangelio {[}unus puer ad modum prophete indutus stans in aliquo eminenti loco cantet lectionem propheticam modo quo sequitur.}
 
-Score0001508, unpaged; 1517, unpaged; 1555, unpaged.\footnote{The prophet's part appears to be found only in the Edd. of 1508 and 1517 (and 1555). {[}1882:50.{]} The music is an elaboration of the Antiphon `\emph{Hierusalm respice}' at Vespers on Monday of the first week of Advent, 108. In the sources, `órientem' begins AG. Comparison with the above-mentioned Antiphon suggests that this is incorrect. In 1555 `vide leva' is set GB♭Cb♭. B♭ DDEFG.D.}
-
-Score000\footnote{1555, unpaged.}
+\gregorioscore{003481-hierusalem-respice}
 
 \emph{Tres clerici de secunda forma habitu non mutato exeuntes ab eadem processione conversi ad populum stantes ante magnam crucem ex parte occidentali simul cantent antiphonam\footnote{`\emph{hunc versum}', 1882:50.} hoc modo.}
 
 Rylands-24:158; 1519:47v; GS:81.\footnote{The flat appears in Rylands-24:158.}
 
-Score000
+\gregorioscore{}
 
 \emph{Post singulos\footnote{'\emph{singulas'}, 1519:47v.} ℣. executor officii incipiat antiphonam} Salve. \emph{conversus ad reliquias quam prosequatur chorus cum genuflexione osculando terram} \emph{ab ipso quoque executore officii primo cum flectione. Senior genuflectendo dicat sic.}\footnote{`\emph{primo cum choro genufiectendo, dicatur sic}', 1882:50.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus in prostratione deosculando terram prosequatur resurgendo.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item propheta cantet hoc quod sequitur.}
 
 1508, unpaged; 1517, unpaged; 1555, unpaged.\footnote{The prophet's part appears to be found only in the Edd. of 1508 and 1517 (and 1555). {[}1882:50.{]} The music is taken from the capitulum at First Vespers of Advent I.}
 
-Score000\footnote{1555, unpaged.}
+\gregorioscore{}\footnote{1555, unpaged.}
 
 \emph{Iterum clerici stantes ante reliquias {[}simul{]}\footnote{1882:51.} loco nec habitu mutato dicant {[}hunc{]}\footnote{1882:51.} ℣. {[}sequentem{]}.}\footnote{1882:51.}
 
 Rylands-24:158; 1519:48r; GS:81.\footnote{1519:48r. has `túrribus'---but many processionals have `cúrribus.'}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Item senior\footnote{`\emph{executor officii}', 1882:51.} loco nec habitu mutato incipiat {[}antiphonam{]}.}\footnote{1882:51.}
 
 Rylands-24:158; 1519:48r; GS:82.\footnote{In 1519:48r. `impérium' is set B♭a.G.FA.A. In Rylands-24:158. `et decus' is DFFG F.F; `et in' is set ED EFE. In 1519:48t. `in' is set GF.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus resurgendo prosequatur.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Iterum propheta.}
 
 1508, unpaged; 1517, unpaged; 1555, unpaged.\footnote{The prophet's part appears to be found only in the Edd. of 1508 and 1517 (and 1555). {[}1882:50.{]} The music is taken from the capitulum at First Vespers of Advent I.}
 
-Score000
+\gregorioscore{}
 
 \emph{Postea evanescat.{]}}\footnote{1882:51.}
 
@@ -2551,15 +2528,15 @@ Score000
 
 Rylands-24:158; 1519:48r; GS:82.\footnote{In Rylands-24:158. `prophétice' is set ED.EF.D.D. In 1519:48r. `nobis jura' is set DF.FG GF.FGAGE.}
 
-Score000
+\gregorioscore{}
 
 \emph{Item senior\footnote{`\emph{executor officii}', 1882:51.} loco nec habitu mutato {[}dicat antiphonam sequentem{]}.}\footnote{1882:51.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus resurgendo prosequatur.}
 
-Score000
+\gregorioscore{}
 
 \footnote{1517---Tunc ministri in prima processione, videlicet accolitus cum cruce et ceroferarii procedentes aliis ministris cum feretro se associent ; et statim reportata prima cruce illa, videlicet sine imagine, predictus accolitus crucem argenteam accipiat deferendam. Et tunc procedat processio usque ad locum secunde stationis. {[}1882:51.{]}}
 
@@ -2567,97 +2544,87 @@ Score000
 
 Rylands-24:158; 1519:48v; GS:82.
 
-Score000
+\gregorioscore{}
 
 \emph{Alia antiphona.}
 
-Rylands-24:158; GS:82; 1519:49r; AS:208; Ant-1519:192v.\footnote{In Rylands-24:158. and GS:82. `óbviam' is set GA.A.G.}
-
-Score000
+\gregorioscore{004107-occurrunt-turbe}
 
 \emph{Si non sufficiunt hec} \emph{due antiphone usque ad locum ij. stationis, tunc cantentur hec duo ℟. vel unum eorum cantore incipiente.}
 
 1519:49; AS:201; Ant-1519:189r; Brev-1531:116v.\footnote{In GS:83: `Pasche' is set E.DEDC. `Lázarus fúerat', \emph{Vulgate.}}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item sequitur{]}\footnote{1882:52.} aliud ℟.}
 
 1519:49v; AS:203; Ant-1519:190r; Brev-1531:117r.\footnote{In 1519:49v. `quem' is set CEECDDCCEECDDCADCB; `credébant' begins AC.BGB etc.; `a' at the end of the Verse. is set ACA.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic fiat secunda statio ex parte ecclesica australi~: ubi septem pueri {[}in{]}\footnote{1882:52.} eminentiores {[}loco{]}\footnote{1882:52.} simul cantent {[}hanc antiphonam{]}\footnote{1882:52.} {[}hoc modo{]}.}
 
 Rylands-24:158; 1519:50r; GS:83.\footnote{In 1519:50r. `mortális' is set G.A.AC; prece is set G.A.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post vnumquemque versum.}
 
 \emph{Pueri vero dicant versum sequens.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}}\footnote{1882:52.} Glória laus.
 
 \emph{Septem pueri versus.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}}\footnote{1882:52.} Glória laus.
 
 \emph{Septem pueri versus.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Item chorus repetatur} Glória laus et honór.
 
 \emph{Peracta hac\footnote{`\emph{autem}', 1882:52.} statione eat processio per medium claustri a dextera manu usque ad hostium ecclesie occidentale, cantando {[}hanc{]}} \emph{antiphonam {[}sequentem{]}} \emph{cantore incipiente hoc modo.}
 
-Rylands-24:158; 1519:50v; GS:84.\footnote{In GS:84. this is indicated as a Responsory. In Rylands-24:158. the first syllable of `Collegérunt' is ste AECEAGa; `forte' is set C.DED; `Románi' is set GA.ACBAB.A.}
-
-Score000
+\gregorioscore{001852-collegerunt}
 
 \emph{Hic fiat tertia statio ante predictum ostium ecclesie occidentale, ubi tres clerici de superiori gradu in ipso habitu non mutato\footnote{`For \emph{in ipso habitu non mutato}, read \emph{in ipso} ostio\emph{, habitu non mutato}.' 1882:xv.} conversi ad populum simul {[}incipiant et{]}\footnote{1882:53.} cantent {[}hunc{]} {[}sequentem{]}\footnote{1882:53.} ℣. {[}hoc modo{]} {[}quo sequitur{]}.}\footnote{1882:53.}
 
-Rylands-24:159; 1519:51r; GS:84.\footnote{In 1519:51r. `prophetávit' is set D.E.GAGABC.CBA. In Rylands-24:159. `Cáyphas' is set G.G.GE; `pópulo' is set ABA.GAB.BA.}
-
-Score000
+\gregorioscore{001852a-unus-autem}
 
 \emph{His finitis intrent ecclesiam per idem ostium sub feretro et capsula\footnote{`\emph{casula}', 1519:51v.} reliquiarum ex transverso ostii elevatis cantando cantore incipiente.}
 
 Rylands-24:159; 1519:51v; AS:205; 1531:118r.\footnote{In 1519:51v. `civitátem' begins FEDCDE.DF etc.; `celsis' is set DEFEDE.ED. In Rylands-24:159. púeri' is set FG.FGEFEDE.ED.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic fiat quarta statio ante crucem in ecclesia et in ipsa statione executor officii incipiet antiphonam {[}sequentem{]}.}\footnote{1882:53.}
 
-Rylands-24:159; 1519:52r; GS:85.\footnote{`Salvatórem domus Israel', Pro-1882:53 Dickinson:260; `dómui', Pro-1519:52r; `Dómini', Pro-1555:unpaged; `dommi', GS:85. The first flat appears in Pro-1528:58v. and Pro-1530:60v. but not in Pro-1519:52r.}
-
-Score000
+\gregorioscore{001543-ave-rex-noster-1}
 
 \emph{Cruce jam discooperta, et respondeat chorus cum genuflectione osculando terram.}
 
-Score000
+\gregorioscore{001543-ave-rex-noster-2}
 
 \emph{Et sic incipiat sacerdos antiphonam ter~: singulis vicibus vocem exaltando et una cum choro fiat genuflexio et post tertiam reinceptionem chorus eadem antiphonam in statione stando totam prosequatur.}
 
 \emph{Item sacerdos vocem exaltando hoc modo incipiat {[}antiphonam{]}.}\footnote{1882:53.}
 
-Score000
+\gregorioscore{001543-ave-rex-noster-3}
 
 \emph{Chorus {[}cum genuflexione osculando terram respondeat{]}}\footnote{1882:53.} Rex noster.
 
 \emph{{[}Item sacerdos{]}\footnote{1882:53.} se modo altissimum.}\footnote{1508---semen altisisimum. 1517, 1523, \&c.---modo altissim̄. 1528, 1532---et modo altissimo. 1544, \&c.---modo altissimo, probably from MS, sē. m̄. altissim̄., \emph{i.e.}, senior modo altissimo, \emph{i.e.,} exsecutor officii, as above, p.~51, notes. {[}1882:53.{]} `se', 1517:52r.}
 
-Score000
+\gregorioscore{001543-ave-rex-noster-3}
 
 \emph{Chorus in eadem statione totam prosequatur antiphonam sic.}
 
-Rylands-24:159; 1519:52r.\footnote{1519:52r. has no flat at `David.' In 1519:52r. `David' is set F.FABAGAG. 1525:43v. agrees with Rylands-24:159. here. In Rylands-24:159. `Redémptor' is set GFFE.CE.FGA. In 1519:52r. `ventúrum' is set CD.DEF.ED. 1525:43r. agrees with Rylands-24:159. here. In Rylands-24:159. `te' is set DF. In 1519:52r. and 1528:48v. `enim' is set FEDD.DCDED. 1525:43v. agrees with Rylands-24:159. here. In Rylands-24:159. `excélsis' is st ED.FGf.D.}
-
-Score000
+\gregorioscore{001543-ave-rex-noster-4}
 
 \emph{Qua finita intrent chorum et omnes cruces per ecclesiam sint discooperte usque post vesperas.}
 
@@ -2687,21 +2654,19 @@ Score000
 
 \emph{¶ Finita lectione incipiat episcopus vel executor officii antiphonam hoc modo.}
 
-Rylands-24:180; GS:94; 1519:53v.\footnote{In 1525--55r. Man:16r. GS:94. Grad-1508:94r. and Rylands-24:180.1519:53v. the third repetition of `Veníte' is set F.F.GA. In the missals, manuals and graduals---except 1508---the third `Veníte' comes only with the continuation of the antiphon. The edition follows here. It would seem, however, that the missal version is both older and superior, and that the processional version represents a simplification that was probably employed widely in practice. In GS:94. `Dómini' is set B♭.GF.F. In GS:94. and 1524:55r. docébo' is set FGAG.A.G. In 1519:43v. 1528:50r. and Grad-1508:94r. `docébo' is set FG.A.GFG. Here the edition follows Rylands-24:180. Rylands-24:180. uses not the psalm tone but rather the officium tone: F G A--- GB♭ A A AG GA~: GF.GA A--- F GA G F.}
-
-Score000
+\gregorioscore{205144-venite}
 
 \emph{Scilicet infra predictum ostium conversus ad borealem signum faciendo cum manu dextra ad penitentes quasi vocando. Deinde ex parte penitentium scilicet extra ostium\footnote{`\emph{hostium}', 1519:53v.} dicat dyaconus hoc modo, quo sequitur ex parte episcopi.}
 
-Score000
+\gregorioscore{}
 
 \emph{Alius diaconus ex parte episcopi dicat\footnote{`\emph{respondeat}', 1882:55.} sic.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et ita respondeat dyaconus. {[}et{]}\footnote{1882:55.} Fiat tribus vicibus ita tamen quod post tertiam repetitionem antiphone non dicatur} Flectámus génua. \emph{sed chorus prosequatur totam antiphonam cantore incipiente hoc modo sequenter.}\footnote{1882:55. begins `Veníte fílii audíte.'}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Totus psalmus dicatur sine} Glória Patri. \emph{et post unumquemque versum repetatur antiphona} Veníte. \emph{Dum psalmus canitur a toto choro cum antiphona~: semper manuatim penitentes a presbyteris\footnote{`\emph{plebesanis}', Munich, Bayerische Staatsbibliothek, Clm 3909, fo. 220r. cited in Sarah Hamilton, \emph{The Practice of Penitence, 900--1050} (Woodbridge, Suffolk~: Boydell and Brewer, 2001), p.~120. i.e.~by the people.} archidyacono et ab archidyacono reddantur episcopo~: et ab episcopo restituantur ecclesie gremio. Tamen si episcopus presens non fuerit tunc penitentes manuatim ab aliquo presbytero de choro habitu non mutato reddantur executori officii~: et ab ipso restituantur ecclesie gremio.}
 
@@ -2719,13 +2684,13 @@ Score000
 
 1519:54r.
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \lettrine{A}{d}ésto Dómine supplicatiónibus nostris et me qui étiam misericórdia tua primus indígeo cleménter exáudi~: et quem non electióne mériti, sed dono grátie tue constituísti hujus óperis\footnote{`óperis hujus', 1882:56.} minístrum~: da fidúciam tui múneris exequéndi~: et {[}tu{]}\footnote{1882:56.} ipse in nostro ministério quod tue pietátis\footnote{`pietátis tue', 1882:56.} est
 \end{lesson}
 
-Score000
+\gregorioscore{}
 
 \emph{Et omnes\footnote{`\emph{omnino}', 1882:57.} orationes dicantur cum} Orémus.\footnote{In Gough Missals 75 a blank space appears where `Orémus' is omitted.} \emph{et finiantur suh tono supradicto. Non dicatur} Dóminus vobscum. \emph{nisi ante primam orationem.}
 
@@ -2787,15 +2752,15 @@ Score000
 
 Rylands-24:183; 1519:55r; Grad-1508:95r.\footnote{Missal-1530:73r. gives the text incipit only. In the manuals an additional verse, `Lotus mente', appears after verse 6, and a further verse, `Sit hec dies leta cunctis' appears after verse 7. In Grad-1508:95r. `Redémptor' is set F.DC.C. 1525:57r. has `Tumet', not `Temet.' In Rylands-24:183. `Temet' is set F.CD. In Grad-1508:95r. concinéntium' is set Fe.FG.FED.CD.D; `Donum' (Verse 1.) is set F.D. The printed processionals have not `donum' but Dómini', set F.E.D. In Pro-1519:55v. `pacis' (Verse 1.) is set CD.FGFED. In 1519:55v. and 1528:51v. `Ad archam' (Verse 2.) is set F D.CD. In 1525:57v. `archam' is set D.CD. Grad-1508:95r. omits Verse 2. In Grad-1508:95r. `turba' (Verse 3.) is set DE.F. Grad-1508:95r. (Verse 4.) has `Hoc óleum'; and (Verse 5.) `Ut movétur.' In 1519:55v. `Consecráto' (Verse 5.) is set Fe.CD.CD.FGFE. In 1519:55v. `Nec' (Verse 6.) is set F. `Sit dies hec' (Verse 7.), Rylands-24:183. The manuals have `Sit dies hec. Rylands-24:183. (verse 7.) has 'Ne senéscat.' In Grad-1508:95r. `nec' (Verse 7.) is set F; `Ambórum Paráclito' (Verse 8.) is set Fe.D.CDFGFED D.CD.D.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum. Clerici prosequantur.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Hic pergat episcopus ad altare. Chorus interim repetat} O redémptor.{]}\footnote{1882:59.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Hac die post} Per ómnia sécula seculórum. \emph{et post} Pax Dómini. \emph{dicta} Et cum spíritu tuo. \emph{more solito, non dicatur} Agnus Dei. \emph{nec} Pax Dei. \emph{nisi episcopus cebraverit~: tunc enim dicitur} Agnus Dei. \emph{sollenniter, sicut in festis minoribus duplicibus~: et sacerdos chrismatis ampullam pro pace deosculetur, et diaconus et subdiaconus dalmatica et tunica induantur propter sollennitatem cene, licet episcopus celebraverit.{]}}\footnote{1882:59.}
 
@@ -2807,11 +2772,11 @@ Score000
 
 1519:56v; AS:215; Ant-1519:199r; Grad-1531:120v.
 
-Score000
+\gregorioscore{}
 
 \emph{Et dicatur} \emph{a toto choro coram altari cum suo ℣. a cantore incipiente hoc modo.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et dicitur sine}\footnote{In Gough Missals 75, fol.~57r. `sine' is added by hand in the margin.} Glória Patri. \emph{quo finito dicatur ℣. et oratio de sancto in cujus honore consecratum est altare~: ab excellentiori sacerdote modesta voce id est sine nota que terminetur sic,} Per Christum Dóminum {[}nostrum{]}.\footnote{1882:60.} \emph{nec precedat, nec sequatur}\footnote{`\emph{subsequatur}', 1882:60.} Dóminus vobíscum. \emph{sed tantum {[}cum{]}}\footnote{1882:60.} Orémus. \emph{ante orationem {[}et postea deosculentur altaria executores officii et alii clerici consequantur priusquam recedant.{]}\footnote{1882:60.} Eodem modo omnia altaria ecclesie abluantur cum responsoriis {[}et versibus suis{]}\footnote{1882:60.} sicut ordinati sunt in {[}predicta{]}\footnote{1882:60.} hystoria scilicet} In monte Olivéti. \emph{et cum ℣. et orationibus de sanctis ut supradictum est~: ita {[}tamen{]}\footnote{1882:60.} quod nullum ℟. incipiatur nisi tantum coram altari ubi totum cantentur {[}ut supra diximus et semper{]}\footnote{1882:60.}~: et si necesse fuerit reincipiatur hystoria. Ita in extrema ablutione cantetur ℟.} Circundedérunt me. \emph{cum suis ℣. sine} Glória Patri. 94. \emph{Finita ablutione altaria nuda usque ad sabbatum pasche~: altaria conserventur\footnote{`\emph{conversentur}', 1519:57r.} preter principale altare. Si vero plura fuerint altaria in ecclesia quam ℟. et predicta hystoria tunc reincipiatur hystoria ordine predicto servatur itaque\footnote{`\emph{scilicet quod}', 1882:60.} ℟.} Circundedérunt me. \emph{semper in ultimo loco\footnote{`\emph{super ultimo loco}', 1519:57r.} cantetur.} 94.
 
@@ -2819,7 +2784,7 @@ Score000
 
 1519:57r; AS:216; Ant-1519:199v; Brev-1531:120v.\footnote{In 1519:199v. ``que'' is set G.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.} Sit nomen Dómini benedíctum.
 
@@ -2839,7 +2804,7 @@ Score000
 
 1519:57v; AS:216; Ant-1519:199v; Brev-1531:120v.\footnote{In 1519:57v. `decórem' is set ACAGAB♭AG.FGAGFG.GF. 1519:57v. has neither the flat at `hic' nor the natural at `peccáta.' They are found in AS:216. In 1519:57v. `portávit' is set B♭C.B♭GFGACAFGAGA.AG. {[}1519:199v. indicates B♭ at `portávit', and no flat at `autem.' In 1519:199v. `portávit' is set B♭Cb♭.AGFGACAFGAGA.AG; `nobis' is set CD.D;. In AS:217 `et peccáta nostra', set F A.C.C CD.C, replaces `et infirmitátes nostras.'{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.} In conspéctu angelórum psallam tibi Dens meus.
 
@@ -2857,7 +2822,7 @@ Score000
 
 1519:58r; AS:217; Ant-1519:200v; Brev-1531:121r.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.} In omnem terram exívit sonus eórum.
 
@@ -2875,7 +2840,7 @@ Score000
 
 1519:58v; AS:217; Ant-1519:200v; Brev-1531:121r.\footnote{1519:58v. has no flat. It appears in AS:217.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.} Letámini in Dómino\footnote{1508:unpaged. 1882:62.has `Deo.'} et exultáte justi.
 
@@ -2893,7 +2858,7 @@ Score000
 
 1519:59r; AS:218; Ant-1519:201r; Brev-1531:121r.\footnote{1529:59r. has no flats; they appear in AS:218. In 1519:59r. appropinquábit is set G.G.G.G.G. {[}1519:201r. omits all flats. BL-52359:141v. has an untransposed version of this responsory. It would appear that the transposition up a fourth permits the raised seventh degree above the finalis. In 1519:201r. `exhortabámini' is set AF.G.AC.CCBCBCA.BCB.AAGFGF. The flat at `Judam' is derived from BL-52359. It is not present in AS:218. or in 1519:201r.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.} Letámini in Dómino et exultáte justi.
 
@@ -2909,9 +2874,9 @@ Score000
 
 \emph{Ad altare sanctarum virginum cantetur sequens responsorium.{]}}\footnote{1882:62.}
 
-1519:59r; AS:219; Ant-1519:201v; Brev-1531:121r.\footnote{1519:59r. has no flats. In 1519:59r. †Cum' is set D. {[}SB:dcclxxx. has `Cogitavérunt' and the following note: `Cōgregaverūt' \emph{Chevallon.} {[}SB:dcclxxx.{]} Most sources on CANTUS have `Congregavérunt.' 1519:202v. and BL-52359:142r. have `Cogitavérunt.' In AS:219. `tenérent' is set G.GFG.DF.{]}}
+1519:59r; AS:219; Ant-1519:201v; Brev-1531:121r.\footnote{1519:59r. has no flats. In 1519:59r. † Cum' is set D. {[}SB:dcclxxx. has `Cogitavérunt' and the following note: `Cōgregaverūt' \emph{Chevallon.} {[}SB:dcclxxx.{]} Most sources on CANTUS have `Congregavérunt.' 1519:202v. and BL-52359:142r. have `Cogitavérunt.' In AS:219. `tenérent' is set G.GFG.DF.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.} Adducéntur regi vírgines.
 
@@ -2945,13 +2910,13 @@ Score000
 
 1519:59v; AS:219; Ant-1519:201v; Brev-1531:121r.\footnote{`concinábat' \emph{Chevallon.} {[}SB:dcclxxx.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Sequitur{]}\footnote{1882:63.} aliud responsorium.}
 
 1519:60r; AS:219; Ant-1519:202r; Brev-1531:121r.\footnote{1519:60r. has no flats. In 1519:60r. `sciéntiam' is set be D.EFA.G.GFFGDCDED. {[}`et erit maniféstum', 1531:121v.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{Post ablutionem altarium intrent capitulum {[}et{]}\footnote{1882:63.} ibidem dyaconus legat evangelium sicut ad missam lectum est {[}videlicet{]}.}\footnote{1882:63.}
 
@@ -2963,15 +2928,13 @@ Score000
 
 \emph{¶ Deinde fiat sermo ad populum. Quo finito surgant duo predicti presbyteri~: et incipient a majoribus et unus lavet omnium pedes ex una parte, et alius ex altera parte~: et postmodum sibi invicem pedes lavent~: et interim cantentur hee sequens antiphone cum suis psalmis a toto choro interim cantent sedentes hanc antiphonam ut sequitur.}\footnote{In 1519:61r. the following is added by hand `¶ Ablutio pedum.'}
 
-Rylands-24:184; GS:96; 1519:61r.
-
-Score000
+\gregorioscore{003688-mandatum-novum}
 
 \emph{¶ Totus psalmus dicatur sine} Glória Patri. \emph{et post unumquemque versum psalmi, repetatur antiphona. Eodem modo dicantur omnes antiphone sequentes cum suis psalmis.}
 
 Rylands-24:184; 1519:61r; GS:96.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Cantetur psalmus usque in finem.}
 
@@ -2979,7 +2942,7 @@ Score000
 
 Rylands-24:184; GS:96; 1519:61v; AS:456; Ant-1520-S:43v; Brev-1531-S:87v.\footnote{In 1520-S:43v. the final `ejus' is set CDCCBB.BA. GS:96. has `retro sedens secus'; a single G is provided for `sedens.' In GS:96. `capíllis' is set FG.GFGE.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Et cantetur psalmus usque in finem.}
 
@@ -2987,7 +2950,7 @@ Score000
 
 Rylands-24:184; GS:96; 1519:62r.\footnote{1519:62r. has no flats. The flats appear in 1528:57v. and in Rylands-24:184. In Rylands-24:184. `immaculáti' is set A.A.A.B♭.A.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Et cantetur usque ad finem psalmi.}
 
@@ -2995,23 +2958,23 @@ Score000
 
 Rylands-24:184; GS:97; 1519:62r.\footnote{Rylands-24:184. has no flat. In GS:97. and Rylands-24:184. the psalm is set to psalm-tone IV.i:
 
-  Score000
+  \gregorioscore{}
 
   It may be that this earlier practice was at some time replaced by the officium tone instead.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}He sequentes antiphone si necesse fuerit cantentur.}
 
 Rylands-24:185; GS:97; 1555:unpaged.\footnote{In GS:97. `debétis' is set D.DE.D; `altérius' is set F.E.D.DED.}
 
-Score000
+\gregorioscore{}
 
 \emph{Sequitur alia antiphona.}
 
 Rylands-24:159; 1555:unpaged.\footnote{In 1555. `magis vos' is set CDCA.CB B. 1555. has no flats, and would therefore be in mode I transposed.}
 
-Score000
+\gregorioscore{}
 
 \emph{Item alia antiphona.}
 
@@ -3019,25 +2982,25 @@ Rylands-24:159; GS:97; 1555:unpaged.\footnote{1555. has flats only at `hora' and
 
   GS:97. has an additional A before the second last GF of the long melisma.}
 
-Score000
+\gregorioscore{}
 
 \emph{Sequitur alia antiphona.}
 
 Rylands-24:159; GS:97; 1555:unpaged.\footnote{1555. has `dixit ei.' 1555. begins thus:
 
-  Score000
+  \gregorioscore{}
 
   In GS:97. `ei' appears to be set AC.ABCBA. In 1555. `pondens' is set B.CDEDE. The flat appears in Rylands-24:159. In 1555. `Dómine' is set C.C.ABCCBDCDBBG. GS:97. has `solum pedes sed.' In Rylands-24:159. the final melisma is as follows:
 
-  Score000
+  \gregorioscore{}
 
   In 1555. the final melisma is as follows:
 
-  Score000
+  \gregorioscore{}
 
   The edition follows GS:98. here.}
 
-Score000{]}\footnote{1882:65.}
+\gregorioscore{}{]}\footnote{1882:65.}
 
 \emph{¶ Peracta ablutione pedum dictoque sermone accipiant potum charitatis, quibus rite peractis unus sacerdos dicat has preces.}
 
@@ -3077,27 +3040,27 @@ Score000{]}\footnote{1882:65.}
 
 Grad-1508:100r; Rylands-24:192; GS:101; 1519:64v.\footnote{The flat at the final `Agyos' appears in Rylands-24:192. and Arsenal:87v. In Arsenal:87v. the third `Sanctus' is set GA.GAGF. Arsenal:87v. has a flat at `immortális.' Rylands-24:192. and GS:101. have `satis', not `nimis.'}
 
-Score000
+\gregorioscore{}
 
 ¶ \emph{{[}Finito versu,{]}} \emph{duo dyaconi de secunda forma {[}indutis{]}} \emph{in cappis nigris stantes ad gradum {[}chori{]}\footnote{1555, unpaged.} conversi ad altare simul dicant sic.}\footnote{`\emph{habitu non mutato, sparsim stantes simul dicant}', 1882:69. 1517---Duo diaconi de ii. forma stantes ad gradum chori conversi ad altare simul dicant. {[}1882:69.{]} `\emph{simul incipiant hoc modo sequentur}', 1523:64v.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus respondeat cum genuflexione osculando tribus vicibus in una responsione et resurgat cum canitur} Deus. \emph{Iterum genuflectat cum dicitur} Sanctus. \emph{et resurgat cum dicatur} Fortis. \emph{Tertio chorus genuflectat cum dicatur} Sanctus. \emph{et resurgat cum} Et immortális miserére {[}nobis{]}.\footnote{1882:69.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hoc est ad quemlibet} Sanctus. \emph{genuflectere debet chorus. Sacerdotes vero tenentes crucem retro magnum altare et dyaconi ad gradum chori cantantes} Agyos. \emph{semper sint stantes}.\footnote{`\emph{sparsim}', 1882:70. 1544, \&c,---semper sint. {[}1882:70.{]}}
 
 \emph{Item sacerdotes loco non mutato simul cantent hanc antiphonam sequentem.}\footnote{`\emph{modo quo sequitur}.' 1882:70. In 1882:70 `Quia edúxi' is labelled `\emph{Ant.}'}
 
-Score000
+\gregorioscore{}
 
 \emph{Dyaconi.} Agyos. \emph{Chorus.} Sanctus Deus.
 
 \emph{Sacerdotes loco non mutato dicat.}
 
-Score000
+\gregorioscore{}
 
 \emph{Dyaconi} Agyos. \emph{Chorus} Sanctus Deus. \emph{\&c.}
 
@@ -3105,13 +3068,13 @@ Score000
 
 Grad-1508:100v; Rylands-24:193; GS:102; 1519:65v.\footnote{1519:65v. has no flat at `salus.' 1528:61r. has both flats. In Pro-1519:65v. `lignum' is set DEFE.EDC. In Rylands-24:193. `adorémus' is set FFE.G.GAGF.GF.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus cum genuflectione osculando terram vel formulas {[}cantent antiphonam{]}.}\footnote{1882:70.}
 
 Grad-1508--100v; Rylands-24:193; GS:102; 1519:66r.\footnote{In 1519:66r. this is identified as a Responsorium. In GS:102 `univérso' is set G.GFG.GAG.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et repetatur antiphona post unumquemque versum istius psalmi.}
 
@@ -3129,17 +3092,17 @@ Benedícat nos Deus Deus noster benedícat nos Deus~: et métuant eum omnes fine
 
 Rylands-24:193; GS:102; Grad-1508:101r; 1519:66v.\footnote{In GS:102; Grad-1508:101r. and 1519:66v. the second line of each verse ends EF.E.D. The edition follows Rylands-24:193. here. In GS:102. `Dulce pondus sustinet.' is set D.DG GFF.DC DE.D.C. In Rylands-24:193. `Dulce' is set D.GA. In GS:102. only the first verse is set to music. In Rylands-24:193. `ligni ut sólveret' is set AAG.ED E F.E.D. In Verse 4. Grad-1508:101r. has `Ut medélam.' In Verse 5. Grad-1508:101r. sets `Quando' D.E. GS:102. includes `Amen.' after the final Verse. The Verses `Flecte ramos.' and `Sola digna.' indicated in Missal-1513:79r. do not appear in the noted sources. Their omission would suggest that they were not always included in the liturgy. London, British Library, MS Harley 3866. includes the texts of these verses.}
 
-Score000 Score000
+\gregorioscore{} \gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum, interim sedendo cantent versum hoc modo.}\footnote{`\emph{interim sedentes sacerdotes cantant versum}', 1882:71. 1517---Chorus idem repetat post unumquemque versum interim stando~: sacerdotes dicant versum. {[}1882:71.{]}}
 
-Score000
+\gregorioscore{}
 
 \emph{His finitis deportetur crux per medium chori solenniter a duobus predictis sacerdotibus precedente ceroferario et reponatur ante aliquod altare ubi a populo adoretur, et interim cantetur hec sequens antiphona cum suo versu a tota choro interim sedente\footnote{1517---stando. {[}1882:72.{]}} cantore incipiente {[}hanc{]}\footnote{1882:72.} antiphonam {[}sequentem{]}.}\footnote{1882:72.}
 
 Rylands-24:193; GS:103; Grad-1508:101v; 1519:68r.\footnote{Grad-1508:101v. does not indicate any flats. GS:103. indicates flats only at `voce magna trádidit.' The other flats are found in Rylands-24:193. The flats also appear in Pro-1544:79v. In GS:103. `scissum' is set CDDCA.CD. In Rylands-24:193. the first `est' is set ED. In Grad-1508:101v. `enim' is set AGABAGAEFGF.FEFGFFE; `fúerat' is set FGAGF.FE.GFEFEDED; `ergo' is set GACC.BA; `sanguis' appears as AG.ABAAA; `aqua' is set EGG.GAD; `redemptiónem' is set D.E.C.GA.GAEGFEFEDED; the last note of the first syllable of `nostre' is E, not D. Pro-1544:80r. indicates `℣.' at `Apérto.' In Rylands-24:193. `non posse' is set Fe GA.G. In Pro-1519:68v. `aqua' is set DGG.GAD. In Grad-1508:102r. and Pro-1519:68v. `redemptiónem' appears to be set D.E.F.GA.AGEGFEFEDED. In Pro-1519:68v. `nostre' ends FFFEECEFD.D. In Rylands-24:193. `O' is set DFD. In GS:103. `póndere' is set ADCCDGa.ABAG.G. In Pro-1519:68v. Tartárea' is set FD.F.GF.F. In Pro-1915:68v. and Grad-1508:102r. `inférni' is set a third higher. GS:103. does not indicate the repetition.}
 
-Score000
+\gregorioscore{}
 
 \emph{Revertendo ceroferariis ad vesbibulum precedant sacerdotes in superpelliceis discalceatis sine almico\footnote{Presumably and Amice `\emph{amictus}' or Almuce, `\emph{almucia}.'} deferentes Corpus Christi in pixide ad altare authenticum dum predicta antiphona cantatur. Adorata cruce et finita predicta antiphona cum suo ℣. predicti duo sacerdotes ea reverentia qua crucem asportaverunt usque ad summum altare iterum reportent~: tunc conveniant omnes clerici de choro ad altare et reinduat ibidem sacerdos casulam qua prius exuerat et accedat ad gradum altaris cum dyacono et subdyacono et dicant} Confíteor. Misereátur. \emph{et} Absolutiónem. \emph{cum precibus et oratione} Aufer a nobis. \emph{more solito.} Missale:1142.
 
@@ -3147,51 +3110,51 @@ Score000
 
 1519:69r; AS:233; Ant-1519:212v; Brev-1531:124v.\footnote{1519:69r. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus prosequatur.}
 
-Score000
+\gregorioscore{}
 
 \emph{Dum predictum ℟. canitur cum suo ℣. predicti duo sacerdotes thurificent sepulchrum quo facto et clauso hostio incipiat idem sacerdos sequens.}
 
 1519:69v; AS:229; Ant-1519:210r; Brev-1531:123v.
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus prosequatur.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item predicti duo{]}} \emph{sacerdotes dicat {[}istas{]}\footnote{1882:73.} iij. antiphonas sequentes {[}genuflectendo continue.{]}}
 
 1519:69v.\footnote{In 1519:69v. an F-clef appears in error.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus prosequatur.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Iterum{]}\footnote{1882:73.} sacerdotes.}
 
 1519:70r.
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus prosequatur.}
 
-Score000
+\gregorioscore{}
 
 \emph{Item sacerdotes dicat sic.}
 
 1519:70r.
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus prosequatur.}
 
-Score000
+\gregorioscore{}
 
 \emph{Ad istas iij. antiphonas genuflectent continue predicti ij. sacerdotes.}
 
@@ -3267,7 +3230,7 @@ Expécta Dóminum viríliter age et confortétur cor tuum~: et sústine Dóminum
 
 1519:71v.
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \subsubsection{Oratio.}
@@ -3277,13 +3240,13 @@ Score000
 
 1519:72v.\footnote{`spiritális', 1882:77.}
 
-Score000
+\gregorioscore{}
 
 \emph{Omnes orationes dicuntur cum} Orémus. \emph{sub tono predicto. Hic aspergatur aqua benedicta super ignem. Deinde cantatur ut sequitur.}
 
 1519:71v.
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \subsubsection[{[}Oratio.{]}]{{[}Oratio.{]}\footnote{1882:77.}}
@@ -3317,29 +3280,29 @@ Orémus.
 
 Rylands-24:195; 1519:62v; GS:104; Grad-1508:103v.\footnote{`rútuli', 1523:72v. In Rylands-24:195 `redde' is set CA.G. In Rylands-24:195. (verse 2) `Ne' is set G. In many sources the third phrase is varied in the last verse: `Regnum' is set C.D rather than C.DE. Only the 1555 edition and GS:104. conform this verse to the others. Arsenal:89v. has a different tune---see the Appendix.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum {[}ita videlicet ut dum dicti clerici cantent versum stent gradibus fixis, et dum chorus prosequatur primum versum procedant. Quod similiter est observandum dum canitur} Rex sanctórum angelórum. \emph{cum suis versibus{]}.}\footnote{1882:79.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus repetat} Invéntor {[}rútili{]}.\footnote{1882:79.}
 
 \emph{Clerici {[}dicant{]}}\footnote{1882:79.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus repetat} Invéntor {[}rútili{]}.
 
 \emph{Clerici {[}dicant{]}}\footnote{1882:79.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Chorus repetat} Invéntor rútili.
 
 \emph{Clerici {[}dicant{]}\footnote{1882:79.} versum.}
 
-Score000
+\gregorioscore{}
 
 \emph{Deinde sequatur benedictio cerei paschalis ab ipso dyacono indutus ad processionem accepta {[}prius{]}\footnote{1882:79.} benedictione ab executore officii ad borealem converso ad gradum presbyterii ceroferarii dyaconi assistentibus uno a dextris, reliquo a sinistris ad eum conversis cereis extinctis nisi cereus super hastam. Subdyaconus vero textum tenens stet ei oppositus juxta quem stet portitor haste ex una parte et ceroferarius ejusdem parvi cerei}\footnote{`The \emph{parvus cereus} is explained by the Ordinal quoted by Dr.~Rock, iv. 246: \emph{Finita benedicitione ignis et incensi \ldots{} Cereus super hastam illuminetur, et alia candela incendatur, unde idem cereus super hastam si forte extinguatur possit reaccendi.}' {[}1882:xv.{]}} \emph{ut patet {[}in ubi protrahitur{]}\footnote{1882:80.} in statione {[}sequente{]}\footnote{1882:80.} hoc modo.}
 
@@ -3363,7 +3326,7 @@ Score000
 
   (5.): In Rylands-24:196. `Ut' is set EFEFFEEDE. In 1513:81r. `méritis' is D.C.CBA; `dignátus' is set C.AGGA.BC. In 1513:81r. `cérei' is set DDE.DC.C; `implére' is set GGA.BC.FGA; `perfíciat' is set EFG.AGF.EF.FE. In 1508:104v. `perfíciat' is set AGFEF.G.GFEEF.F. In GS:106. `implére' is set G.GABC.BA.
 
-  (6.): In 1508:104v. `Per' is set EFEFF. In GS:106. `per' is set EFEFEE. In 1513:81r. `Per' is set EFEF. In Rylands-24:196. `Per' is set EFEEFe. In 1508:104v. `nostrum' is set B.BCA. In 1513:81r. `Christum' is set C.CB; `Fílium' is set A.BC.BAG. `tuum qui tecum' {[}in place of `suum qui cum eo'{]}, 1515. {[}Dickinson:338†.{]} In GS:106. `Fílium suum' is set BC.BA.AG A.A. In 1513:81r. `regnat Deus' is set G.AC C.CB; `Spíritus' is set B.G.E. 1513:81r, 1508:104v. and Rylands-24:196. have no flat. GS:106. omits Deus and its music. In GS:106. `unitáte' is set G.A.CCB.A. In 1513:81r. `Sancti' is set FA.A.
+  (6.): In 1508:104v. `Per' is set EFEFF. In GS:106. `per' is set EFEFEE. In 1513:81r. `Per' is set EFEF. In Rylands-24:196. `Per' is set EFEEFe. In 1508:104v. `nostrum' is set B.BCA. In 1513:81r. `Christum' is set C.CB; `Fílium' is set A.BC.BAG. `tuum qui tecum' {[}in place of `suum qui cum eo'{]}, 1515. {[}Dickinson:338† .{]} In GS:106. `Fílium suum' is set BC.BA.AG A.A. In 1513:81r. `regnat Deus' is set G.AC C.CB; `Spíritus' is set B.G.E. 1513:81r, 1508:104v. and Rylands-24:196. have no flat. GS:106. omits Deus and its music. In GS:106. `unitáte' is set G.A.CCB.A. In 1513:81r. `Sancti' is set FA.A.
 
   (7.): In 1513:81v. `Habémus' is set A.AC.B. In GS:106. `sursum' is set GABCCDc.BAG. In 1513:81v. `Dómino' is set ABC.A.AABG. In 1508:105r. `Grátias' is set C.C.CBAGGA; `Deo' is GAC.CB. In 1508 `et justum est' appears to be set CB BC.AB B.
 
@@ -3381,7 +3344,7 @@ Score000
 
   (14.): In 1513:82r. `Hec nox' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In 1508:105v. `nox' appears 5 notes earlier. In 1513:82r. `qua' is set C. In 1508:105v. `mortis' is set AB.A. In GS:108. `victor' is CCB.BAG. In GS:108. `vínculis' is set C.B.CBBCA.
 
@@ -3389,7 +3352,7 @@ Score000
 
   (16.): In 1513:82r. `mira' is set D.CBC In Rylands-24 `O mira' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   (17.): In 1508:105v. `inestimábilis' is set E.FEF.D.DCB.BD.DCBCCB. In GS:108. `inestimábilis is set E.FEF.D.DCB.CB.B. In 1513:82r. 'caritátis' is set C.CB.AB.BA; `ut' is set C. In 1508:105v. `Fílium' is set C.CBA.ACBAG (or CCB.A.ACBAG).
 
@@ -3401,17 +3364,17 @@ Score000
 
   (20.) In 1508:105v. `O certe' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In 1513:82v. `et is set CBBC. In GS:108. 'et' is set CBBCb. In 1513:82v. `ab' is set A. In 1508:105v. `ínferis' is set CCb.AA.ABG. In GS `ínferis' is set CA.AABG. In GS:108 `ab' is set B.
 
   (21.): In 1513:82v. `Hec' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In GS:108. `Hec' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In 1513:82v. `illuminátio' is set D.C.B.C.B.CBBC.
 
@@ -3421,7 +3384,7 @@ Score000
 
   (24.): In 1508:106r. `tibi' is set CDC.CBB. In 1513:82v. `oblatióne' solénni per ministrórum' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In GS:109. `solénni' is set DCB.CCB.B. In 1513:82v. `opéribus' is set B.C.CB.AG; `sacrosáncta' is set C.BAB.C.B. In 1508:106r. `opéribus' is set B.CCB.A.AG. GS:109. omits `sacro-', but includes the music. In Rylands-24:197. `sacrosáncta' is set B.BAAB.C.B.
 
@@ -3435,17 +3398,17 @@ Score000
 
   (28.): In 1513:83r. `O beáta' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In GS:109. `O' is set as follows:
 
-  Score000
+  \gregorioscore{}
 
   In 1508:106v. `mater' is set CBA.G. `O' omits the last 6 notes of the melisma. In 1508:106v. the text-underlay at `beáta' is misaligned. In 1513:83r. `expoliávit' is set A.C.B.C.B; `Egýptios' is set CB.BC.AB.B. In 1508:106v. `Egíptios' is set CB.BCAAB.B.B. In GS:109. Egýptios' is set AG.AB.B.B. In GS:109. `in' is set CB.
 
   (29.): In 1513:83r. `Dómine' is set DCBC.CBA.B; `honórem' is set E.EGFFGE.E. In GS:109. `Dómine' is set CCB.AB.B. In 1513:83r. `consecrátus' is set DCBCD.DE.DCB.B; `ad' is set BBC; `calíginem' is set A.C.C.B. In GS:109. `consecrátus' is set BAGA.DDEDEC.B.B. In Rylands-24:198. `consecrátus is set DEDC.DEDC.B.B; 'calíginem' is set A.C.A.CCb. In 1513:83r. `indefíciens' is set C.CA.CA.CEEF.D; `persevéret' is set C.CB.ABCCBAGA.AG. In 1508:106v. `persevéret' is set CCb.ABCCBAG.GA.A.
 
-  (30.): In 1513:83v. `odórem' is set BC.DE.E; `suavitátis' is set E.EF.D.DC.BC; `acceptúrus' is set DE.DEC.B.B; `lumináribus' is set C.A.C.A.ACBAG. `accéptus; accénsus in 97. 26.' Dickinson:342†.
+  (30.): In 1513:83v. `odórem' is set BC.DE.E; `suavitátis' is set E.EF.D.DC.BC; `acceptúrus' is set DE.DEC.B.B; `lumináribus' is set C.A.C.A.ACBAG. `accéptus; accénsus in 97. 26.' Dickinson:342† .
 
   In 1508:106v. the text underlay of `suavitátis' is unclear.
 
@@ -3457,19 +3420,19 @@ Score000
 
   (34.): In 1513:83v. `Dómine' is set DCBC.CBA.B; `tuos' is set AB.C. In 1508:107r. `ergo' is set CDE.EF. In Rylands-24:198. `Dómine' is set DCBCCB.AB.B. In 1513:83v. `devotíssimum' is set C.C.D.CCB.AG; `una cum patre' is set B.BC D CCb.AB. In 1508:107r. `una' is set B.BCD. In 1513:83v. `nostro papa' is set C.BA.BGAB.B; the first `\emph{N.}' is set A.AB.AB; the following two are set A.AB.AB.B; `atque rege' is set BAB.C CBB.G. In 1513:83v. `patre nostro pape \emph{N.} atque' is stricken out. In 1508:107r. each `\emph{N.}' is set A.AB.AB.B. In GS:110. the first two `\emph{N.}' are set A.ABG.AB.B; the third is set A.ABa.AB.B. In Rylands-24:198. the first `\emph{N.}' is set AABa.AAAB.B, and the second and third are set AAABa.AB.B. In 1513:83v. `témporum' is set D.DE.CB. In Rylands-24:198. `necnon' has no music; `et epíscopo' is set A CBC.D.C.CCB. In 1513:83v. `paschálibus' is set E.EEF.D.CBAG. In Pro-1519:79r. `patre nostro papa \emph{N.} atque' is crossed out. If a queen were on the throne the following would presumably be sung:
 
-  Score000
+  \gregorioscore{}
 
   (35.): In 1513:83v. `ímperas' is set BDED.Dc.CB. In 1513:83v. `gloriáris' is set DE.E.GFFG.E; `solus' is set CC.C; `altíssimus' is set CB.C.E.CBC. In GS:110. `altíssimus is set CBC.D.EDCBC.CB. In Rylands-24:198. `gloriáris' is set D.DE.EFFG.FE. In 1513:83v. `Jesu' is set CBBCBCDCBAACBAG; `cum Sancto Spíritu' is set AACb ABCEEFED.DC BCD.DCBC.CB; `in glória' is set B GAC.C.C. In 1508:107r. `Spíritu' is set D.DCBCCB.B. In GS:110. `Christe is set GACBC.A. In Rylands-24:198. `Spíritu' set D.EDCBC.CB. In GS:110. `Patris' is set BCBCBAGACBBC.A. In Rylands-24:198. `Patris' is set BCBCCAAGACBCCb.A. In 1513:84r. `Amen' is set ADDCBCDEFEDCBCDCBAAB.B.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic dyaconus ponat incensum in cereum in modum crucis {[}cantando hoc quod sequitur hoc modo{]}.}\footnote{1882:82.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic accendatur cereus paschalis de novo igne, nec extinguatur ante completorium diei sequentis. Hic accendantur cetera luminaria per ecclesiam.}
 
-Score000
+\gregorioscore{}
 
 \emph{Finita benedictione cerei paschalis sacerdos completurus officium indutus casula ad altare authenticum assumpta~: cum ministris suis ad altare accedat confessione jam non dicta, sed tantum} Pater noster. \emph{et osculando altare cum suis ministris eat sessum. Accedat cereus super hastam~: minister vero qui alium cereum defert ad sinistrum cornu altaris stet super gradum {[}ad{]}\footnote{1882:83.} australe conversus quousque finiatur septiformis letania, postea legantur lectiones sine titulo a dignioribus personis, \&c.} Missale:731.
 
@@ -3479,7 +3442,7 @@ Score000
 
 1519:79v; Ant-1519-P:172r; Missal-1531-P:48v.
 
-Score000
+\gregorioscore{}
 
 Sancta virgo vírginum.
 
@@ -3563,7 +3526,7 @@ Sancta Cecília. Ora.
 
 Sancta Scolástica. Ora.
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Si episcopus presens fuerit indutus cappa serica stet in sede sua dum predicta letania canitur.}
 
@@ -3669,7 +3632,7 @@ Omnes sancti. Oráte.
 
 1519:81v.
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \lettrine{O}{m}nípotens sempitérne Deus adésto magne pietátis mystériis, adésto sacraméntis et ad recreándos novos pópulos quos tibi fons baptismátis párturit Spíritum adoptiónis emítte~: ut quod nostre humilitátis geréndum est, ministério tue virtútis impleátur
@@ -3679,19 +3642,19 @@ Score000
 
 1519:82r.
 
-Score000
+\gregorioscore{}
 
 1519:82r.
 
-Score000
+\gregorioscore{}
 
 \emph{Hic dividat aquam manu sua in modum crucis dicenda {[}hoc quod sequitur hoc modo{]}\footnote{1882:88.} sic.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic sacerdos ejiciat sua manu aquam de fonte in modum crucis in iiij. partes {[}dicendo hoc modo{]}.}\footnote{1882:89.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic mutet vocem suam quasi legendo} Hec nobis precépta servántibus tu Deus omnípotens et\footnote{not in 1882:89.} clemens~: adésto tu benígnus aspíra.
 
@@ -3699,15 +3662,15 @@ Score000
 
 \emph{Hic stillet de cereo in fontem in modum crucis postea dicat.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic mittat cereum in medio}\footnote{`\emph{infra}', 1882:89.} \emph{fontis crucem faciens, {[}et postea prosequatur{]}.}\footnote{1523:85r. `\emph{dicendo hoc quod sequitur hoc modo}', 1882:89. 1519:85r. has after faciens `\emph{\&c.}'}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic extrahatur cereus a}\footnote{`\emph{extra}', 1882:89.} \emph{fontes dicendo {[}sic{]}.}\footnote{1882:89.}
 
-Score000Per Dóminum nostrum Jesum Christum Fílium tuum~: qui tecum vivit et regnat in unitáte Spíritus Sancti Deus. Per ómnia sécula seculórum. \emph{{[}℟.{]}} Amen.
+\gregorioscore{}Per Dóminum nostrum Jesum Christum Fílium tuum~: qui tecum vivit et regnat in unitáte Spíritus Sancti Deus. Per ómnia sécula seculórum. \emph{{[}℟.{]}} Amen.
 
 \emph{¶ Consecratis fontibus non infundetur oleum neque crisma nisi fuerit aliquis baptizandus. Completo fontium ministerio tres clerici de superiori gradu in cappis sericis videlicet duo in cappis rubeis et tertius in cappa alba}\footnote{`\emph{alma}', 1519:85v.} \emph{in medio processionis in eundo cantent hanc letaniam simul~: ita quod primus ℣. cantetur a predictis clericis antequam procedat processio hoc modo sequente.}
 
@@ -3715,11 +3678,11 @@ Rylands-24:207; 1519:85v; Grad-1508:108r; GS:114; Missal-1513:85v.\footnote{1508
 
 Mode III. mundum notes together.
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum.}
 
-Score000
+\gregorioscore{}
 
 \emph{Deinde incipiatur missa sine regimine chori immediate cantore incipiente.} Missale:743.
 
@@ -3737,11 +3700,11 @@ Score000
 
 1519:87r; AS:241; Ant-1519:214r; Brev-1531:125v.\footnote{1519:87r. has no flats. In 1519:87v. `Judéi' is set CD.EFD.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus respondeat {[}hoc modo{]}\footnote{1882:92.} sic {[}quo sequitur{]}.}\footnote{1882:92.}
 
-Score000
+\gregorioscore{}
 
 \emph{Finita antiphona cum sua versu a toto choro dicat}\footnote{`\emph{incipiat}', 1882:92.} \emph{excellentior persona in ipsa statione conversus ad altare versiculum.}
 
@@ -3763,7 +3726,7 @@ Orémus.
 
 1502:2r; 1530:4r; 1519:88r; GS:116; Grad-1508:110r; Missal-1513:86r.\footnote{In the processionals `salvi' is st GBD.C. {[}In 1508:110r. `pervénit' is set Ba.AC.C; `salvi' is set GCCD.C; at `dicent' the letter `e' is missing; the first `allelúya' is set AG.G.GAABa.A. GS:116. gives only beginning of Psalm-Verse, plus the word `Amen' along with the Psalm-Tone ending.{]}}
 
-Score000
+\gregorioscore{}
 
 Vidi aquam. Glória Patri. \emph{Et omnes ℣. et orationes ut supra in prima dominica adventus Domini.} 7.
 
@@ -3771,21 +3734,21 @@ Vidi aquam. Glória Patri. \emph{Et omnes ℣. et orationes ut supra in prima do
 
 Rylands-24:209; GS:116; 1519:88v.\footnote{In Rylands-24:209. and GS:134. `inférnum' is set FA.AAG.ED. GS:166. breaks off in the middle of verse 3. In verse 1. GS:116. has `mundi'; in verse 2. GS:116. has `dantque creatóri', set FD.EF GF.D.C.E; in verse 3. GS:116. has `Pollícitam; 1882:93. has 'Sollicitam sed \ldots{} sepúlte Deus'; 1528:82r. has `Solícitam te \ldots{} sepúlte Deus'; in verse 8. 1882:93. has `Redde diem, qui nos'; in verse 10. 1882:93. has `Trístia cessérunt'; 1528:83r. has `expavíque.' Verse 1: in GS:116. and Rylands-24:209. `grátia' is set G.F.D. Verse 2: in Rylands-24:209. `Deus ecce per' is set FD.E D.G G. GS:116. and Rylands-24:209. have `Dantque Creatóri'; this is set GD.EF GF.D.C.E. Verse 3: in 1519:88v. and 1528:82r. `redde fidem precor alma' is set F.A F.D E.E DG.F. 1528:82r. has `preco.' GS:116. appears to begin `Pollícitam.' In Rylands-24:209. `redde fidem' is set G.F G.A. Verse 5: in Rylands-24:209. `claudúntur' is F.D.E. In the printed processionals `tegat inclúsum' is st EF.GF D.C.E. Here the edition follows Rylands-24:209. Verse 7: in the printed processionals `Intrans mortis iter' is set FD.EF GF.D C.E. Here the edition follows Rylands-24:209. Verse 8: in the printed processionals `ut' is set D. Here the edition follows Rylands-24:209. In Rylands-24:209. `Redde diem quem nos' is set FD.E F.GF DC E. Verse 9: in the printed processionals `de' is set D. Here the edition follows Rylands-24:209. In the printed processionals `séquitur liber' is set EF.GF.D C.E. Here the edition follows Rylands-24:209.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum cantore incipiente} {[}Salve festa dies{]}.\footnote{1882:93.} \emph{Quotienscunque dicitur} Salve festa dies. \emph{percantetur primus ℣. a predictis clericis in medio chori antequam procedat processio.}
 
-Score000
+\gregorioscore{}
 
 \emph{In revertendo usque ad crucem in ecclesia per idem ostium qua egressa est dicatur hec antiphona cantore incipiente {[}hoc modo{]}.}\footnote{1882:94.}
 
 Rylands-24:210; 1519:89v.\footnote{1519:89v. has no flats. Flats appear in 1528:83r. and in Rylands-24:210. In 1519:90r. `vobis quia illum quem quéri' appears a third lower. 1528:83v, 1530:106v, and 1544:106v. have `propter vos' in the verse. In the printed processionals `terróre' is set C.DCCACECD.D. In the printed processionals `Crucifíxum' is set G.GA.AB.A.}
 
-Score000
+\gregorioscore{}
 
 \emph{Tres clerici de superiori gradu in cappis sericis ad populum conversi in pulpito dicant {[}hunc{]}\footnote{1882:94.} versum {[}modo quo sequitur{]}.}\footnote{1882:94.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori cantor incipiat antiphonam} Christus resúrgens. \emph{cum suo versu {[}et percantetur{]}\footnote{1882:94.} a toto choro ut supra.} 200.
 
@@ -3807,29 +3770,29 @@ Score000
 
 Rylands-24:211; 1519:90v; AS:239; Ant-1519:218v; Missal-1531:127v.\footnote{1519:91r. omits the doubling of F at the mediation throughout. In 1519:91r. the verse `Quis sicut' is set thus~:
 
-  Score000
+  \gregorioscore{}
 
   In 1519 `érigens páuperem' is set F.F.EE C.C.D; `pópuli' is set F.E.E; `filiórum' is set F.F.F.E.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus {[}totam{]}\footnote{1882:94.} prosequatur antiphonam antequam processio procedat sic.}
 
-Score000
+\gregorioscore{}
 
-\emph{Qua finita rectores ex parte chori incipiant psalmum sequentem sic.}\footnote{`\emph{hoc modo}', 1882:94.} Score000
+\emph{Qua finita rectores ex parte chori incipiant psalmum sequentem sic.}\footnote{`\emph{hoc modo}', 1882:94.} \gregorioscore{}
 
 \emph{Et percantetur ab illa parte hoc modo ut sequitur hic.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic procedat processio~: deinde dicatur alius versus ex alia parte chori hoc modo {[}quo sequitur{]}.}\footnote{1882:95.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Et{]}\footnote{1882:95.} sic dicatur totus psalmus cum} Glória Patri. \emph{et} Sicut erat. \emph{repetatur j.} allelúya. \emph{post suum versiculum semel dicendo non alternando {[}sed modo superius notato{]}\footnote{1882:95.} ut patet.}\footnote{`\emph{ut prius}', 1882:95.}
 
-Score000
+\gregorioscore{}
 
 \emph{Quo finito reincipiatur antiphona a rectoribus chori, et percantetur a toto choro.}
 
@@ -3850,33 +3813,33 @@ Score000
 
 Rylands-24:212; 1519:92v; AS:239; Ant-1519:219v; Brev-1531:127v.\footnote{1519:92v. has no flat. In 1519:92v. `Allelúya' appears thus at the beginning~:
 
-  Score000
+  \gregorioscore{}
 
   and thus at the end~:
 
-  Score000
+  \gregorioscore{}
 
   In 1519:92v. `nomen' is set EFG.GDG.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus repetatur.}\footnote{`\emph{Chorus finiat}', 1882:96.}
 
-Score000
+\gregorioscore{}
 
 \emph{Pueri {[}dicant hunc versum sequentem{]}.}\footnote{1528:85v.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus sic respondeat {[}ut sequitur{]}.}\footnote{1528:85v.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:97.} pueri dicant sic {[}ut sequitur{]}.}\footnote{1528:85v. At this point AS:239. includes a second verse:
 
-  Score000}
+  \gregorioscore{}}
 
-Score000
+\gregorioscore{}
 
 \emph{Non ulterius dicatur post repetitionem} Allelúya. \emph{sine neuma.}
 
@@ -3900,31 +3863,31 @@ Score000
 
 Rylands-24:212; 1519:92v; AS:239; Ant-1519:219v; Brev-1531:127v.\footnote{It should be noted that the text setting of the first `Allelúya' differs from those that follow. Rylands-24:212. gives only a single `Allelúya', at the beginning; it is set E.GAGFE.DE.E. Perhaps in earlier days the first Allelúya' would have been treated like the incipit of an antiphon, and sung by the cantor only. Rylands-24:212. gives only the first verse of the psalm. In verse 1: Rylands-24:212. `de Egypto' is set E E.D.C. In 1519:103r. in verse 15. `gútture' is set F.F.E; verse 19. has `speravérunt'; in verse 21. `Israel' is set D.D.C; in verse 23. `a Dómino' is st D D.C.C; in verse 27. `Dómino' is set D.D.C; in the `Glória Patri' `Fílio' is set D.D.C.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus prosequatur {[}sic{]}.}\footnote{1882:97.}
 
-Score000
+\gregorioscore{}
 
 \emph{Que licet brevis sic terminetur a choro. Statim rectores ex parte decani ad chorum conversi simul incipiant {[}hunc{]}\footnote{1882:97.} psalmum {[}sequentem hoc modo{]}.}\footnote{1882:97.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus ex parte predicta ℣. prosequatur {[}ut sequitur{]}.}\footnote{`\emph{hoc modo}', 1882:97.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hinc procedat processio~: alius ℣. ex alia parte chori dicens sic.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et hoc modo dicatur totus psalmus cum} Glória Patri. \emph{et} Sicut erat. \emph{{[}cum{]}\footnote{1882:97.} uno} Allelúya. \emph{tantum}\footnote{`\emph{tamen}', 1882:97.} \emph{post unumquemque versum \&c.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic thurificet sacerdos crucifixum.}
 
-Score000
+\gregorioscore{}
 
 \emph{Quo finito dicat sacerdos ℣.} Dícite in natiónibus.
 
@@ -4078,11 +4041,11 @@ Score000
 
 Rylands-24:223; GS:125; 1519:97v.\footnote{1519:97v. has `latus sáncea mórtuus.' 1519:97v. has no flat at `fecérunt' or at `redémptio.' In 1882:103 `fel dedérunt et in latus láncea'is omitted. 1528:90r. has all the flats. In many printed processionals 'coronátus' is set FE.FGFE.D.D. In Rylands-24:223. `resurréxi' is set A.A.G.FE. In many printed processionals `est' is set D. In the verse, in Rylands-23:223. `die' is set D.E.}
 
-Score000
+\gregorioscore{}
 
 \emph{Duo clerici de secunda forma in superpelliciis ante introitum chori conversi ad populum dicant versum.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori antiphona} Christus resúrgens. \emph{sine versu.} 201.
 
@@ -4114,13 +4077,13 @@ Score000
 
 1519:99r; Rylands-24:229.
 
-Score000
+\gregorioscore{}
 
 \emph{Non dicatur nisi primus versus sed statim sequatur} Glória Patri. 426. \emph{Deinde repetatur antiphona} Exúrge Dómine. \emph{et sic post ceteras antiphonas fiat que sequuntur. His dictis fiat processio cantore incipiente {[}antiphonam sequentem{]}\footnote{1882:105.} hoc modo {[}ut sequitur{]}.}\footnote{1528:91v.}
 
 1519:99r; Rylands-24:229.\footnote{In Rylands-24:229. the final syllable of `sanctificáte' is set DCCDAGBAAG; the final syllable of `benedícite' is set GAGFE; the second syllable of `allelúya' is set GCGAGGFGACCEDDBAGBCBABAG. In 1519:99r. `pace' is set CD.CDCCD. In many printed processionals `benedícite' is set CDC.CB.AG.A.GABAGA.GAGGF. In 1525:105r. the melisma of `allelúya' begins CBC. (Compare WO-F-160:113r.).}
 
-Score000
+\gregorioscore{}
 
 Glória Patri. 429. \emph{Repetatur antiphona.}
 
@@ -4128,7 +4091,7 @@ Glória Patri. 429. \emph{Repetatur antiphona.}
 
 1519:99v; Rylands-24:229.\footnote{In Rylands-24:229. `monte' is set GAC.CCCA. 1519:99v. has no flat. In 1519:99v. the final syllable of `protéctio' is set GF. In Rylands-24:229. `monte' is set GAC.CCCA. In the printed processionals the second `et' is set F; `salvábitur' is set AC.C.C.CCDBCD; `allelúya' is set Ag.GCGAGGFGACCDCCBABCBABAG.GACAB.AG.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Et repetatur antiphona.{]}}\footnote{1882:105.}
 
@@ -4136,21 +4099,21 @@ Score000
 
 1519:100r; Rylands-24:229.\footnote{The flat appears in Rylands-24:229. In Rylands-24:229. `Hierusalém' is set F.FE.DE.E.CEGGFDCDFGFFE. In the printed processionals `allelúya' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In 1519:100r. the psalm tone ending is IV.i. (ending on E). The edition uses the ending provided in Rylands-24:229. which agrees with patterns of the \emph{Tonale}.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}cum} Glória Patri. \emph{et} Sicut erat.{]}\footnote{1882:105. This could be sung as in a psalm, i.e.~in two verses, or as in an officium, i.e.~a single verse, as follows:
 
-  Score000}
+  \gregorioscore{}}
 
 \emph{Si necesse fuerit ad pluviam postulandam cantentur hec sequens antiphonam, sinautem non dicitur.}
 
 1519:100r; Rylands-24:229.\footnote{In the printed processionals `Dómine' is set D.A.CDED; `plúviam' is set FF.DE.DDC; `terre' is set CECD.A. In Bodleian Library MS. Rawl. liturg. d.~4:96v. `Dómine' is set D.A.CDE. In 1519:100r. `plúviam' is set FF.DEDC.C.}
 
-Score000
+\gregorioscore{}
 
 {[}Glória Patri. Sicut erat. 426. \emph{Et repetatur antiphona.{]}}\footnote{1882:105.}
 
@@ -4158,7 +4121,7 @@ Score000
 
 1519:100v; 1525:106v.\footnote{In Bodleian Library MS. Rawl. Liturg. d.~4:96v. `géntium' is set F.FGF.F; `nobis' is set AAG.AGAFGAG. In 1525:106v. `géntium' is set EF.F.EGFF; `dare' is set A.GA. In most printed processionals `nisi tu' is set FD.FE FG. Here the edition follows 1525:106v. (and WO-F-160:231). In most printed processionals `nobis' is set AAG.GAGF. In 1555:unpaged. `nobis' is set AAG.FAGFGAG. The edition follows 1525:106v.}
 
-Score000
+\gregorioscore{}
 
 {[}Glória Patri. Sicut erat. 427. \emph{Et repetatur antiphona.{]}}\footnote{1882:106.}
 
@@ -4166,11 +4129,11 @@ Score000
 
 1519:101r; 1525:107r.\footnote{In most printed processionals the underlay differs at `plúviam \ldots{} dedísti' thusly:
 
-  Score000
+  \gregorioscore{}
 
   In 1555:unpaged. `super' is set DCC.A.}
 
-Score000
+\gregorioscore{}
 
 {[}Glória Patri. Sicut erat. 427.
 
@@ -4178,7 +4141,7 @@ Score000
 
 1519:101v; 1525:107v.\footnote{Bodleian Library MS. Rawl. Liturg. d.~4:97v. omits the flat at `plantávit', but includes the flat at `allelúya.' In 1525:107v. `rúgiunt' is set F.F.FFF; `miserére' is set A.ACA.BC.C. In 1519:101v.'plúviam' is set AGA.FD.EFEF. The flat at `allelúya' appears in 1525:107v.}
 
-Score000
+\gregorioscore{}
 
 \emph{Ad {[}hanc{]}\footnote{1882:106.} antiphonam non sequatur psalmus.}
 
@@ -4186,7 +4149,7 @@ Score000
 
 1519:102r; Rylands-24:230.\footnote{In the printed processionals `Inundavérunt' is set D.D.D.DFGFF.DEFEC; `cápita' is set FGAG.GFFED.DCDEDCD; `tuum' is set AC.AB♭A; `fáciem' is set GA.FED.DG. In Rylands-24:230. `lacu' is set GD.DCBA. Bodleian Library MS. Rawl. Liturg. d.~4:98r. has no flats. In Rylands-24:230. `a' is set D. In Rylands-24:230. the division of the psalm verse is at `aque.'}
 
-Score000
+\gregorioscore{}
 
 {[}Glória Patri. Sicut erat. 426. \emph{Et repetatur antiphona.}
 
@@ -4194,7 +4157,7 @@ Score000
 
 1519:102r.\footnote{In 1519:102r. `neque' is set BCED.DEC; `líbera' is set GCC.CD.CD. The edition follows 1508:unpaged and Bodleian Library MS. Rawl. Liturg. d.~4:98v. here.}
 
-Score000
+\gregorioscore{}
 
 {[}Glória Patri. Sicut erat. 428.{]}\footnote{1882:106.}
 
@@ -4202,7 +4165,7 @@ Score000
 
 1519:102v; Rylands-24:230.\footnote{In Rylands-24:230. `mortis' is set ACGA.GF. In the printed processionals `plebem' is set EFG.GA.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}cum} Gloria Patri. 427.{]}\footnote{1882:107.}
 
@@ -4210,13 +4173,13 @@ Score000
 
 Rylands-24:230.\footnote{Rylands-24:230. gives only the incipit of the psalm verse and the psalm tone ending.}
 
-Score000
+\gregorioscore{}
 
 \emph{Pro quacumque tribulacione.}
 
 Rylands-24:230.\footnote{Rylands-24:230. gives only the incipit of the psalm verse and the psalm tone ending.}
 
-Score000{]}\footnote{Rylands-24:230.}
+\gregorioscore{}{]}\footnote{Rylands-24:230.}
 
 \emph{His dictis dicant septem. psalmos penitentiales quantum}\footnote{`\emph{si tantum}', 1882:107.} \emph{restat iter~: cum} Glória Patri. \emph{et} Sicut erat. \emph{et antiphona} Ne reminiscáris. \emph{Require hos psalmos cum antiphona in quarta feria in capite jejunii}\footnote{`\emph{in fine libri}', 1882:107.} 56. \emph{: et dicatur cum hac letania et ℣. et oratione sequente~: et hec omnia sine nota dicantur~: ita tamen quod quicquid dicat sacerdos de letania, chorus idem repetat plene et integre usque ad prolationem} Peccatóres te rogámus audi nos. \emph{tunc enim post} Ut pacem nobis dones. \emph{Chorus respondent,} Te rogámus audi nos. \emph{Et {[}sic{]}\footnote{1882:107.} post singulos ℣. usque ad} Fili Dei. Te rogámus {[}audi nos{]}.\footnote{1882:107.}
 
@@ -4530,7 +4493,7 @@ Orémus.
 
 1519:105v; GS:132; Grad-1508:128r; Missal-1513:97r.\footnote{In 1519:105v. part of the music for the first `allelúya' is missing because of the deletion of `papam' on the recto. In Grad-1508:128v. `sancto suo' is set A.AGAG GEF.FE. In Grad-1508:128v. the second `ejus' is set GFFEE.ED. GS:132. has no flat. GS:132. gives the beginning of the Psalm-Verse followed by the Psalm-Tone ending together with the word `Amen.'}
 
-Score000 Score000
+\gregorioscore{} \gregorioscore{}
 
 \begin{lesson}
 \subsubsection{Oratio.}
@@ -4548,7 +4511,7 @@ Score000 Score000
 
 1519:106r; GS:132; Grad-1508:128v; Missal-1513:97r.\footnote{In Grad-1508:128v. `Allelúya.' is set F.G.AC.CCCDBCAG; the final note of the jubilus is A; `confitémini' is set G.G.C.CC.CCAG; `misericórdia' is set AF.G.A.ACC.C.AGG; the final melisma is BABDBAGABCAAG. GS:132. omits the last four notes. 1519:106r. `Dómino' is set BG.ACBC.C; the second syllable of `ejus' appears 2 notes later.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Diaconus legat evangelium sic dicendo.} Sequéntia sancti evangélii secúndum Lucam. \emph{Chorus respondeat} Glória tibi Dómine.{]}\footnote{1882:113.}
 
@@ -4560,9 +4523,9 @@ Score000
 
 1519:106v; GS:132; Grad-1508:128v; Missal-1513:97v.\footnote{GS:132. has a flat signature until `fáceret.' In GS:132. and Grad-1508:128v. `multórum' is set G.GACB(♭)C.GA; the edition follows Rylands-24:231. GS:132. has `salvum.' 1519. has no flat at `fáceret.' In Grad-1508:128v. the text underlay at `fáceret' is unclear; the second syllable of `persequéntibus' is set GCDB♭CA; `persequéntibus' has a flat throughout; `ánimam' is set AG.CDC.CCCA. In Rylands-24:231. `salvam' is set ACCC.A. Grad-In 1508:128v. `allelúya' is set thus:
 
-  Score000}
+  \gregorioscore{}}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Hic fiat sermo ad populum si placet.}
 
@@ -4570,7 +4533,7 @@ Score000
 
 1519:107r; GS:133; Grad-1508:129r; Missal-1513:97v.\footnote{In Grad-1508:129r. `aperiétur' is set F.F.FE.DC.DFEF. `et pulsánti', Missal-1513:97v; Dickinson:409.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Feria iij. dicatur magna missa de sancta Maria~: nisi}\footnote{1882:114. `\emph{ubi}', 1519:107r.} \emph{aliquod festum cum regimine chori contigerit, et tunc missa} Salus pópuli. Missale:{[}194{]}. \emph{dicatur in processione ubi fit statio et in vigilia ascensionis Domini dicatur missa de pace in processione. Tamen si festum alicujus sancti cum regimine chori in ij. feria contigerit tunc dicatur missa dominicalis in iij. feria, vel in vigilia ascensionis Domini in processione ubi fit statio. Similiter quando festum cum regimine chori in vigilia ascensionis Domini contigerit tunc dicatur missa de vigilia ubi fit statio et semper in his predictis tribus diebus dicatur missa in choro post sextam et post illam missam dicatur {[}hora{]}\footnote{1882:114.} nona~: et tunc eat processio {[}ad aliquam ecclesiam ut supra dictum est{]}.}\footnote{1882:114.}
 
@@ -4578,7 +4541,7 @@ Score000
 
 1519:107v; GS:130; Grad-1508:127v; Missal-1513:96v.\footnote{In 1515:107v. the firt `allelúya' is set AC.AG.GEFEE.ED. 1519:107v. has no flat at `allelúya.' In 1519:107v. `laudi ejus' is set A.A B.GA. In Grad-1508:127v. `annunciáte' is set AC.C.CCCA.A.GAGGEFE. Grad-1508:127v. has `annunciáte usque'; `annunciáte' is set FE.FF.DGE.EG.GA. Grad-In 1508:127v. the second `allelúya' is set AC.AG.GEFEE.ED; the final allelúya' begins DEGA.AGC etc. GS:130. has no flat. GS:130. gives the beginning of the Psalm-Verse together with the Psalm=Tone ending and the word `Amen.'}
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \subsubsection{Oratio.}
@@ -4598,11 +4561,11 @@ Score000
 
 1519:108r; GS:130; Grad-1508:127v; Missal-1513:96v.\footnote{The flat appears in GS:130. In Rylands-24:228. `nómine' is set E.G.GA. No flat appears in Grad-1508:127v. In Grad-1508:127v. `accipiétis' is set as follows:
 
-  Score000
+  \gregorioscore{}
 
   GS:131. omits last 16 notes of the final melisma.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Evangelium.} Sequéntia sancti evangélii secúndum Johánem, décimo sexto capítulo. Glória tibi Dómine.{]}\footnote{1882:115.}
 
@@ -4614,19 +4577,19 @@ Score000
 
 1519:108v; GS:131; Grad-1508:128r; Missal-1513:97r.\footnote{In 1519:108v. `posuit' is set F.FFAG.GAFFDED; `pedes' is set D.CFF; `amóvit' is set F.FFDFC.AC. In Grad-1508:128r. `pósuit' is set FF.FAGGAFF.FDED.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Postea cantetur communio sequens.{]}}
 
 1519:108v; GS:131; Grad-1508:128r; Missal-1513:97r.{]}\footnote{In 1519:108v. `Dómino' is set FA.FE.FGF; `die' is set FE.E. `et benedícite', Missal-1513:97r; Dickinson:406. Grad-1508:128r. has no flat.}
 
-Score000
+\gregorioscore{}
 
 \chapter{Missa de vigilia ascensionis Domini.}
 
 1519:109r; GS:133, 148; Grad-1508:129r, 152r; Missal-1513:97v.\footnote{In 1519:109r. `Omnes gentes' is set FFFDCDFAGA.GF AGA.GFGFD; `voce exultatiónis' is set F.FFF; FF.DF.C.FF.FAGAFGGF.F; 1519 the first `allelúya' is set D.FF.FGF.FEFDDC. 1519:109r. has no flat. In Grad-1508:129r. `Omnes gentes' is set FFFEDDFAGA.GF AGA.GFGFE; `voce exultatiónis' is set FF.FF F.FCF.D.FF.FAGAFG.GFF. In GS:133. the final `allelúya' begins on C. GS:133. has no flat. GS:133. gives the incipit of the Psalm verse followed by the Psalm tone ending together with the word `Amen.' In Grad-1508:152r. `voce' is set FF.FF; the fourth syllable of `exultatiónis' appears one note earlier. Grad-1508:152r. has no flat in the Psalm verse. GS:133. gives the beginning of the Psalm verse followed by the Psalm tone ending together with the word `Amen.'}
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \subsubsection{Oratio.}
@@ -4644,23 +4607,23 @@ Score000
 
 1519:109v; GS:133; Grad-1508:129r; Missal-1513:97v.\footnote{In GS:133. `gentes' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In Grad-1508:129r. `pláudite' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In 1519:109v. the syllable `-ya.' in `Allelúya' comes two notes earlier; `pláudite' is set thus~:
 
-  Score000;
+  \gregorioscore{};
 
   in `mánibus' the syllable `-ni-' appears two notes earlier. `in voce' is set thus~:
 
-  Score000
+  \gregorioscore{}
 
   Grad-1508:129r. has no flats. 1519:109v. has no flats. In Grad-1508:129r. the second syllable of `mánibus' comes two notes later. In Grad-1508:129r. the second syllable of `voce' appears five notes later. GS:133. omits the last 35 notes of the final melisma.}
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \subsubsection{Evangelium secundum Johannem. {[}xvij. 1.-11.{]}}
@@ -4670,31 +4633,31 @@ Score000
 
 1519:110r; GS:133; Grad-1508:129v; Missal-1513:98r.\footnote{1519:110r. has no flats; `admirámini' is set F.F.FG.GFFD.D'; `celum' is set thus~:
 
-  Score000;
+  \gregorioscore{};
 
   Jesus is set G.FEGFDEC; `est' is set F; `ascendéntem' is set thus~:
 
-  Score000;
+  \gregorioscore{};
 
   `celum' is set GEDFEFD.DFDDC.
 
   In GS:133. `Galiléi' is set F.GAG.AFAG.GAFEFEDED. In Grad-1508:129v. `aspiciéntes' begins DF. In GS:133. `celum' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In Grad-1508:129v. `Jesus' is set G.FEGFDFC. In GS:133. `Jesus' is set G.FEGFDEC. Here the edition follows Rylands-24:233. In Grad-1508:129v. the first syllable of `assúmptus' is set C. In GS:133. the second `celum' appears to be set FFFDDDGFFDFC.C. Grad-In 1508:129v. the second `celum' appears to be set FFDDDGFFDFC.C. Here the edition follows Rylands-24:233.
 
   In Grad-1508:129v. `ascendéntem' is set thus:
 
-  Score000
+  \gregorioscore{}
 
   In Grad-1508:129v. the last `celum' is set GFDFEFD.DFDDC.}
 
-Score000
+\gregorioscore{}
 
 1519:110v; GS:134; Grad-1508:129v; Missal-1513:98r.\footnote{1519:110v. has no flat. In 1519:110v. `eis' is set ACBG.AGABA; `servábam' is set F.FG.G. In Grad-1508:129v. `eis' is set G.ABA. In GS:134. `vénio' is set CBC.CACG.G. GS:134. has no flats. The flat at `serves' appears in Rylands-24:233.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Cantata missa statim si duplex festum illa die contigerit tres clerici de superiori gradu in medio processionis cantent letaniam in revertendo habitu non mututo. Si duplex festum non fuerit dicatur a duobus clericis de secunda forma, et sic eat processio ad portam claustri orientalem et intrent chorum per ostium occidentale~: et dicatur letania usque ud prolationem} Sancta María {[}quésumus almum{]}.\footnote{1882:117.} \emph{antequam exeat processio ad gradum altaris.}
 
@@ -4702,7 +4665,7 @@ Score000
 
 Rylands-24:231; 1519:111r.
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem.}
 
@@ -4712,19 +4675,19 @@ Score000
 
 \emph{Hic procedat processio et clerici predicti prosequantur.{]}}\footnote{1882:117.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus} Kýrie\emph{.}
 
 \emph{Clerici {[}cantent versum{]}}.\footnote{1882:118.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus} Kýrie\emph{.}
 
 \emph{Clerici {[}dicant versum{]}.}\footnote{1882:118.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus ut supra}. {[}Kýrie.{]}\footnote{1882:118.}
 
@@ -4742,79 +4705,79 @@ Score000
 
 Rylands-24:232; 1519:111v.\footnote{1519:111v. has no flats. 1554:117v. has some of the flats. In 1519:111r. `Christeléyson' is set A.AGF.G.DC. Some printed processionals have:
 
-  Score000}
+  \gregorioscore{}}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque ℣.}
 
-\emph{Clerici dicant versum.} Score000
+\emph{Clerici dicant versum.} \gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:118.} chorus {[}repetat{]}}\footnote{1882:118.} Kýrie. \emph{{[}et cetera{]}.}\footnote{1882:118.}
 
-\emph{Clerici {[}cantent versum{]}.}\footnote{1882:118.} Score000
+\emph{Clerici {[}cantent versum{]}.}\footnote{1882:118.} \gregorioscore{}
 
 \emph{{[}Iterum{]}\footnote{1882:118.} chorus {[}repetat{]}}\footnote{1882:118.} Kýrie.
 
 \emph{Clerici {[}cantent versum{]}.}\footnote{1882:118.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus} Kýrie {[}eléison. \emph{et cetera.{]}}\footnote{1882:118.}
 
 \emph{Clerici {[}dicant versum{]}.}\footnote{1882:118.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus {[}repetat{]}}\footnote{1882:118.} Kýrie.
 
-\emph{{[}Postea{]}\footnote{1882:118.} clerici {[}dicant versum{]}.}\footnote{1882:118.} Score000
+\emph{{[}Postea{]}\footnote{1882:118.} clerici {[}dicant versum{]}.}\footnote{1882:118.} \gregorioscore{}
 
 \emph{Chorus} Kýrie.
 
 \emph{Hic procedat processio et clerici predicti procedant de ceteris ordinibus, quantum sufficit iter.}
 
-\emph{Item clerici.} Score000
+\emph{Item clerici.} \gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:118.} chorus} Kýrie.
 
 \emph{{[}Postea{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Iterum{]}\footnote{1882:119.} chorus} Kýrie.
 
-\emph{{[}Postea{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.} Score000
+\emph{{[}Postea{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.} \gregorioscore{}
 
 \emph{{[}Postea{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie.
 
-\emph{{[}Item{]}\footnote{1882:119.} clerici {[}versum{]}.}\footnote{1882:119.} Score000
+\emph{{[}Item{]}\footnote{1882:119.} clerici {[}versum{]}.}\footnote{1882:119.} \gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie.
 
-\emph{{[}Postea{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.} Score000
+\emph{{[}Postea{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.} \gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie.
 
-\emph{{[}Deinde{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.} Score000
+\emph{{[}Deinde{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.} \gregorioscore{}
 
 \emph{{[}Deinde{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie.
 
 \emph{{[}Postea{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Postea{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie.
 
 \emph{{[}Item{]}\footnote{1882:119.} clerici {[}versum{]}.}\footnote{1882:119.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Deinde{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie {[}eleison. \emph{et cetera.}
 
 \emph{Iterum{]}\footnote{1882:119.} clerici {[}dicant versum{]}}.\footnote{1882:119.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Chorus repetat} Kýrie.{]}\footnote{1882:119.}
 
@@ -4824,23 +4787,23 @@ Score000
 
 Rylands-24:232; 1519:112v.
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat post unumquemque versum{]}.}\footnote{1882:119.}
 
 \emph{{[}Postea{]}\footnote{1882:119.} clerici {[}cantant hunc versum{]}.}\footnote{1882:119.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie.
 
-\emph{{[}Deinde{]}\footnote{1882:119.} clerici {[}versum{]}.}\footnote{1882:119.} Score000
+\emph{{[}Deinde{]}\footnote{1882:119.} clerici {[}versum{]}.}\footnote{1882:119.} \gregorioscore{}
 
 \emph{{[}Iterum{]}\footnote{1882:119.} chorus {[}repetat{]}}\footnote{1882:119.} Kýrie.
 
 \emph{{[}Postea{]}\footnote{1882:119.} clerici {[}versum{]}.}\footnote{1882:119.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus} Kýrie.
 
@@ -4850,115 +4813,115 @@ Score000
 
 Rylands-24:232; 1519:112v.\footnote{In some printed processionals `Kyrie' is set G.A.GFE; `Dómine' is set G.A.GFE.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:119.}
 
 \emph{{[}Postea{]}\footnote{1882:119.} clerici {[}dicant versum{]}.}\footnote{1882:119.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:120.}
 
 \emph{{[}Postea{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:120.}
 
 \emph{{[}Postea{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus} Kýrie.
 
 \emph{{[}Item{]}\footnote{1882:120.} clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus {[}repetat} Dómine{]}\footnote{1882:120.} miserére.
 
 \emph{{[}Item{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus {[}repetat{]}}\footnote{1882:120.} Miserére.
 
 \emph{{[}Postea{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus {[}repetat{]}}\footnote{1882:120.} Kýrie.
 
 \emph{Clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:120.} chorus} Dómine {[}miserére{]}.\footnote{1882:120.}
 
 \emph{{[}Deinde{]}\footnote{1882:120.} clerici {[}versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Iterum{]}\footnote{1882:120.} chorus} Miserére.
 
 \emph{Clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item{]}\footnote{1882:120.} chorus {[}repetat{]}}\footnote{1882:120.} Kýrie.
 
 \emph{{[}Deinde{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic modus servetur per omnes ordines usque ad} Omnis chorus sanctórum oret. \emph{Si necesse fuerit ℣. sequentes dicantur a predictis clericis tempore belli.}
 
 \emph{Versus.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:120.}
 
 \emph{{[}Deinde{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:120.}
 
 \emph{Clerici {[}versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:120.}
 
 \emph{{[}Deinde{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:120.}
 
 \emph{{[}Iterim{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}.}\footnote{1882:120.}
 
 \emph{{[}Postea{]}\footnote{1882:120.} clerici {[}dicant versum{]}.}\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}}.\footnote{1882:120.}
 
 \emph{{[}Deinde{]}\footnote{1882:120.} clerici {[}dicant versum{]}}.\footnote{1882:120.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem {[}repetat{]}}.\footnote{1882:120.}
 
 \emph{{[}Iterum{]}\footnote{1882:121.} clerici {[}dicant versum{]}}.\footnote{1882:121.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Chorus idem repetat.}
 
@@ -4996,25 +4959,25 @@ Rylands-24:234; 1519:114v; GS:134.\footnote{In 1519:115r. `astra' is set G.E. At
 
   In Rylands-24:234. `celum' is set AAG.ED. Verse 1: in Rylands-24:234. `grátia' is set G.D.F. It appears that a D has been erased below the G. Verse 2: in Rylands-24:234. `rútilant'' is set F.D.G. Verse 4: in Rylands-24:234. `oppréssis' is set F.D.E. Verse 5: in Rylands-24:234. `inférni' is set F.D.E. Verse 6: in Rylands-24:234. `cárcere' is set G.FE.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum.}
 
 \emph{Clerici {[}dicant{]}\footnote{1882:122.} ℣.}
 
-Score000
+\gregorioscore{}
 
 \emph{Per idem ostium quo egressa est {[}processio{]}\footnote{1882:123.} regredietur usque ad crucem in ecclesia cantando {[}hoc sequens{]}\footnote{1882:123.} ℟. In revertendo cantore incipiat.}
 
 1519:116r; AS:269; Ant-1519:250v; Missal-1531:146r.\footnote{In 1519:116r. `admirámini' is set lower, using a B♭ clef: D.GAB♭.B♭.AFAB♭AB♭.AG; 1519:116r. has no flat at `celum.' In 1519:116r. `illos' is set DED.D; `véstibus' is set DF.ED.CD.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ In introitu chori dicatur aliud responsorium hoc modo {[}quo sequitur{]}.}\footnote{1882:123.}
 
-1519:116v; AS:266; Ant-1519:248r; Missal-1531:145v.\footnote{1519:116v. has flats only at `†Spíritum' and `allelúya.'}
+1519:116v; AS:266; Ant-1519:248r; Missal-1531:145v.\footnote{1519:116v. has flats only at `† Spíritum' and `allelúya.'}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Ascéndit Deus in jubilatióne.
 
@@ -5046,25 +5009,25 @@ Score000
 
 Rylands-24:240; 1519:117r.\footnote{In 1519:117r. `celo' appears to be set AAGG.DC. In verse 2: in Rylands-24:240. `solem celi órbita' is set FD.E D.G G.F.D. In verse 4: in Rylands-24:240. `prodúcunt' is set F.D.E. In verse 5: Rylands-24:240. has `gaudet'; in Rylands-24:240. `bene vernáles' is set E.F GF.DC.E. In verse 7: note: `al.~cuncta.' 1882:125.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum.}
 
 \emph{Clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{In redeundo per idem ostium quo egressa est regrediatur {[}processio{]}\footnote{1882:125.} usque ad crucem cantando hoc ℟. sequens hoc modo.}
 
 1519:118r; AS:279; Ant-1519:259v, 265v; Brev-1531:152v.\footnote{1519:118r. has a flat only at `penetrávit.'}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori dicatur hec {[}sequens{]}\footnote{1882:125.} antiphona {[}hoc modo quo sequitur{]}.}\footnote{1882:125.}
 
 1519:118v; AS:281; Ant-1519:261v; Brev-1531:153r.
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Loquebántur váriis linguis apóstoli.
 
@@ -5084,15 +5047,15 @@ Score000
 
 1519:119r; AS:292; Ant-1520:6r; Brev-1531:158v.\footnote{1519:119r. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori dicatur istud responsorium {[}sequens hoc modo quo sequitur{]}.}\footnote{1882:126.}
 
 1519:119v; AS:290; Ant-1520:5r; Brev-1531:158r.\footnote{1519:119v. has no flats.}
 
-Score000
+\gregorioscore{}
 
-\emph{In tempore paschali hoc modo dicatur.} Score000
+\emph{In tempore paschali hoc modo dicatur.} \gregorioscore{}
 
 \emph{℣.} Sit nomen Dómini benedíctum.
 
@@ -5112,23 +5075,23 @@ Score000
 
 1519:120r.\footnote{In ℣. 1: `MS. Harl. 2945---ipse cibus', 1882:126; in ℣. 4: `Harl. MS. 2945---Fit caro de pane, de vino sanguis, inane Ne cor deficiat, hic cibus efficiat.' `Edd.---memorandum; Bodl.---manducanda.' 1882:127; in ℣. 5, `Ita MS. Harl. 2945; Edd.---Hic cibus, hic potus facit, quoque numine totus; MS. Bodl.---Hic cibus, hic potus facit munimine totus.' 1882:127; 1882:127. has `fáciat'; in ℣. 12, `huic cibus', 1882:127; in ℣. 13, `ille cibus', 1882:127; in ℣. 14, `sit cor', 1882:127; in ℣. 15: `Ita MS. Harl. 2945 ; Edd.---Quod te sanctificet Christus qiu te benedicet.' 1882:127; in ℣. 16: `Ita MS. Harl. 2945 ; Edd.---Cui.' 1882:127. In 1525:125r. in verse 12 `criménque' is set E.DG.F; in verse 13 `teguménta' is set E.DG.F D; in verse 15 'quod te is set E.DG.F.}
 
-Score000
+\gregorioscore{}
 
 \emph{In revertendo usque ad crucem dicatur {[}hoc responsorium modo quo sequitur{]}.}\footnote{1882:127.}
 
 1519:122r; Ant-1520:11r; Brev-1531:160v.\footnote{1519:122r. has no flats. In 1519:122r. `cibi' is set BDCBCA.BA.}
 
-Score000
+\gregorioscore{}
 
 \emph{Si necesse fuerit dicatur istum versiculum.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori dicatur ista antiphona.}
 
 1519:122v; Ant-1520:15r; Brev-1531:161v.\footnote{1519:122v. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Panem de celo prestitísti eis.
 
@@ -5162,19 +5125,19 @@ Score000
 
 1523:123v; AS:424; Ant-1519-S:70v; Brev-1531-S:47v.\footnote{1523:123v. has a B♭ signature throughout. In 1523:123v. `et' is set CB♭ADB♭B♭A.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et finiatur cum} Allelúya. \emph{qandocunque dicatur} Allelúya.
 
 1519:123v; AS:428; Ant-1519-S:73v; Brev-1531-S:48v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Sequitur alia antiphona.{]}}\footnote{1882:130.}
 
 1519:124r; Ant-1520:17v; Brev-1531:171v.\footnote{1519:124r. has `inmici' for 'inimíci.}
 
-Score000
+\gregorioscore{}
 
 \emph{Statio post thurificationem crucifixi.}
 
@@ -5194,69 +5157,69 @@ Score000
 
 1519:124v; AS:519; Ant-1520-S:105r; Brev-1531-S:130r.\footnote{In the Antiphonal the `Allelúya' is different.}
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali.}
 
-Score000
+\gregorioscore{}
 
 1519:124v; AS:529; Ant-1519-C:49r; Ant-1520-C:49r; Brev-1531:171v.
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali {[}ita finiatur{]}.}\footnote{1882:130.}
 
-Score000
+\gregorioscore{}
 
 1519:125r; AS:529; Ant-1519-C:48v; Ant-1520-C:48v; Brev-1531:171v.
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali {[}finiatur cum{]}.}
 
-Score000
+\gregorioscore{}
 
 1519:125v; Ant-1519-C:50r; Ant-1520-C:50r; Brev-1531:171v.
 
-Score000
+\gregorioscore{}
 
 \emph{In} \emph{tempore paschali {[}finiatur cum{]}.}
 
-Score000
+\gregorioscore{}
 
 1519:125v; AS:528; Ant-1520-S:111v; Brev-1531-S:132v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Postea sequitur alia antiphona{]}.}\footnote{1555. unpaged.}
 
 1519:126r; AS:528; Ant-1520-S:112r; Brev-1531-S:132v.
 
-Score000
+\gregorioscore{}
 
 \emph{Infra assumptionem et nativitatem beate Marie tam ad processionem ad vesperas in sabbatis quam ante missam in dominicis dicatur una istarum antiphonarum.}
 
 1519:126v; AS:490; Ant-1520-S:89v; Brev-1531-S:115v.
 
-Score000
+\gregorioscore{}
 
 1519:127r; AS:492; Ant-1520-S:91r; Brev-1531-S:105v.
 
-Score000
+\gregorioscore{}
 
-1519:127v; AS:491; Ant-1520-S:90r; Brev-1531-S:115v. Score000
+1519:127v; AS:491; Ant-1520-S:90r; Brev-1531-S:115v. \gregorioscore{}
 
 \emph{In tempore paschali.}
 
-Score000
+\gregorioscore{}
 
 1519:128r; AS:492; Ant-1520-S:90v; Brev-1531-S:115v.
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Sancta Dei génitrix {[}virgo semper Maria{]}.\footnote{1882:132.}
 
@@ -5280,45 +5243,45 @@ Score000
 
 1519:128v; AS:288; Ant-1520:3v; Brev-1531:157v.\footnote{1519:128v. has no flats. In 1519:128v. `Patri' is set A.AG.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item sequitur aliud responsorium.{]}}\footnote{1882:132.}
 
 1519:128v; AS:288; Ant-1520:3v; Brev-1531:157v.\footnote{In 1519:128v. `majestátis' is set FE.FG.GFFEDC.F.}
 
-Score000
+\gregorioscore{}
 
-6249a. Score000
+6249a. \gregorioscore{}
 
 \emph{{[}Postea sequitur aliud responsorium.{]}}\footnote{1882:132.}
 
 1519:129r; AS:289; Ant-1520:4r; Brev-1531:158r.
 
-Score000 7498.
+\gregorioscore{} 7498.
 
-Score000 7498a.
+\gregorioscore{} 7498a.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item sequitur aliud responsorium.{]}}\footnote{1882:133.}
 
 1519:129v; AS:289; Ant-1520:4v; Brev-1531:158r.\footnote{1519:129v. has no flats. In 1519:129v. `Magnus' is set EDCDE.E; `magna' is set GA.BGGAG; the final four notes of `est' are AFDF; in the ℣. `Glória Patri', `et' is set G.}
 
-Score000 7117.
+\gregorioscore{} 7117.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item sequitur aliud responsorium.{]}}\footnote{1882:133.}
 
 1519:130r; AS:290; Ant-1520:4v; Brev-1531:158r.\footnote{1519:130r. has a flat oly at `proli.' In 1519:130r. the second `Da' is set AB.}
 
-6777. Score000
+6777. \gregorioscore{}
 
 \emph{{[}Postea sequitur aliud responsorium.{]}}\footnote{1882:133.}
 
 1519:130v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Postea sequitur aliud responsorium.{]}}\footnote{1882:133.}
 
@@ -5326,9 +5289,9 @@ Score000
 
 1519:130v; AS:291; Ant-1520:5v; Brev-1531:158v.\footnote{1519:130v. has no flats.}
 
-7764. Score000
+7764. \gregorioscore{}
 
-7764a. Score000
+7764a. \gregorioscore{}
 
 \emph{{[}Deinde sequitur aliud responsorium.{]}}\footnote{1882:133.}
 
@@ -5336,7 +5299,7 @@ Score000
 
 6239.
 
-Score000 6239a.
+\gregorioscore{} 6239a.
 
 \emph{{[}Item aliud responsorium} Summe Trinitáti. \emph{et cetera.{]}\footnote{1882:133.} Require {[}ut supra{]}\footnote{1882:133.} in festo Sancte Trinitatis.} 277.
 
@@ -5344,13 +5307,13 @@ Score000 6239a.
 
 1519:131v; AS:533; Ant-1520-S:117r; Brev-1531-S:137v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Item sequitur alia antiphona.{]}}\footnote{1882:134.}
 
 1519:131v; AS:532; Ant-1520-S:117r; Brev-1531-S:137v.\footnote{In 1528:122r, 1530:154v. and 1554:141r. the music appears a fifth lower. In AS:532. the music is a fourth lower, in Mode VII.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Hoc signum crucis erit in celo.
 
@@ -5374,23 +5337,23 @@ Score000
 
   In Rylands-24:287. `Qua sponso sponsa' is set F ED.FA AAG.ED.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat post unumquemque versum.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ In introitu chori dicatur hoc responsorium {[}sequens{]}.}\footnote{1882:135.}
 
-1519:132v; AS:pl. p; Ant-1520:58v; Brev-1531:215v.\footnote{In 1519:132v. the first `est' is set CDEDF. In 1519:132v. and the other editions no repeat is indicated at `vere', but a repeat is indicated at `et'; yet the indicated repetition cue at the end is `†Vere.' In 1519:132v. `in' is set CD. In 1519:133r. `somno' is set thus~:
+1519:132v; AS:pl. p; Ant-1520:58v; Brev-1531:215v.\footnote{In 1519:132v. the first `est' is set CDEDF. In 1519:132v. and the other editions no repeat is indicated at `vere', but a repeat is indicated at `et'; yet the indicated repetition cue at the end is `† Vere.' In 1519:132v. `in' is set CD. In 1519:133r. `somno' is set thus~:
 
-  Score000}
+  \gregorioscore{}}
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali {[}dicitur{]}.}\footnote{1882:135.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Hac die non dicatur} Glória Patri.
 
@@ -5408,7 +5371,7 @@ Score000
 
 \emph{¶ Dominica vero infra octavas}\footnote{`\emph{et in octava}, MS.' 1882:135.} \emph{si dominica fuerit ad processionem Resp.} Terríbilis. 312. \emph{cum versu} Cumque evigilásset. \emph{ut supra et cum} Glória Patri. \emph{et {[}cum{]}}\footnote{1882:135.} ‡Et ego.\footnote{1882:135.
 
-  Score000} \emph{In paschali tempore cum} Allelúya.
+  \gregorioscore{}} \emph{In paschali tempore cum} Allelúya.
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -5418,7 +5381,7 @@ Score000
 
 1519:133v; AS:350; Ant-1519-S:6r; Brev-1531-S:3v.\footnote{In 1519:133v. `iste est' is set G.GBAGA AFFE. 1519:133v. has no flat.}
 
-7899. Score000
+7899. \gregorioscore{}
 
 \emph{Non dicatur} Glória Patri.
 
@@ -5446,7 +5409,7 @@ Score000
 
 1519:134r; AS:543, 579; Ant-1520-S:155r; Brev-1531-S:79r.\footnote{1519:134r. has no flats. In 1519:134r. `sanctórum' is set C.AB.A; `semper' is set DF.DC.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Letámini in Dómino et exultáte justi.
 
@@ -5468,11 +5431,11 @@ Score000
 
 1519:134v; AS:359; Ant-1519-S:14r; Brev-1531-S:7r.\footnote{1519:134v. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{Cum suo ℣. sed sine prosa in hac processione.}
 
-Score000
+\gregorioscore{}
 
 \emph{Non dicatur} Glória Patri.
 
@@ -5498,7 +5461,7 @@ Score000
 
 1519:135v; AS:543; Ant-1520-S:40v; Brev-1531-S:79r.\footnote{In 1519:135v. `beáta' is set GBCD.D.GA.}
 
-Score000
+\gregorioscore{}
 
 \emph{cum versiculo et oratione predictis de omnibus sanctis {[}ut supra{]}.}\footnote{1882:138.} 316.
 
@@ -5508,11 +5471,11 @@ Score000
 
 1519:135v; AS:370; Ant-1519-S:23r; Brev-1531-S-S:15r.\footnote{`pax in homínibus' \emph{Chevallon.} {[}SB:83.{]} SB:83 has `pax homínibus.' AS:368 has no indication of the second repeat `‡Et in terra.'}
 
-Score000 6647.
+\gregorioscore{} 6647.
 
-Score000
+\gregorioscore{}
 
-6647a. Score000
+6647a. \gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri {[}et Fílio et Spirítui Sancto{]}.\footnote{1882:138.} 425. ‡Et in terra.
 
@@ -5524,15 +5487,15 @@ Score000
 
 \emph{Si dominica fuerit ad processionem {[}dicatur responsorium sequens{]}.}\footnote{1882:139.}
 
-1519:136r; AS:373; Ant-1519-S:26r; Brev-1531-S:15v.\footnote{1519:136r. has no flats. 1519:136v. has `†Et intra.' 1528:127r. has `†Et tanquam.'}
+1519:136r; AS:373; Ant-1519-S:26r; Brev-1531-S:15v.\footnote{1519:136r. has no flats. 1519:136v. has `† Et intra.' 1528:127r. has `† Et tanquam.'}
 
-Score000 6955.
+\gregorioscore{} 6955.
 
-Score000 6955b.
+\gregorioscore{} 6955b.
 
-Score000
+\gregorioscore{}
 
-\emph{{[}℣.{]}} Glória. 425. †Et tanquam.
+\emph{{[}℣.{]}} Glória. 425. † Et tanquam.
 
 \emph{In introitu chori de sancta Maria {[}cum versu et oratione que tempori conveniunt{]}.}\footnote{1882:139.} 50.
 
@@ -5542,7 +5505,7 @@ Score000
 
 1519:136v; AS:384; Ant-1519-S:33v; Brev-1531-S:19r.\footnote{1519:136v. has no flats. In 1519:136v. `-ciósus martyr Vincén-' is a third lower, as if the clef is wrong. In 1519:136v. `resolútus' is set ED.CD.DEFD.D; at the ℣. `de' is set GAF.}
 
-sar0658. Score000
+sar0658. \gregorioscore{}
 
 \emph{In introitu chori de sancta Maria.} 50.
 
@@ -5552,11 +5515,11 @@ sar0658. Score000
 
 1519:137v; AS:393; Ant-1519-S:40v; Brev-1531-S21r.\footnote{1519:137v. has no flats. In 1519:137v. `hódie' is set FG.DEFEDCD.CDC; in the V. the second `et' is set G.}
 
-Score000 6272.
+\gregorioscore{} 6272.
 
-Score000
+\gregorioscore{}
 
-\emph{{[}℣.{]}} Glória Patri {[}et Fílio et Spirítui{]}.\footnote{1882:139.} 424. †Quia.
+\emph{{[}℣.{]}} Glória Patri {[}et Fílio et Spirítui{]}.\footnote{1882:139.} 424. † Quia.
 
 \emph{In introitu chori de sancta Maria.} 50.
 
@@ -5574,12 +5537,12 @@ Score000
 
 1519:138r; Grad-1508-S:378; Missal-1513-S:10v.
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \lettrine{B}{e}ne✠dic Dómine Jesu Christe hanc ✠ creatúram cere supplicántibus nobis et infúnde ei per virtútem sancte crucis bene{[}✠{]}\footnote{B1555, unpaged.}dictiónem celéstem~: ut qui eam ad repellándas ténebras humáno úsui tribuísti, talem signáculo sancte crucis tue fortitúdinem et benedictiónem accípiat~: ut quibuscúnque locis accénsa sive appósita fúerit, discédat diábolus et contremíscat et fúgiat pállidus cum ómnibus minístris suis de habitatiónibus illis nec presúmat ámplius inquietáre \emph{et finiatur {[}benedictio{]}\footnote{1882:140.} sic}
 
-Score000
+\gregorioscore{}
 \end{lesson}
 
 \emph{Et dicantur omnes orationes cum} Orémus. \emph{sub eodem tono. Non dicatur} Dóminus vobíscum. \emph{nisi ante primum orationem tantum.}
@@ -5600,7 +5563,7 @@ Orémus.
 
 1519:139r; Missal-1513-S:11r.\footnote{At the fifth line from the end of the following prayer, 1555, unpaged has `gubernáre ut portum.'}
 
-Score000
+\gregorioscore{}
 
 \emph{Hic mutet vocem suam quasi legendo sic.} Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus. Per ómnia sécula seculórum amen.
 
@@ -5608,7 +5571,7 @@ Score000
 
 1519:140v.
 
-Score000
+\gregorioscore{}
 
 \begin{lesson}
 \subsubsection{Oratio.}
@@ -5624,7 +5587,7 @@ Score000
 
 Rylands-24:329; 1519:141r; GS:180; Grad-1508-S; Missal-1513-S:12r.
 
-Score000
+\gregorioscore{}
 
 \emph{Repetatur antiphona post unumquemque versum.}
 
@@ -5642,35 +5605,35 @@ Sicut erat.
 
 Rylands-24:329; GS:180; pl. i.; 1519:141r.\footnote{1519:141r. has `qui in ténebris.' GS:180. omits the text `tu sénior, setting 'letáre' as follows:
 
-  Score000
+  \gregorioscore{}
 
   Missal-1530:167r. has `vitam et resurrectiónem.' GS:pl. i. begins with `-nebris sunt.' The flats appear in Rylands-24:329. In GS:pl. i. the second syllable of `letáre' comes 2 notes earlier. In the printed processionals `letáre' is set FGA.B♭AAF.GA. In GS:180. `juste' is set FF.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Postea sequitur alia antiphona.{]}}\footnote{1882:143.}
 
 Rylands-24:329; GS:180; pl. i.; 1519:141v.\footnote{In 1519:141v. the music for the second syllable of `Salvatórem' is illegible. The music is provided from 1530:167v. In GS:180. and pl. i. and in Rylands-24:329. `porta' is set CD.C. In Rylands-24:329. `quem' is set A.}
 
-Score000
+\gregorioscore{}
 
 \emph{Postea sequitur Responsorium.}\footnote{`\emph{Antiphonam}', 1519:142r.}
 
 GS:pl. i.; Rylands-24:329; 1519:142r.\footnote{In 1519:142r. and Rylands-24:329. this is labelled `Antiphona.' In Missal-1530:167v. it is labelled `℟.' In some printed processionals `mortem' is set B♭C.AG. Some printed processionals have b-flat throughout; in these cases `accépit' is set DDFCD.CB♭G. In some printed processionals `benedíxit' is set G.GB♭.B♭A.GAB♭GF. In GS:pl. i. the responsory appears a tone higher, with no flats, while the verse remains at the same pitch:
 
-  Score000}
+  \gregorioscore{}}
 
-Score000
+\gregorioscore{}
 
 \emph{Tres clerici seniores in pulpito conversi ad populum in cappis sericis simul cantant hunc versum.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori dicatur hoc ℟.} {[}s\emph{equens, sine versu et cum versu pro dispositione precentoris{]}.}\footnote{1882:144.}
 
 1519:142v; AS:395, 401; Ant-1519-S:43v, 47v; Brev-1531-S:24r.\footnote{1519:142v. has no flat. In 1519:143r. `ignára' is set GA.ABAGF.AB. In AS:396. the second repeat is to `‡Que se nescit.'}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Suscépimus Deus misericórdiam tuam.
 
@@ -5696,17 +5659,17 @@ Score000
 
 1519:143v; AS:419; Ant-1519-S:64v; Brev-1531-S:42v.\footnote{1519:143v. omits the T.P. idication. It is found in 1555, unpaged.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}In introitu chori cantetur hec antiphona sequens~:}
 
 1555:unpaged; AS:415; Ant-1519-S:61v; Brev-1531-S:40v.
 
-3340. Score000
+3340. \gregorioscore{}
 
 \emph{Tempore paschali.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Roráte celi désuper.
 
@@ -5754,7 +5717,7 @@ Score000
 
 1519:144v; AS:424; Ant-1519-S:70v; Brev-1531-S:47v.\footnote{1519:144v. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et finiatur cum} Allelúya. \emph{quacumque dicatur cum} Allelúya.
 
@@ -5786,7 +5749,7 @@ Score000
 
 1519:145r; AS:425; ant-1519-S:71v; Brev-153-S:48r.\footnote{In 1519-S:71v. the first clef is an F-clef. The guide at the end of the line suggests that the clef should be a C-clef.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori de sancta Maria.} 291.
 
@@ -5808,7 +5771,7 @@ Score000
 
 1519:145v; AS:431; Ant-1520-S:5r; Brev-1531-S:58v.\footnote{1519:145v. has no accidentals. `1517--- Rectores simul cantent versum.' 1882:148.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Sine} Glória Patri.{]}\footnote{1555, unpaged.}
 
@@ -5828,9 +5791,9 @@ Score000
 
 1519:146r; AS:434; Ant-1520-S:7r; Brev-1531-S:59v.\footnote{1519:146r.has no flats.}
 
-Score000
+\gregorioscore{}
 
-\emph{{[}℣.{]}} Glória Patri. 424. †Qui viam.
+\emph{{[}℣.{]}} Glória Patri. 424. † Qui viam.
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -5848,7 +5811,7 @@ Score000
 
 1519:146v; AS:446; Ant-1520-S:16v; Brev-1531-S:64r.\footnote{1519:146v. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -5858,7 +5821,7 @@ Score000
 
 1519:147r; AS:393; Ant-1519-S:40v; Ant-1520-S:21r; Brev-1531-S:65v.\footnote{1519:147r. has no flats.}
 
-Score000 Score000
+\gregorioscore{} \gregorioscore{}
 
 \emph{℣.} Glória Patri. 420. ‡Qui te {[}elégit{]}.\footnote{SB-S:386.}
 
@@ -5870,7 +5833,7 @@ Score000 Score000
 
 1519:147v.\footnote{In ℣. 10: `quidem tu', 1882:150.}
 
-Score000
+\gregorioscore{}
 
 \emph{In redeundo de omnibus sanctis} Salvátor mundi. \emph{tantum.} 315. \emph{℣.} Letámini in Dómino. 316. \emph{Oratio.} Infirmitátem. 316.
 
@@ -5896,9 +5859,9 @@ Score000
 
 1519:149r; AS:665; Ant-1519-C:43r; Brev-1531-P:81r.\footnote{1519:149r. has no flats. In 1519:149r. `tui' is set CDE.C.}
 
-Score000 6142a.
+\gregorioscore{} 6142a.
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Ora pro nobis beáta Margaréta.
 
@@ -5938,7 +5901,7 @@ Score000
 
 1519:149v; AS:462; Ant-1520-S:46v; Brev-1531-S:89v.\footnote{1519:149v. has a flat only at `Glória Patri.' In 1519:149v. `éthere' is set FAAFGFD.CD.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ In introitu chori de sancta Maria.} 309.
 
@@ -5948,7 +5911,7 @@ Score000
 
 1519:150r; Ant-1520-S:52v; Brev-1531-S:94v.\footnote{1519:150r. has a flats only at `letos', `cunctis', and `et.' In 1519:150r. `remissionem' is set A.AGADAA.BCA.GA.A. In 1519:150r. `fac' is set AC; `post' is set BAG.}
 
-Score000
+\gregorioscore{}
 
 \emph{In redeundo de sancta Maria.} 309.
 
@@ -5958,7 +5921,7 @@ Score000
 
 1519:150v; AS:464, 469; Ant-1520-S:57v; Brev-1531-S:97v.
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori dicatur aliqua antiphona de sancta Maria.} 309.
 
@@ -5968,7 +5931,7 @@ Score000
 
 1519:151r.\footnote{This ℟. has the same text as the ninth ℟. at Matins of the Tranfiguration, but different music.}
 
-Score000
+\gregorioscore{}
 
 \emph{In redeundo {[}dicatur{]}\footnote{1882:152.} de sancta Maria.} 309.
 
@@ -5978,11 +5941,11 @@ Score000
 
 1519:151v.\footnote{In ℣. 1. 1882:152. has `veréntur'; in ℣. 3 1882:153. has `impédit et dirimit atque fugat' with the note `Edd.---Hostes impédiat, dírimit, atque fugit.' For ℣. 4: `The couplet would have a possible meaning if \emph{vacuum} or some equivalent were read for \emph{gratum} ; \emph{portans precordia vite} seems a paraphrase of \emph{cordiale} in the Sequence \emph{Dulcis Jesus Nazarenus}, on which this extremely obscure prose is closely based, and \emph{vacuum eo} is the exact opposite of \emph{arca cordis inseratum}.' {[}1882:xv.{]}; in ℣. 5 1882:153. has `salútiem'; in ℣. 6 1882:153. has `légitur'; in ℣. 7 1882:153. has `letítia.'}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Chorus idem repetat post unumquemque versum. Clerici versus.{]}}\footnote{1555, unpaged.}
 
-Score000
+\gregorioscore{}
 
 \emph{In redeundo de sancta Maria.} 309.
 
@@ -5992,9 +5955,9 @@ Score000
 
 1519:153r; AS:485; Ant-1520-S:85v; Brev-1531-S:110v.
 
-Score000
+\gregorioscore{}
 
-\emph{{[}℣.{]}} Glória Patri. 420. †Et ideo.
+\emph{{[}℣.{]}} Glória Patri. 420. † Et ideo.
 
 \emph{℣.} Glória et honóre coronásti eum Dómine.
 
@@ -6026,17 +5989,17 @@ Score000
 
 \emph{Quacunque die contigerit ad processionem.}
 
-1519:153v; AS:498, 572; Ant-1519:100v; Ant-1520-S:94v; Brev-1531-S:117v.\footnote{1519:153v. has no flats. At the repeat after ℣. Glória. `Quia.' \emph{Chevallon.} {[}SB-S:698.{]} 1520-S:94v. omits `\emph{V.} Glória. †Quia.' SB-S:98 has at the repeat after ℣. `Glória. Christus.' The settings in AS, for Assumption and for All Saints, have neither the `Allelúya' nor the final word of the ℣. `commemoratiónem.' In AS:498. the last syllable of `justície' is set AGDEFGEDEDDC.}
+1519:153v; AS:498, 572; Ant-1519:100v; Ant-1520-S:94v; Brev-1531-S:117v.\footnote{1519:153v. has no flats. At the repeat after ℣. Glória. `Quia.' \emph{Chevallon.} {[}SB-S:698.{]} 1520-S:94v. omits `\emph{V.} Glória. † Quia.' SB-S:98 has at the repeat after ℣. `Glória. Christus.' The settings in AS, for Assumption and for All Saints, have neither the `Allelúya' nor the final word of the ℣. `commemoratiónem.' In AS:498. the last syllable of `justície' is set AGDEFGEDEDDC.}
 
-Score000
+\gregorioscore{}
 
-\emph{{[}℣.{]}} Glória Patri. 424. †Quia ext te.
+\emph{{[}℣.{]}} Glória Patri. 424. † Quia ext te.
 
 \emph{{[}Sequitur{]}\footnote{1882:154.} aliud responsorium.}
 
 1519:154r; AS:496; Ant-1520-S:93v; Brev-1531:117r.\footnote{In 1519:154e. `concíves' is set G.GEG.EDG.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 426. ‡Consórtes et concíves.
 
@@ -6044,7 +6007,7 @@ Score000
 
 1519:154r; AS:492; Ant-1520-S:91r; Brev-1531-S:105v.\footnote{In 1519:154r. the final note of `immortalitátis' is the first note of `locum.'}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Exaltáta es sancta Dei génitrix.
 
@@ -6064,7 +6027,7 @@ Score000
 
 1519:155r; AS:500; Ant-1520-S:96r; Brev-1531-S:118r.\footnote{1519:155r. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori de omnibus sanctis antiphona.} Te gloriósus. 319. \emph{quando vero antiphona} Salvátor mundi. \emph{dicitur ad vesperas tunc in crastino ante missam in introitu chori dicitur antiphona} Te gloriósus. \emph{quando de omnibus sanctis dicitur in revertendo et semper cum hoc ℣.} Letámini. 316. \emph{et cum oratione} Infirmitátem. 316.
 
@@ -6082,19 +6045,19 @@ Score000
 
 1519:155v; AS:524; Ant-1520-S:109v; Brev-1531-S:132r.\footnote{1519:155v. has no flats. In 1519:155v. `maris' is set GFDFFG.DF.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Sequitur{]}\footnote{1882:155.} aliud {[}resp.{]}}\footnote{1882:155.}
 
 1519:155v; AS:523; Ant-1520-S:108v; Brev-1531-S:131v.\footnote{In 1519.155v. `génuit' is set GAEDF.AGC.AGC.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori {[}cantetur hec sequens antiphona{]}.}\footnote{1882:156. `\emph{In redeundo ℟}. Styrps Jesse. \emph{vel} Natívitas tua.' Rylands-24:370.}
 
 1519:156r; AS:519; Ant-1520-S:106r; Brev-1531:130r.\footnote{1519:156r. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Sancta Dei génitix virgo semper María. 300.
 
@@ -6118,7 +6081,7 @@ Score000
 
 1519:156v; AS:427; Ant-1520-S:118r; Brev-1531-S:139r.\footnote{1519:156v. has no flats. In 1519:156v. `cleménter' is set D.Dc.F; `nobis' is set AFAGAFEDEFD.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ In introitu chori de sancta Maria.} 309.
 
@@ -6130,7 +6093,7 @@ Score000
 
 1519:157r; AS:549; Ant-1520-S:125r; Brev-1531-S:143v.\footnote{1519:157r. has no flats. In 1519:157r. juxta is set AAGEFED.EFE.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 424. ‡Illuc.
 
@@ -6142,7 +6105,7 @@ Score000
 
 1519:157v; AS:555; Ant-1520-S:129v; Brev-1531-S:147v.\footnote{1519:157v. has no flats. The editions maintain the cue `‡Et' even though there is no ℣. Glória Patri' or final repetition, as there is at matins.}
 
-Score000
+\gregorioscore{}
 
 \emph{Non dicatur {[}℣.{]}} Glória Patri.
 
@@ -6162,7 +6125,7 @@ Score000
 
 1519:158r; AS:556; Ant-1520-S:130v; Brev-1531-S:146r.\footnote{1519:158r. has a flat only at `omnis.'}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6172,7 +6135,7 @@ Score000
 
 1519:158v; AS:564; Ant-1520-S:139r; Brev-1531:152v.\footnote{1519:158v. has no flats. In 1519:158v. `Beátus' is set C.D.DEFEDDC; `intulérunt' is set FEGA.FE.DCEFGED.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 420. ‡Beátas.
 
@@ -6184,7 +6147,7 @@ Score000
 
 1519:159r; AS:653; Ant-1519-C:29v; Brev-1531-P:76v.\footnote{In 1519:159r. `rogántes' is set CD.D.BE.}
 
-7580. Score000
+7580. \gregorioscore{}
 
 \emph{¶ Dum versus canitur thurificet sacerdos altare, deinde imaginem sancti Edvvardi regis~: deinde {[}dicat{]}}\footnote{1882:158.}
 
@@ -6208,7 +6171,7 @@ Score000
 
 1519:159v; AS:567; Ant-1520-S:131r; Brev-1531-S:148r.\footnote{In 1519:159v. `Dómine' is set DFGA.G.G.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 426. ‡Contingámus.
 
@@ -6224,7 +6187,7 @@ Score000
 
 1519:160v; AS:542, 577; Ant-1520-S:153r; Brev-1531:165v.\footnote{1519:160v. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori antiphona} Salvátor mundi. \emph{require in festo Sancti Andree apostoli ad j. vesperas.} 315.
 
@@ -6246,7 +6209,7 @@ Score000
 
 1519:161r; AS:592; Ant-1520-S:161r; Brev-1531:173r.\footnote{1519:161r. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória. 424. ‡Celum.
 
@@ -6312,7 +6275,7 @@ Score000
 
 1519:162r; AS:pl. S; Ant-1520-S:169v; Brev-1531:185r.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 421. ‡Abjícite.
 
@@ -6324,9 +6287,9 @@ Score000
 
 1519:162v; AS:pl. S; Ant-1520-S:171r; Brev-1531-S:187r.\footnote{`abundantia' \emph{Chevallon.} {[}SB:1094.{]} `abundántia', 1519:162v. 1519:162v. has a flat only at `ad' and throughout the ℣. In 1519:162v. `confessóribus' is set F.AC.CD.CCB.CBA. In 1555, unpaged, the repeat is to `‡Ut de benefíciis.'}
 
-Score000
+\gregorioscore{}
 
-\emph{{[}℣.{]}} Glória Patri. 421. †Ut {[}confessóribus{]}.\footnote{1882:161.}
+\emph{{[}℣.{]}} Glória Patri. 421. † Ut {[}confessóribus{]}.\footnote{1882:161.}
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6336,7 +6299,7 @@ Score000
 
 1519:163r; AS:pl. Y; Ant-1520-S:176r; Brev-1531-S:189r.
 
-Score000
+\gregorioscore{}
 
 \emph{Non dicatur} Glória Patri.
 
@@ -6358,7 +6321,7 @@ Score000
 
 1519:163v; {[}AS:pl. W; Ant-1520-S:173v; Brev-1531-S:189r.\footnote{1519:163v. has no flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6368,9 +6331,9 @@ Score000
 
 1519:163v; AS:plate H.; Ant-1519-C:1r; Brev-1531-P:66r.
 
-Score000 6263.
+\gregorioscore{} 6263.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 424. ‡Allelúya.
 
@@ -6382,7 +6345,7 @@ Score000
 
 1519:164r; AS:pl. L; Ant-1519-C:3v; Brev-1531-P:66v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 424. ‡Allelúya.
 
@@ -6394,13 +6357,13 @@ Score000
 
 1519:164v; AS:plate Q; Ant-1519-C:9r; Brev-1531-P:67v.
 
-Score000 6289.
+\gregorioscore{} 6289.
 
-Score000 6289a.
+\gregorioscore{} 6289a.
 
-Score000
+\gregorioscore{}
 
-\emph{{[}℣.{]}} Glória Patri. 425. †Et liberáre.
+\emph{{[}℣.{]}} Glória Patri. 425. † Et liberáre.
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6410,7 +6373,7 @@ Score000
 
 1519:165r; AS:639; Ant-1519-C:15v; Brev-1531-P:70v.\footnote{1519:165r. has no flats. In 1519:165r. `gaudens' is set D.CEE; `vívere' is set FGAGFG.FE.E.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6418,13 +6381,13 @@ Score000
 
 \emph{Si dominica fuerit ad processionem.}
 
-1519:165v; AS:638; Ant-1519-C:16r; Brev-1531-P:70v.\footnote{AS:639. does not indicate `℣. Glória. †Quam repromísit.'}
+1519:165v; AS:638; Ant-1519-C:16r; Brev-1531-P:70v.\footnote{AS:639. does not indicate `℣. Glória. † Quam repromísit.'}
 
-Score000
+\gregorioscore{}
 
-6232a. Score000
+6232a. \gregorioscore{}
 
-\emph{{[}℣.{]}} Glória Patri. 425. †Quam.
+\emph{{[}℣.{]}} Glória Patri. 425. † Quam.
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6434,7 +6397,7 @@ Score000
 
 1519:166r; AS:648; Ant-1519-C:24r; Brev-1531-P:74v.
 
-6891. Score000
+6891. \gregorioscore{}
 
 \emph{{[}℣.{]}} Glória Patri. 424. ‡Ibi.
 
@@ -6446,7 +6409,7 @@ Score000
 
 1519:166v; AS;655; Ant-1519-C:31r; Brev-1531-P:77r.\footnote{In 1519:166v. `\emph{N.}' is set GBG.A.A.}
 
-Score000
+\gregorioscore{}
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6460,15 +6423,15 @@ Score000
 
 \emph{Si dominica fuerit ad processionem {[}dicitur{]}} \emph{responsorium.}\footnote{1882:164.}
 
-1519:166v; AS:576, 661; Ant-1519-C:38v; Brev-1531-P:80r.{]}\footnote{In 1519:166v. `precíncti' ends CDE.D; `homínibus' is set CD.D.DEFD.C. In 1519:167r. a repeat is indicated by the capital at `†Et.' as at matins of many confessors in the Breviary, but the cue for the repetition is `‡Quando.'}
+1519:166v; AS:576, 661; Ant-1519-C:38v; Brev-1531-P:80r.{]}\footnote{In 1519:166v. `precíncti' ends CDE.D; `homínibus' is set CD.D.DEFD.C. In 1519:167r. a repeat is indicated by the capital at `† Et.' as at matins of many confessors in the Breviary, but the cue for the repetition is `‡Quando.'}
 
-Score000 7675a.
+\gregorioscore{} 7675a.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}℣.} Glória Patri. 424. ‡Quando.{]}\footnote{1555, unpaged.
 
-  Score000}
+  \gregorioscore{}}
 
 \emph{In introitu chori de sancta Maria.} 309.
 
@@ -6478,11 +6441,11 @@ Score000
 
 1519:167r; AS:666; Ant-1519-C:44r; Brev-1531-P:81v.
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali in processione contra reginam suscpiendam finiatur sic.}
 
-7524a. Score000
+7524a. \gregorioscore{}
 
 \emph{In tempore paschali post} Glória Patri. \emph{repetatur a choro} ‡Allelúya.
 
@@ -6522,45 +6485,45 @@ Score000
 
 1519:168r; AS:321; Ant-1520:40r; Brev-1531:194r.\footnote{In 1520:40r. `convérte' is set CD.D.D.}
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali.}
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Sequitur aliud responsorium.{]}}\footnote{1882:165.}
 
 1519:168v; AS:321; Ant-1520:40r; Brev-1531:194v.
 
-Score000
+\gregorioscore{}
 
 \emph{{[}Postea sequitur aliud responsorium.{]}}\footnote{1882:166.}
 
 1519:169r; AS:324; Ant-1520:43v; Brev-1531:196v.\footnote{1519:169r. has no flats.}
 
-6687. Score000
+6687. \gregorioscore{}
 
-6687a. Score000
+6687a. \gregorioscore{}
 
 1519:169r; AS:325; Ant-1520:44r; Brev-1531:196v.\footnote{`pátentia', 1519:169r.}
 
-Score000 7793.
+\gregorioscore{} 7793.
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali.}
 
-Score000 7793a.
+\gregorioscore{} 7793a.
 
-Score000
+\gregorioscore{}
 
 1519:169v; AS:320; Ant-1520:39r; Brev-1531:192v.\footnote{1519:169v. has no flat.}
 
-Score000
+\gregorioscore{}
 
 \emph{In tempore paschali.}
 
-Score000
+\gregorioscore{}
 
 \emph{¶ Si transierit processio ad aliquam ecclesiam in urbe vel in suburbio ubi fieri debet statio dicitur antiphona vel ℟. de sancto de quo est ecclesia illa~: ita quod ad januas cymiterii vel citius inchoetur. Finita antiphona vel ℟. statim dicat sacerdos ad gradum chori ℣. et orationem de sancto ejusdem ecclesie sine} Dóminus vobíscum. \emph{sed tantum cum} Orémus. \emph{qua dicta clerici eodem modo et ordine quo in processione ordinantur se prosternant ita quod sacerdos ad gradum altaris cum diacono a dextris et subdiacono a sinistris suam faciant prostrationem cum dicitur} Kyrieléyson. Christeléyson. Kyrieléyson. \emph{sine nota sequatur} Pater noster. \emph{cetera omnia sicut predictum est in processione feriali xl.} 80. \emph{His dictis incipiatur {[}missa{]}\footnote{1882:166.} ex sua causa processione precedente a cantore.}
 
@@ -6570,85 +6533,85 @@ Score000
 
 1519:170r; 1519-P:172r; Brev-1531-P:48v.\footnote{The processionals do not indicate the repetition of the petitions. In 1519:170r. `de celis' is set A C.A. 1519:170r. omits `Spíritus sancte Deus~: Miserére nobis.'; In 1519:170r. `unus' is set C.C.}
 
-Score000
+\gregorioscore{}
 
 \emph{Cetera ut supra} 83. \emph{usque ad}
 
-Score000
+\gregorioscore{}
 
 \emph{Deinde statim sequatur.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat.}
 
 \emph{Clerici prosequantur sic versum.}\footnote{In 1519:170v. `Ab' is set D.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem repetat et sic de singulis ℣. ut in secunda feria rogationum.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem.}
 
 \emph{Clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus respondent sic.}\footnote{1519:170v. omits `audi nos.'}
 
-Score000
+\gregorioscore{}
 
 \emph{Clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus respondeat.}
 
-Score000
+\gregorioscore{}
 
 \emph{Et sic} \emph{de singulis ℣. ut supra in ij. feria rogationum.}
 
 \emph{Clerici versum.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem versus.}
 
 \emph{Clerici.}\footnote{1519:171r. omits the flats.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem versus.}
 
 \emph{Clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem versus.}
 
 \emph{Clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem.}
 
 \emph{Clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem.}
 
 \emph{Clerici.}
 
-Score000
+\gregorioscore{}
 
 \emph{Chorus idem.}
 
 \emph{Clerici.}\footnote{1519:171r. omits the flat.}
 
-Score000
+\gregorioscore{}
 
 \emph{Deinde dicat sacerdos ℣.} Letámini in Dómino. 312.
 
@@ -6666,7 +6629,7 @@ Score000
 
 1519:171v.
 
-Score000
+\gregorioscore{}
 
 \emph{Repetatur antiphona. Deinde dicatur iste psalmus} De profúndis {[}clamávi{]}.\footnote{1882:168.} 62. \emph{et post unumquemque versum repetatur antiphona. Deinde si necesse fuerit dicatur iste psalmus} {[}In éxitu.{]}\footnote{1882:168.} Brev:{[}318{]}. \emph{in ordine.}
 
@@ -6674,9 +6637,9 @@ Score000
 
 1519:171v; AS:583; Ant-1519-P:188v; Brev-1531-P:53r.
 
-Score000
+\gregorioscore{}
 
-7091g. Score000
+7091g. \gregorioscore{}
 
 \emph{Et dicitur cum uno versu tantum.}
 
@@ -6684,13 +6647,13 @@ Score000
 
 1519:172r.
 
-Score000
+\gregorioscore{}
 
 \emph{Repetatur antiphona et statim dicatur quod sequitur.}
 
 1519:172r.
 
-Score000
+\gregorioscore{}
 
 \emph{Tunc sacerdos aspergat corpus cum aqua benedicta et thurificet rogans} Oráte pro ánima \emph{N.} et pro animábus fidélium defunctórum.
 
@@ -6770,19 +6733,19 @@ Score000
 
 1519:173r.
 
-Score000
+\gregorioscore{}
 
 1519:174v.
 
-Score000
+\gregorioscore{}
 
 1519:175r; AS: 55; Ant-1519:63r, 97v; Brev-1531:31v.{]}
 
-Score000
+\gregorioscore{}
 
 1519:175r.
 
-Score000
+\gregorioscore{}
 
 \emph{℣.} Ave María grátia plena Dóminus tecum.
 
@@ -6800,15 +6763,15 @@ Score000
 
 1519:175r.
 
-Score000
+\gregorioscore{}
 
 1519:175v.
 
-Score000
+\gregorioscore{}
 
 1519:175v; AS:518; Ant-1520-S:105r; Brev-1531-S:7v.
 
-Score000\footnote{1508. and 1555. include here five proses, which are not properly part of the Processional but of the Antiphonale (\emph{O morum doctor egregie}, \emph{Sospitati dedit}, \emph{Inviolata integra et casta}, \emph{Crux fidelis}, and \emph{Eterne virgo memorie},) followed by the seven penitential psalms.}
+\gregorioscore{}\footnote{1508. and 1555. include here five proses, which are not properly part of the Processional but of the Antiphonale (\emph{O morum doctor egregie}, \emph{Sospitati dedit}, \emph{Inviolata integra et casta}, \emph{Crux fidelis}, and \emph{Eterne virgo memorie},) followed by the seven penitential psalms.}
 
 \begin{quote}
 {[}Quis satis enumeret, quantam pressoria nobis
@@ -6863,57 +6826,57 @@ Primus modus.
 
 ST:x.
 
-Score000
+\gregorioscore{}
 
 Secundus modus.
 
 ST:xvij.
 
-Score000
+\gregorioscore{}
 
 Tertius modus.
 
 ST:xxj.
 
-Score000
+\gregorioscore{}
 
 Quartus modus.
 
 ST:xxxj.
 
-Score000
+\gregorioscore{}
 
 Quintus modus.
 
 ST:xxxv.
 
-Score000
+\gregorioscore{}
 
 Sextus modus.
 
 ST:xliij.
 
-Score000
+\gregorioscore{}
 
 \textbf{add flat}
 
-Score000
+\gregorioscore{}
 
 Septimus modus.
 
 ST:liij.
 
-Score000
+\gregorioscore{}
 
 Octavus modus.
 
 ST:lxv.
 
-Score000
+\gregorioscore{}
 
 \chapter{Ad Officium.}
 
-Score000
+\gregorioscore{}
 
 \backmatter
 
