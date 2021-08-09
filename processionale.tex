@@ -25,7 +25,7 @@
 \setmainfont[Numbers={Lowercase,Proportional}]{JuniusX}
 
 % Decorative fonts
-\newfontfamily\gothic{Old English Text MT}[Scale=1]
+\newfontfamily\gothic{DS Caslon Gotisch}[Scale=1]
 \newfontfamily\lombardic{Luminari}
 \newfontfamily\woodcut{TypographerWoodcutInitialsOne}
 
@@ -96,6 +96,7 @@
 \newunicodechar{℣}{{\scshape\addfontfeatures{Letters=UppercaseSmallCaps} ℣}}
 \newunicodechar{℟}{{\scshape\addfontfeatures{Letters=UppercaseSmallCaps} ℟}}
 
+% TODO: should these be coloured only in scores?
 \newunicodechar{†}{{\color{gregoriocolor} †}}
 \newunicodechar{‡}{{\color{gregoriocolor} ‡}}
 \newunicodechar{⹋}{{\color{gregoriocolor} ⹋}}
@@ -103,12 +104,12 @@
 \newfontfamily{\jenson}{Adobe Jenson Pro}
 \newunicodechar{¶}{{\jenson ¶}}
 
-\newfontfamily{\crossfont}{Brill}
-\newunicodechar{✠}{{\crossfont ✠}}
-
-\newunicodechar{𝕬}{{\gothic A}}
-\newunicodechar{𝕺}{{\gothic O}}
-\newunicodechar{𝕰}{{\gothic E}}
+% TODO: licence for commercial use of Brill requested; alternatively STIX Two Math renders the character this way, but it needs to be raised to sit on the baseline
+\newfontfamily{\brill}{Brill}
+\newunicodechar{✠}{{\brill ✠}}
+\newunicodechar{𝔄}{{\brill 𝔄}}
+\newunicodechar{𝔈}{{\brill 𝔈}}
+\newunicodechar{𝔒}{{\brill 𝔒}}
 
 % Endnotes
 \usepackage{enotez}
