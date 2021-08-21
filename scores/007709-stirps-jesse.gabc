@@ -1,6 +1,8 @@
 name: Stirps Jesse;
 cantus: 007709;
-commentary: 1519:12r; AS:519; Ant-1520-S:105v; Brev-1531-S:8r\footnote{140};
+commentary: 1519:12r; AS:519; Ant-1520-S:105v; Brev-1531-S:8r\footnote{The barline and capital at `Almus' (also found in 1523:12v, 1528:11v, and 1544:15r) may indicate an optional repeat. 1519:12v has `Virgo Dei génitrix virga est.' In 1519:12v `ejus' is set thus:
+
+  {\noinitial\gabcsnippet{((f3) e(fhFEfvghf/ge/fhf/hjIFhvGECde)jus.(fhGEfv) (::))}}};
 annotation: Resp.;
 annotation: II.;
 %%
