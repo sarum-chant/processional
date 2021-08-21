@@ -163,9 +163,11 @@
 % set chant symbols
 \renewcommand{\GreStar}{{\color{gregoriocolor}*}}
 
-\newcommand\noinitial{\gresetinitiallines{0}\grechangestyle{firstsyllableinitial}{}}
+\NewDocumentCommand\noinitial{}{\gresetinitiallines{0}\grechangestyle{firstsyllableinitial}{}}
 
-\gresetheadercapture{cantus}{marginnote}{}
+\NewDocumentCommand\cantusmargin{m}{\marginnote{\href{http://www.cantusindex.org/id/#1}{#1}}}
+
+\gresetheadercapture{cantus}{cantusmargin}{}
 \gresetheadercapture{commentary}{grecommentary}{}
 \gresetheadercapture{annotation}{greannotation}{}
 \gresetheadercapture{annotation}{greannotation}{}
@@ -182,7 +184,7 @@
     \setcounter{DefaultLines}{3}}
     {\end{multicols}}
 
-\newcommand{\newrubric}{\hfill \break \noindent}
+\NewDocumentCommand\newrubric{}{\hfill \break \noindent}
 
 \input{ushyphex} % standard English exceptions
 
