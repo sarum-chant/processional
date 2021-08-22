@@ -17,7 +17,7 @@
 \usepackage[canadian, latin]{babel}
 
 \addto\captionslatin{
-  \renewcommand{\contentsname}
+  \RenewDocumentCommand\contentsname{}
     {Tabula contentorum}
 }
 
@@ -32,12 +32,14 @@
 
 % heading formatting
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbers
-\renewcommand\raggedsection{\centering} % centre all headings
+\RenewDocumentCommand\raggedsection{}
+  {\centering} % centre all headings
 \setkomafont{disposition}{\normalfont\color{gregoriocolor}} % all headings in red (gregoriocolor = rubric colour)
 \addtokomafont{caption}{\color{gregoriocolor}}
 \addtokomafont{pageheadfoot}{\color{gregoriocolor}}
 \addtokomafont{pagenumber}{\color{gregoriocolor}}
-\renewcommand*{\marginfont}{\noindent\rule{0pt}{0.7\baselineskip}\color{black}\footnotesize}
+\RenewDocumentCommand\marginfont{}
+  {\noindent\rule{0pt}{0.7\baselineskip}\color{black}\footnotesize}
 
 % title page formatting
 \addtokomafont{subject}{\normalfont\scshape\addfontfeatures{Letters=UppercaseSmallCaps}\Huge}
@@ -51,7 +53,8 @@
 \RedeclareSectionCommand[afterskip=1sp]{subsubsection}
 
 % Use \emph for rubrics
-\renewcommand\emph[1]{{\color{gregoriocolor}{#1}}}
+\RenewDocumentCommand\emph{m}
+  {{\color{gregoriocolor}{#1}}}
 
 \hypersetup{
   pdflang=la,
@@ -73,8 +76,10 @@
 % Drop caps
 \usepackage{lettrine}
 \LettrineRealHeighttrue
-\renewcommand{\LettrineTextFont}{\MakeUppercase} % make word following cap all caps
-\renewcommand{\LettrineFontHook}{\color{gregoriocolor}}
+\RenewDocumentCommand\LettrineTextFont{}
+  {\MakeUppercase} % make word following cap all caps
+\RenewDocumentCommand\LettrineFontHook{}
+  {\color{gregoriocolor}}
 \setlength{\DefaultNindent}{0em}
 
 \urlstyle{same} % disable monospaced font for URLs
@@ -87,7 +92,8 @@
 
 % use all small caps for \textsc
 \let\mixtextsc\textsc
-\renewcommand{\textsc}[1]{\mixtextsc{\addfontfeatures{Letters=UppercaseSmallCaps}{#1}}}
+\RenewDocumentCommand\textsc{m}
+  {\mixtextsc{\addfontfeatures{Letters=UppercaseSmallCaps}{#1}}}
 
 % Font substitution
 \usepackage{newunicodechar}
@@ -128,8 +134,8 @@
 \let\footnote=\endnote % turn footnotes into endnotes
 
 % remove figure numbers
-\renewcommand*{\figureformat}{}
-\renewcommand*{\captionformat}{}
+\RenewDocumentCommand\figureformat{}{}
+\RenewDocumentCommand\captionformat{}{}
 
 % Graphics
 \usepackage{graphicx}
@@ -150,7 +156,8 @@
 \grechangedim{spacebeneathtext}{1ex}{scalable}
 
 \gresetlinecolor{gregoriocolor} % staff lines in red
-\renewcommand{\GreItalic}[1]{{\color{gregoriocolor}{#1}}} % use red for italics in scores
+\RenewDocumentCommand\GreItalic{m}
+  {{\color{gregoriocolor}{#1}}} % use red for italics in scores
 \grechangestyle{initial}{\woodcut\fontsize{90}{90}\selectfont}
 \grechangestyle{commentary}{\footnotesize}
 \grechangestyle{annotation}{\footnotesize}
@@ -161,30 +168,29 @@
 \grechangedim{abovelinestextraise}{5mm}{scalable}
 
 % set chant symbols
-\renewcommand{\GreStar}{{\color{gregoriocolor}*}}
+\RenewDocumentCommand\GreStar{}
+  {{\color{gregoriocolor}*}}
 
-\NewDocumentCommand\noinitial{}{\gresetinitiallines{0}\grechangestyle{firstsyllableinitial}{}}
+\NewDocumentCommand\noinitial{}
+  {\gresetinitiallines{0}\grechangestyle{firstsyllableinitial}{}}
 
-\NewDocumentCommand\cantusmargin{m}{\marginnote{\href{http://www.cantusindex.org/id/#1}{#1}}}
+\NewDocumentCommand\cantusmargin{m}
+  {\marginnote{\href{http://www.cantusindex.org/id/#1}{#1}}}
 
 \gresetheadercapture{cantus}{cantusmargin}{}
 \gresetheadercapture{commentary}{grecommentary}{}
 \gresetheadercapture{annotation}{greannotation}{}
 \gresetheadercapture{annotation}{greannotation}{}
 
-\newenvironment{lesson}
-    {\begin{multicols}{2}
-    \renewcommand{\LettrineFontHook}{\lombardic\color{gregoriocolor}}
-    \setcounter{DefaultLines}{2}}
-    {\end{multicols}}
+\NewDocumentEnvironment{lesson}{}
+  {\begin{multicols}{2}
+  \RenewDocumentCommand\LettrineFontHook{}
+    {\lombardic\color{gregoriocolor}}
+  \setcounter{DefaultLines}{2}}
+  {\end{multicols}}
 
-\newenvironment{lesson1}
-    {\begin{multicols}{2}
-    \renewcommand{\LettrineFontHook}{\woodcut}
-    \setcounter{DefaultLines}{3}}
-    {\end{multicols}}
-
-\NewDocumentCommand\newrubric{}{\hfill \break \noindent}
+\NewDocumentCommand\newrubric{}
+  {\hfill \break \noindent}
 
 \input{ushyphex} % standard English exceptions
 
@@ -265,9 +271,9 @@ Images courtesy of the Bodleian Library, University of Oxford.
 
 \marginnote{2r}\lettrine[lines=7,image=true,findent=.5em]{images/2r-initial.png}{}\emph{Mnibus dominicis diebus per annum post primam et capitulum~: nisi in duplicibus festis et in dominica ramis palmarum, a sacerdote ebdomadario alba et cum cappa serica induto cum diacono et subdiacono textum deferentibus cum thuribulario et duobus ceroferariis~: et acolito crucem deferente omnibus albis cum amictibus indutis et in medio presbyterii ad altare conversis~: et {[}cum{]}\footnote{Barlow 7:1r; 1882:1.} duobus pueris quorum unus\footnote{`\emph{alter}', 1882:1.} scilicet puer\footnote{`\emph{quorum alter scilicet}', Barlow 7:1r.} qui ad aquam scribitur in tabula in sale\footnote{`\emph{salem}', 1882:1.} tenendo et aquam benedictam gestando~: alter puer scilicet\footnote{`\emph{scilicet puer}', 1882:2.} ebdomadarius lector ad manus in libro tenendo eidem sacerdoti in superpellicio ministrent ad gradum chori fiat benedictio salis et aqua sic incipiente.\footnote{`\emph{hoc modo}', Barlow 7:1r; `\emph{incipiendo}', 1882:2.} ✠}
 
-\grecommentary{1519:2r.\footnote{In Barlow 7:1r ff. the versicles appear a fifth higher, in the C clef.}}
-
 {
+
+\grecommentary{1519:2r.\footnote{In Barlow 7:1r ff. the versicles appear a fifth higher, in the C clef.}}
 
 \grechangestyle{initial}{\woodcut\fontsize{120}{120}\selectfont}
 
@@ -276,31 +282,33 @@ Images courtesy of the Bodleian Library, University of Oxford.
 \begin{lesson}
 \noindent per Deum ve✠rum\footnote{In Balrow 7:1r. the three crosses are a later addition.} per Deum sanc✠tum~: per Deum qui te per Helíseum prophétam in aquam mitti jussit~: ut sanarétur sterílitas aque ut efficiáris sal exorcizátus\footnote{`exorcizátum', Barlow 7:1r; 1882:2.} in salútem credéntium, et sis\footnote{`ut sit', Barlow 7:1r.} ómnibus te suméntibus sánitas ánime et córporis~: et effúgiat atque discédat ab eo loco quo aspérsus\footnote{`aspérsum', Barlow 7:1r; 1882:2.} fúeris~: omnis fantásia et nequítia vel versútia diabólice fraudis~: omnísque spíritus immúndus adjurátus. Per eum qui ventúrus est judicáre vivos et mórtuos et
 
-{\noinitial
+\begin{noinitial}
 
 \gabcsnippet{(f3) sé(hv)cu(h)lum(h) per(hv) ig(hv)nem.<v>\footnote{SP:2r. has no flat. 1519:2r. has no flat.}</v>(dxd) (::)}
-}
+
+\end{noinitial}
+
 \end{lesson}
 
 \emph{Chorus respondeat sic.}
 
-{\noinitial
+\begin{noinitial}
 
-\gabcsnippet{(f3) A(gh)men.(hv) (::)
-}
+\gabcsnippet{(f3) A(gh)men.(hv) (::)}
 
 \emph{Et sic finiatur omnes exorcismi per totum annum.}
 
 \emph{Sequitur oratio sine} Dóminus vobíscum. \emph{sed tantum cum}
 
 \gabcsnippet{(f3) O(hv)ré(h)mus.(f) (::)}
-}
+
+\end{noinitial}
 
 \begin{lesson}
 \lettrine{I}{m}ménsam cleméntiam tuam omnípotens etérne Deus humíliter implorámus~: ut hanc creatúram salis\footnote{1517: \emph{hic respiciat salem.} {[}1882:2.{]}} quam in usum géneris humáni\footnote{`humáni géneris', Balrow 7:1r.} tribúisti, bene✠dícere et sanctificáre\footnote{1517---sancti✠ficáre. {[}1882:2.{]} In Barlow 7:1r. a second cross has been added here in a later hand.} tua pietáte dignéris~: ut sit\footnote{`sis', Barlow 7:1r.} ómnibus suméntibus salus men\marginnote{2v}tis et córporis~: ut\footnote{`et', Barlow 7:1r; 1882:3.} quicquid ex eo tactum vel respérsum fúerit cáreat omni immundícia~: omníque impugnatióne spirituális \emph{{[}qui finietur hoc modo{]}\footnote{Barlow 7:1r.}}
 \end{lesson}
 
-{\noinitial
+\begin{noinitial}
 
 \grecommentary{1519:2v.\footnote{SP:2v. has no flats. 1519--2v. has no flats.}}
 
@@ -313,7 +321,8 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 \emph{Chorus respondeat sic}
 
 \gabcsnippet{(f3) A(gh)men.(hv) (::)}
-}
+
+\end{noinitial}
 
 \emph{¶ Sub eodem tono finiantur omnes orationes sequentes {[}et etiam oratio post aspersionem aque{]}.\footnote{‡ 1517, \&c.~add---Sub eodem tono finiantur omnes orationes sequentes et etiam oratio post aspersionem aque. {[}1882:2.{]}; also Barlow 7:1r.}}
 
@@ -335,14 +344,15 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 
 \subsubsection[¶ Sequitur benedictio salis et aque pariter hoc modo.]{¶ Sequitur benedictio salis et aque pariter hoc modo.\footnote{`\emph{hoc modo incipiens}', 1882:3.}}
 
-{\noinitial
+\begin{noinitial}
 
 \grecommentary{1519:3r.\footnote{Barlow 7:1v. omits `Dóminus vobíscum \ldots{} Orémus.'}}
 
 \gabcsnippet{(f3) Dó(hv)mi(h)nus(h) vo(hv)bís(h)cum.(f) (::)
 <i>℟.</i> Et(hv) cum(h) spí(hv)ri(h)tu(h) tu(hv)o.(f) (::Z)
 <i>℣.</i> O(hv)ré(h)mus.(f) (::)}
-}
+
+\end{noinitial}
 
 \begin{lesson}
 \subsubsection[Oratio.]{Oratio.\footnote{1882:3.}}
@@ -356,7 +366,7 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 
 \emph{Deinde repetatur antiphona} Aspérges me. \emph{Versus.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{001494-asperges-me-2}
 
@@ -367,7 +377,8 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 \marginnote{4r}\emph{Repetatur in hunc modum.}
 
 \gregorioscore{001494-asperges-me-4}
-}
+
+\end{noinitial}
 
 \emph{Hec antiphona {[}predicta{]}\footnote{1882:4.} dicatur in aspersione aque supradicto modo omnibus dominicis per annum de quocunque fit servitium~: et in dominica passionis {[}Domini{]}\footnote{1882:4.} et dominica in ramis palmarum cum} Glória Patri \emph{et} Sicut erat \emph{preter quod\footnote{`\emph{preterquam}', 1882:4; Barlow 7:2r.} a pascha usque ad festum Sancte Trinitatis.}
 
@@ -377,45 +388,49 @@ se(h)cu(h)ló(h)rum.(dxd) (::)}
 
 \emph{Deinde repetatur antiphona.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{005403-vidi-aquam-2}
 
 \emph{Deinde repetatur sic.}
 
 \gregorioscore{005403-vidi-aquam-3}
-}
+
+\end{noinitial}
 
 \emph{Hec antiphona predicta dicatur in aspersione aque in die pasche et omnibus dominicis a pascha usque ad festum Trinitatis.{]}\footnote{1530:4r.}}
 
 \emph{Post aspersionem aque\footnote{`\emph{aque aspersionem}', 1882:5.} dicat sacerdos {[}hunc versum{]}\footnote{1882:5.} ad gradum chori.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{008166-ostende-nobis}
 
 \emph{sine\footnote{`\emph{Non dicatur}', 1882:5.}} Dóminus vobíscum. \emph{sed tantum cum}
 
 \gabcsnippet{(c3) O(h)ré(hv)mus.(f) (::)}
-}
+
+\end{noinitial}
 
 \begin{lesson}
 \lettrine{E}{x}áudi nos Dómine sancte Pater omnípotens etérne Deus~: et míttere dignáre sanctum ángelum tuum de celis~: qui custódiat fóveat prótegat vísitet et deféndat omnes habitántes in hoc
 \end{lesson}
 
-{\noinitial
+\begin{noinitial}
 
 \gabcsnippet{(c3) ha(hv)bi(h)tá(h)cu(d)lo.(d) (:)
 Per(h) Chris(h)tum(h) Dó(h)mi(h)num(h) nos(hv)trum.(f) (::)}
-}
+
+\end{noinitial}
 
 
 \emph{Chorus respondeat sic.}
 
-{\noinitial
+\begin{noinitial}
 
 \gabcsnippet{(c3) A(gh)men.(hv) (::)}
-}
+
+\end{noinitial}
 
 \emph{Deinde eat processio hoc ordine. In primis\footnote{`\emph{Imprimis}', 1882:5.} procedat ministri virga\footnote{`\emph{virgam}', 1882:5.} manu gestans locum faciens processio.\footnote{`\emph{processioni}', 1882:5. Barlow 7:2r. omits the verger.} Deinde pueri in superpelliceis cum aqua benedicta gestante,\footnote{`\emph{puer in super pelliceo aquam benedictam gestans}', 1882:5.} deinde accolitus crucem ferens~: et post ipsum duo ceroferarii pariter incedentes deinde thuribularius~: \marginnote{4v}post eum subdiaconus, deinde diaconus omnes albis cum amictibus induti, et absque tunicis vel casulis et post diaconum~: eat sacerdos in simili habitu cum cappa serica. Deinde sequantur pueri et clerici de secunda forma habitu non mutato non bini et bini~: sed ex duabus partibus juxta ordinem quo disponuntur in choro. Et clerici\footnote{`\emph{reliqui clerici}', note, 1901:21.} de superiori gradu eodem ordine quo disponuntur in capitulo\footnote{`\emph{capite}', 1528:4r; 1544:5r; 1554:4v.} habitu non mutato~: sed excellentioribus sequentur per ordinem quod in omnibus dominicis non duplicibus observetur per totum annum.}
 
@@ -518,16 +533,17 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Et {[}dicatur{]}\footnote{1882:8.} cum versu vel sine versu per dispositione cantoris.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{007068-letentur-celi-2}
-}
+
+\end{noinitial}
 
 \marginnote{6v}\emph{Sed sine} Glória Patri. \emph{Quod per totum annum observetur quando dicitur responsorium in introitu chori, et quando dicatur ℣. cantetur a toto choro.}
 
 \emph{Deinde dicat sacerdos ad gradum chori versiculum sequentem.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{008246-vox-clamantis}
 
@@ -541,7 +557,8 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \gabcsnippet{(c3) sé(hv)cu(h)la(h) sé(h)cu(h)ló(h)rum.(d) (::)
 <i>℟.</i> A(gh)men.(hv) (::)}
-}
+
+\end{noinitial}
 
 \emph{Deinde eat sacerdos cum suis ministris in cimiterium canonicorum, aspergendo et orando pro defunctis cum isto psalmo} De profúndis. Brev:{[}340{]}. \emph{et cum oratione.}
 
@@ -655,10 +672,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Chorus respondeat.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{006411a-tanquam-sponsus}
-}
+
+\end{noinitial}
 
 \emph{Clerici cantent hanc prosam sequentem in hunc modum.}
 
@@ -666,10 +684,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Chorus {[}cantat versum ut sequitur{]}}.\footnote{1528:9v. 1519:10r. has `iui', not `tui.'}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{006411-gloria-patri}
-}
+
+\end{noinitial}
 
 \emph{Clerici aliam prosam dicatur.}
 
@@ -677,14 +696,15 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Que scilicet prosa in ipsa statione ante crucem ab ipsis finiabitur~: et post unamquamque ℣. respondeat chorus cantum prose super iij. vocales,} 𝔄. 𝔒. 𝔈. \emph{quod in omnibus prosis observetur.\footnote{`\emph{respondeat cantum prose more solito,} 𝔄.' 1882:13.}}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{006411Pzi-te-laudant-alme-2}
 
 \emph{Chorus respondeat sic {[}dicens{]}\footnote{1882:13.}}
 
 \gregorioscore{006411Pzi-te-laudant-alme-3}
-}
+
+\end{noinitial}
 
 \emph{In introitu chori dicatur hec {[}sequens{]}\footnote{1882:13.} antiphona cantore incipiente.}
 
@@ -810,10 +830,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 1519:14r.\footnote{1519:14r. has no flat. In 1519:14r. this ℣. appears \emph{after the} rubric `\emph{Oratio ut supra,}'}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{006913Pzd-gloria-patri}
-}
+
+\end{noinitial}
 
 \emph{¶ In die sancti Johannes ad vesperas post memoriam de sancto Stephano eat processio puerorum ad altare sancte Trinitatis~: et omnium sanctorum quod dicatur} Salve.\footnote{1517 omits `\emph{quod dictur} Salve.' {[}1882:17.{]}} \emph{in cappis cereis ardentibus in manibus cantando~: episcopo puerorum incipiente hoc modo.}
 
@@ -821,10 +842,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Tres pueri dicant hunc versum sequentem.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{006273b-hi-empti-sunt}
-}
+
+\end{noinitial}
 
 \emph{Omnes pueri dicant hanc prosam. Chorus post unumquemque versum respondeat cantum prose super ultimum litteram.}
 
@@ -854,14 +876,15 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{Hic convertat se ad populum sic dicendo.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{000000-princeps-ecclesie-2}
 
 \emph{Chorus respondent sic.}
 
 \gregorioscore{000000-princeps-ecclesie-3}
-}
+
+\end{noinitial}
 
 \emph{Deinde tradat baculum episcopo et tunc episcopus puerorum primo signando se in fronte sic dicendo.}
 
@@ -911,10 +934,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \emph{In eundo ℟.} Centum quadragínta. 31. \emph{℣.} Hi empti. \emph{Prosa.} Sedéntem in supérne. \emph{Sequatur}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{006273-gloria-patri}
-}
+
+\end{noinitial}
 
 \emph{In introitu chori de nativitate ut supra.} 23.
 
@@ -948,10 +972,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 1519:17v.\footnote{In 1519:17v. `tu' is set B♭. In 1555 (unpaged), `tu' is set B♭C.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{601260-gloria-patri}
-}
+
+\end{noinitial}
 
 \emph{In introitu chori de nativitate ut supra.} 23.
 
@@ -983,10 +1008,11 @@ Orémus pro ecclésia Romána et pro papa et archiepíscopis, et epíscopis, et 
 
 \gregorioscore{007840Pzc-quem-ethera}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{007840-gloria-patri}
-}
+
+\end{noinitial}
 
 \emph{In introitu chori dicatur ℟. {[}sequens{]}\footnote{1882:22.} de sancta Maria.}
 
@@ -1086,10 +1112,11 @@ Orémus.
 
 \emph{Duo clerici de secunda forma in statione ante crucem ad populum conversi habitu non mutato cantant {[}versum{]}.\footnote{1882:24.}}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{002497a-ecce-mater}
-}
+
+\end{noinitial}
 
 \emph{In introitu chori ante purificationem dicatur {[}responsorium{]}\footnote{1882:24.}} Te laudant. 22. \emph{Si post dicatur {[}hoc responsorium sequens{]}.\footnote{1882:24.}}
 
@@ -2458,10 +2485,11 @@ Omnes sancti. Oráte pro nobis.
 
 \emph{Chorus resurgendo prosequatur.}
 
-{\noinitial
+\begin{noinitial}
 
 \gregorioscore{a01485-rex-regum}
-}
+
+\end{noinitial}
 
 \emph{{[}Iterum propheta.}
 
