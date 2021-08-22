@@ -1,3 +1,4 @@
+\PassOptionsToPackage{unicode,pdfusetitle,pdflang=la,hidelinks}{hyperref}
 \documentclass[
   fontsize=14pt,
   paper=letter,
@@ -50,13 +51,6 @@
 % Use \emph for rubrics
 \RenewDocumentCommand\emph{m}
   {{\color{gregoriocolor}{#1}}}
-
-\hypersetup{
-  pdfusetitle,
-  pdflang=la,
-  unicode,
-  hidelinks
-}
 
 % Line spacing
 \usepackage{setspace}
@@ -167,8 +161,10 @@
 % styles for chant lines
 \NewDocumentEnvironment{noinitial}{}
   {\gresetinitiallines{0}\grechangestyle{firstsyllableinitial}{}}
+  {}
 \NewDocumentEnvironment{largeinitial}{}
   {\grechangestyle{initial}{\woodcut\fontsize{120}{120}\selectfont}}
+  {}
 
 % chant headers
 \NewDocumentCommand\cantusmargin{m}
