@@ -91,9 +91,8 @@
 \setfootnoterule{0pt} % Remove footnote rule
 
 % use all small caps for \textsc
-\let\mixtextsc\textsc
 \RenewDocumentCommand\textsc{m}
-  {\mixtextsc{\addfontfeatures{Letters=UppercaseSmallCaps}{#1}}}
+  {{\scshape\addfontfeatures{Letters=UppercaseSmallCaps}#1}}
 
 % Font substitution
 \usepackage{newunicodechar}
