@@ -11,7 +11,6 @@
 \usepackage{microtype}
 \usepackage[open]{bookmark}
 \usepackage{xurl}
-\usepackage{xr}
 \usepackage{marginnote}
 
 \usepackage[canadian, latin]{babel}
@@ -46,10 +45,6 @@
 \addtokomafont{publishers}{\scshape\addfontfeatures{Letters=UppercaseSmallCaps}}
 \addtokomafont{date}{\scshape\addfontfeatures{Letters=UppercaseSmallCaps}}
 
-% \RedeclareSectionCommands[
-  % beforeskip=3sp,
-  % afterskip=1sp,
-  % afterindent=true]{section, subsection}
 \RedeclareSectionCommand[afterskip=1sp]{subsubsection}
 
 % Use \emph for rubrics
@@ -57,10 +52,9 @@
   {{\color{gregoriocolor}{#1}}}
 
 \hypersetup{
+  pdfusetitle,
   pdflang=la,
   unicode,
-  pdftitle={Breviarium Sarisburiense cum nota},
-  pdfauthor={William Renwick},
   hidelinks
 }
 
@@ -170,17 +164,21 @@
 \RenewDocumentCommand\GreStar{}
   {{\color{gregoriocolor}*}}
 
-\NewDocumentCommand\noinitial{}
+% styles for chant lines
+\NewDocumentEnvironment{noinitial}{}
   {\gresetinitiallines{0}\grechangestyle{firstsyllableinitial}{}}
+\NewDocumentEnvironment{largeinitial}{}
+  {\grechangestyle{initial}{\woodcut\fontsize{120}{120}\selectfont}}
 
+% chant headers
 \NewDocumentCommand\cantusmargin{m}
-  {\marginnote{\href{http://www.cantusindex.org/id/#1}{#1}}}
-
+  {\marginnote{\href{http://cantusindex.org/id/#1}{#1}}}
 \gresetheadercapture{cantus}{cantusmargin}{}
 \gresetheadercapture{commentary}{grecommentary}{}
 \gresetheadercapture{annotation}{greannotation}{}
 \gresetheadercapture{annotation}{greannotation}{}
 
+% two-column text layout
 \NewDocumentEnvironment{lesson}{}
   {\begin{multicols}{2}
   \RenewDocumentCommand\LettrineFontHook{}
@@ -270,13 +268,13 @@ Images courtesy of the Bodleian Library, University of Oxford.
 
 \marginnote{2r}\lettrine[lines=7,image=true,findent=.5em]{images/2r-initial.png}{}\emph{Mnibus dominicis diebus per annum post primam et capitulum~: nisi in duplicibus festis et in dominica ramis palmarum, a sacerdote ebdomadario alba et cum cappa serica induto cum diacono et subdiacono textum deferentibus cum thuribulario et duobus ceroferariis~: et acolito crucem deferente omnibus albis cum amictibus indutis et in medio presbyterii ad altare conversis~: et ⟨cum⟩\footnote{Barlow 7:1r; 1882:1.} duobus pueris quorum unus\footnote{`\emph{alter}', 1882:1.} scilicet puer\footnote{`\emph{quorum alter scilicet}', Barlow 7:1r.} qui ad aquam scribitur in tabula in sale\footnote{`\emph{salem}', 1882:1.} tenendo et aquam benedictam gestando~: alter puer scilicet\footnote{`\emph{scilicet puer}', 1882:2.} ebdomadarius lector ad manus in libro tenendo eidem sacerdoti in superpellicio ministrent ad gradum chori fiat benedictio salis et aqua sic incipiente.\footnote{`\emph{hoc modo}', Barlow 7:1r; `\emph{incipiendo}', 1882:2.} ✠}
 
-{
+\begin{largeinitial}
 
 \grecommentary{1519:2r.\footnote{In Barlow 7:1r ff. the versicles appear a fifth higher, in the C clef.}}
 
-\grechangestyle{initial}{\woodcut\fontsize{120}{120}\selectfont}
+\gabcsnippet{(f3) Ex(hv)or(h)cí(h)zo(h) te(hv) cre(hv)a(h)tú(h)ra(h) sa(hv)lis(h) per(hv) De(hv)um(h) vi(hv)✠vum(h)}
 
-\gabcsnippet{(f3) Ex(hv)or(h)cí(h)zo(h) te(hv) cre(hv)a(h)tú(h)ra(h) sa(hv)lis(h) per(hv) De(hv)um(h) vi(hv)✠vum(h)}}
+\end{largeinitial}
 
 \begin{lesson}
 \noindent per Deum ve✠rum\footnote{In Balrow 7:1r. the three crosses are a later addition.} per Deum sanc✠tum~: per Deum qui te per Helíseum prophétam in aquam mitti jussit~: ut sanarétur sterílitas aque ut efficiáris sal exorcizátus\footnote{`exorcizátum', Barlow 7:1r; 1882:2.} in salútem credéntium, et sis\footnote{`ut sit', Barlow 7:1r.} ómnibus te suméntibus sánitas ánime et córporis~: et effúgiat atque discédat ab eo loco quo aspérsus\footnote{`aspérsum', Barlow 7:1r; 1882:2.} fúeris~: omnis fantásia et nequítia vel versútia diabólice fraudis~: omnísque spíritus immúndus adjurátus. Per eum qui ventúrus est judicáre vivos et mórtuos et
