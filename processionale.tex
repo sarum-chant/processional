@@ -189,16 +189,17 @@
 \gresetgregpath{{./scores/}}
 
 \grechangestaffsize{20} % larger staff
+\grechangedim{abovelinestextraise}{4ex}{scalable}
+\grechangedim{annotationraise}{1ex}{scalable}
+\grechangedim{commentaryraise}{4ex}{scalable}
+\grechangedim{parskip}{2ex}{scalable}
 \grechangedim{spacebeneathtext}{1ex}{scalable}
 
-\grechangestyle{initial}{\woodcut\fontsize{90}{90}\selectfont}
-\grechangestyle{commentary}{\footnotesize}
-\grechangestyle{annotation}{\footnotesize}
 \grechangestyle{abovelinestext}{\scriptsize}
+\grechangestyle{annotation}{\footnotesize\selectfont}
+\grechangestyle{commentary}{\footnotesize\selectfont}
 \grechangestyle{firstsyllableinitial}{\MakeUppercase}
-\grechangedim{annotationraise}{0mm}{scalable}
-\grechangedim{commentaryraise}{5mm}{scalable}
-\grechangedim{abovelinestextraise}{5mm}{scalable}
+\grechangestyle{initial}{\woodcut\fontsize{90}{90}\selectfont}
 
 % coloured chant
 \let\emph\relax % rubrics in red
