@@ -10,9 +10,11 @@
 \usepackage[autocompile]{gregoriotex}
 \usepackage{unicode-math}
 \usepackage{microtype}
-\usepackage[open]{bookmark}
 \usepackage{xurl}
 \usepackage{marginnote}
+\usepackage[imakeidx]{xindex}
+\makeindex[title=Index of incipits]
+\usepackage[open]{bookmark}
 
 \usepackage[canadian, latin]{babel}
 
@@ -227,7 +229,8 @@
 % chant headers
 \NewDocumentCommand\cantusnote{m}
   {\marginnote{\href{http://cantusindex.org/id/#1}{#1}}}
-\gresetheadercapture{cantus}{cantusmargin}{string}
+\gresetheadercapture{name}{index}{string}
+\gresetheadercapture{cantus}{cantusnote}{string}
 \gresetheadercapture{commentary}{grecommentary}{}
 
 % two-column text layout
@@ -322,5 +325,7 @@ Images courtesy of the Bodleian Library, University of Oxford.
 \backmatter
 
 \printendnotes
+
+\printindex
 
 \end{document}
