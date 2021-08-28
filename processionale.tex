@@ -160,16 +160,18 @@
 \usepackage{enotez}
 \setenotez{
   list-name={Notae},
+  list-heading = {},
+  reset=true,
+  % split=chapter,
   % backref=true % causing spacing issues
 }
 \AtEveryEndnotesList{
-  \markboth{Notae}{Notae}
+  % \markboth{Notae}{Notae}
   \setlength{\columnsep}{2pc}
   \setlength{\columnseprule}{0pt}
   \begin{multicols}{2}
 }
 \AfterEveryEndnotesList{\end{multicols}}
-\let\footnote=\endnote % turn footnotes into endnotes
 
 % remove figure numbers
 \RenewDocumentCommand\figureformat{}{}
@@ -303,6 +305,8 @@ Images courtesy of the Bodleian Library, University of Oxford.
 \include{processionale-0-intro}
 
 \mainmatter
+
+\let\footnote=\endnote % turn footnotes into endnotes
 
 \include{processionale-1-advent}
 
