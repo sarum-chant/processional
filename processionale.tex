@@ -167,8 +167,9 @@
   \setlength{\columnsep}{2pc}
   \setlength{\columnseprule}{0pt}
   \begin{multicols}{2}
+  \begin{noinitial}
 }
-\AfterEveryEndnotesList{\end{multicols}}
+\AfterEveryEndnotesList{\end{noinitial}\end{multicols}}
 
 % remove figure numbers
 \RenewDocumentCommand\figureformat{}{}
