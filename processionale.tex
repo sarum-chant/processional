@@ -228,6 +228,9 @@
 \NewDocumentEnvironment{largeinitial}{}
   {\grechangestyle{initial}{\woodcut\fontsize{120}{120}\selectfont}}
   {}
+\NewDocumentEnvironment{highnotes}{} % raise commentary when it clashes with high notes
+  {\grechangedim{commentaryraise}{6ex}{scalable}}
+  {}
 
 % chant headers
 \NewDocumentCommand\cantusnote{m}
