@@ -2,6 +2,7 @@
 \documentclass[
   fontsize=14pt,
   paper=letter,
+  oneside,
   DIV=12,
   headings=normal,
   parskip=never]
@@ -151,7 +152,7 @@
 
 % TODO: licence for commercial use of Brill requested; alternatively STIX Two Math renders the character this way, but it needs to be raised to sit on the baseline
 \newfontfamily{\brill}{Brill}
-\newunicodechar{✠}{{\brill ✠}}
+\newunicodechar{✠}{{\brill\color{gregoriocolor} ✠}}
 \newunicodechar{𝔄}{{\brill 𝔄}}
 \newunicodechar{𝔈}{{\brill 𝔈}}
 \newunicodechar{𝔒}{{\brill 𝔒}}
