@@ -26,68 +26,49 @@
 
 \defaultfontfeatures{Scale=MatchLowercase}
 \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\setmainfont{JuniusX}[
+\setmainfont{Junicode Two Beta}[
   UprightFont = {*-Regular},
-  ItalicFont = {Junicode-Italic}, % until JuniusX italic available
+  ItalicFont = {*-Italic},
   BoldFont = {*-Semibold},
-  BoldItalicFont = {Junicode-BoldItalic},
+  BoldItalicFont = {*-Bold Italic},
   Numbers={Lowercase,Proportional},
-  StylisticSet = 18, % old-style punctuation spacing
   UprightFeatures={
     SizeFeatures={
-      {Size={-10.99},   Font=*-Medium},
-      {Size={11-23.99}, Font=*-Regular},
-      {Size={24-},      Font=*-Light}
+      {Size={-8.5},      Font={*-SemiExpanded Medium}},
+      {Size={8.6-10.99}, Font=*-Medium},
+      {Size={11-21.59},  Font=*-Regular},
+      {Size={21.6-},     Font=*-Light}
+    },
+  },
+  ItalicFeatures={
+    SizeFeatures={
+      {Size={-7.5},      Font={*-SemiExpanded Medium Italic}},
+      {Size={7.6-10.99}, Font={*-Medium Italic}},
+      {Size={11-21.59},  Font=*-Italic},
+      {Size={21.6-},     Font={*-Light Italic}}
+    },
+  },
+  BoldFeatures={
+    SizeFeatures={
+      {Size={-8.5},      Font={*-SemiExpanded Bold}},
+      {Size={8.6-10.99}, Font=*-Bold},
+      {Size={11-21.59},  Font=*-Semibold},
+      {Size={21.6-},     Font=*-Medium}
+    },
+  },
+  BoldItalicFeatures={
+    SizeFeatures={
+      {Size={-7.5},      Font={*-SemiExpanded Bold Italic}},
+      {Size={7.6-10.99}, Font={*-Bold Italic}},
+      {Size={11-21.59},  Font={*-Semibold Italic}},
+      {Size={21.6-},     Font={*-Medium Italic}}
     },
   },
 ]
-% \setmainfont{ElstobD}[
-%   UprightFont = {*-Regular},
-%   ItalicFont = {*-Italic},
-%   BoldFont = {*-SemiBold},
-%   BoldItalicFont = {*-SemiBoldItalic},
-%   Numbers={Lowercase,Proportional},
-%   UprightFeatures={
-%     SizeFeatures={
-%       {Size={-8.5},      Font=*-8pt},
-%       {Size={8.6-10.99}, Font=*-10pt},
-%       {Size={11-14.5},   Font=*-14pt},
-%       {Size={14.6-21.59},Font=*-18pt},
-%       {Size={21.6-35.99},Font=*-Light},
-%       {Size={36-},       Font=*-ExtraLight}
-%     },
-%   },
-%   ItalicFeatures={
-%     SizeFeatures={
-%       {Size={-8.5},      Font=*-8ptItalic},
-%       {Size={8.6-10.99}, Font=*-10ptItalic},
-%       {Size={11-14.5},   Font=*-14ptItalic},
-%       {Size={14.6-21.59},Font=*-18ptItalic},
-%       {Size={21.6-35.99},Font=*-LightItalic},
-%       {Size={36-},       Font=*-ExtraLightItalic}
-%     },
-%   },
-%   BoldFeatures={
-%     SizeFeatures={
-%       {Size={-8.5},      Font=*-8ptSemiBold},
-%       {Size={8.6-10.99}, Font=*-10ptSemiBold},
-%       {Size={11-14.5},   Font=*-14ptSemiBold},
-%       {Size={14.6-},     Font=*-18ptSemiBold}
-%     },
-%   },
-%   BoldItalicFeatures={
-%     SizeFeatures={
-%       {Size={-8.5},      Font=*-8ptSemiBoldItalic},
-%       {Size={8.6-10.99}, Font=*-10ptSemiBoldItalic},
-%       {Size={11-14.5},   Font=*-14ptSemiBoldItalic},
-%       {Size={14.6-},     Font=*-18ptSemiBoldItalic}
-%     },
-%   }
-% ]
 
 % Decorative fonts
 \newfontfamily\gothic{DS Caslon Gotisch}[Scale=1]
-\newfontfamily\lombardic{Luminari}
+\newfontfamily\lombardic{Eadui}
 \newfontfamily\woodcut{TypographerWoodcutInitialsOne}
 
 % heading formatting
@@ -124,7 +105,7 @@
 \RenewDocumentCommand\LettrineTextFont{}
   {\MakeUppercase} % make word following cap all caps
 \RenewDocumentCommand\LettrineFontHook{}
-  {\color{gregoriocolor}}
+  {\lombardic\color{gregoriocolor}}
 \setlength{\DefaultNindent}{0em}
 
 \urlstyle{same} % disable monospaced font for URLs
@@ -161,7 +142,7 @@
 \usepackage{enotez}
 \setenotez{
   list-name={Notae},
-  % backref=true % causing spacing issues
+  backref=true
 }
 \AtEveryEndnotesList{
   \markboth{Notae}{Notae}
@@ -237,8 +218,6 @@
 % two-column text layout
 \NewDocumentEnvironment{lesson}{}
   {\begin{multicols}{2}
-  \RenewDocumentCommand\LettrineFontHook{}
-    {\lombardic\color{gregoriocolor}}
   \setcounter{DefaultLines}{2}}
   {\end{multicols}}
 
