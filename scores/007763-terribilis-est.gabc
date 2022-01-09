@@ -1,0 +1,40 @@
+name: Terribilis est locus iste;
+cantus: 007763;
+commentary: 1519:132v; AS:pl. p; Ant-1520:58v; Brev-1531:215v.\footnote{In 1519:132v the first `est' is set CDEDF. In 1519:132v and the other editions no repeat is indicated at `vere', but a repeat is indicated at `et'; yet the indicated repetition cue at the end is `†~Vere.' In 1519:132v `in' is set CD. In 1519:133r `somno' is set thus:
+
+  \gabcsnippet{(c4) som(ceedfcdvhjkvkvJIHGhiIGFgh)no:(hv)}};
+annotation: Resp.;
+annotation: I.;
+%%
+(c4) Ter(dcdfefddefghvhg)rí(f)bi(fe)lis(d) *() est(cedfv) lo(fv)cus(gf) is(edefvfd)te,(d) (,)
+non(dhiv) est(hi) hic(h) á(hvGF)li(gh)ud(hfhfg) ni(gh)si(hfghg) do(fe)mus(fgfgFE) De(defef)i(ed) (,)
+et(dh~) por(hv)ta(hji) ce(gh)li.(hv) (:)
+
+†~Ve(hvhghjvkvJIHGhvdhhfhGDEfgDEfvECde)re(ed) ét(ded)e(cd)nim(dv) (,)
+Dó(de)mi(d)nus(d) est(eded) in(cb~) lo(dv)co(dfefge) is(decegf)to,(ed) (,)
+% et(dvCA) e(cdev)go(d) nes(deDCdvdefgFEDevDCdvdefgFEDfvEDed)ci(cd)é(defd)bam.(d) (::)
+%
+% co(dfefge) is(decegf)to,(ed) (:)
+‡~Et(dvCA) e(cdev)go(d) nes(deDCdvdefgFEDevDCdvdefgFEDfvEDed)ci(cd)é(defd)bam.(d) (::)
+
+Al(fg~g)le(edfhghgefghfgvFE)lú(defef)ya.(ed) (::)
+
+<c>℣.</c> Cum(dhg~)que(gvFE) e(d)vi(fe)gi(fg)lás(fe)set(d) Ja(ceedfcdvhvhvGFgh)cob(hdfvfe) (,)
+qua(d)si(fe) de(fg) gra(fe)vi(d) som(ceedfcdvhjkvkvJIHgijvIFGgh~)no:(hv) (,)
+a(hvGFghd)it.(d) (::)
+
+†~Ve(hvhghjvkvJIHGhvdhhfhGEDfgEDfvECde)re.(ed) (::)
+
+% Gló(dh)ri(gh)a(gvFE) Pa(d)tri(fe) et(fg) Fí(fe)li(dceedfcdvhvhvGFgh)o:(hdfvfe) (;)
+% et(d) Spi(fe)rí(fg)tu(fe)i(d) Sanc(ceedfckvJIHkvhjdvjvIgigh~FG)to.(hvGFghd) (::)
+%
+% Ve(hvhghjvkvJIHGhvdhhfhGEDfgEDfvECde)re.(ed) (::)
+%
+% a(hvGFghd)it.(d) (::)
+%
+% Ve(hvhghjvkvJIHGhvdhhfhGEDfgEDfvECde)re.(ed) (::)
+%
+% som(ceedfcdvhjkvkvJIHGhiIGFgh)no:(hv) Gló(dh)ri(gh)a(gvFE) Pa(d)tri(fe) et(fg) Fí(fe)li(dceedfcdvhvhvGFgh)o:(hdfvfe) (;)
+% et(d) Spi(fe)rí(fg)tu(fe)i(d) Sanc(ceedfcdvhjkvkvJIHgijvIFGgh~)to.(hvGFghd) (::)
+%
+% Et(dvCA) e(cdev)go.(d) (::)
