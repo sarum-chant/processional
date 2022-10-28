@@ -1,17 +1,12 @@
 name: Viri Galilei;
 cantus: g02180;
-commentary: 1519:110r; GS:133; Grad-1508:129v; Missal-1513:98r\footnote{1519:110r has no flats; `admirámini' is set F.F.FG.GFFD.D; `celum' is set thus: \gabcsnippet{(f3) ce(jijhjijjhjjiijjvHGifhghFEfv)lum(fv) (,)}; Jesus is set G.FEGFDEC; `est' is set F; `ascendéntem' is set thus: \gabcsnippet{(f3) as(e)cen(fvkjkIJlvl)dén(fjjijHIlvlvijHIhfHIlvhjhghjljivljji)tem(jv) (,)}; `celum' is set GEDFEFD.DFDDC. In GS:133 `Galiléi' is set F.GAG.AFAG.GAFEFEDED. In Grad-1508:129v `aspiciéntes' begins DF. In GS:133 `celum' is set thus: \gregorioscore{missing} In Grad-1508:129v `Jesus' is set G.FEGFDFC. In GS:133 `Jesus' is set G.FEGFDEC. Here the edition follows Rylands-24:233. In Grad-1508:129v the first syllable of `assúmptus' is set C. In GS:133 the second `celum' appears to be set FFFDDDGFFDFC.C. Grad-In 1508:129v the second `celum' appears to be set FFDDDGFFDFC.C. Here the edition follows Rylands-24:233. In Grad-1508:129v `ascendéntem' is set thus: \gregorioscore{missing} In Grad-1508:129v the last `celum' is set GFDFEFD.DFDDC.};
+commentary: 1519:110r; GS:133; Grad-1508:129v; Missal-1513:98r\footnote{1519:110r has no flats; `admirámini' is set F.F.FG.GFFD.D; `celum' is set thus: \gabcsnippet{(f3) ce(jijhjijjhjjiijjvHGifhghFE/0fv)lum(fv) (,)}; Jesus is set G.FEGFDEC; `est' is set F; `ascendéntem' is set thus: \gabcsnippet{(f3) as(e)cen(fvkjkIJ!lvl)dén(fjjijHI!lvlvijHIhfHI!lvhjhghjljivljji)tem(jv) (,)}; `celum' is set GEDFEFD.DFDDC. In GS:133 `Galiléi' is set F.GAG.AFAG.GAFEFEDED. In Grad-1508:129v `aspiciéntes' begins DF. In GS:133 `celum' is set thus: \gregorioscore{missing} In Grad-1508:129v `Jesus' is set G.FEGFDFC. In GS:133 `Jesus' is set G.FEGFDEC. Here the edition follows Rylands-24:233. In Grad-1508:129v the first syllable of `assúmptus' is set C. In GS:133 the second `celum' appears to be set FFFDDDGFFDFC.C. Grad-In 1508:129v the second `celum' appears to be set FFDDDGFFDFC.C. Here the edition follows Rylands-24:233. In Grad-1508:129v `ascendéntem' is set thus: \gregorioscore{missing} In Grad-1508:129v the last `celum' is set GFDFEFD.DFDDC.};
 annotation: Offert.;
 annotation: IV.;
 %%
-(f3) Vi(hhhvFEfhjij)ri(ih) *() Ga(h)li(iji)lé(jhjki)i(ijHGhvGFgf) (,)
-quid(hhv) ad(hv)mi(hv)rá(hi)mi(ihhf)ni(f) (,)
-as(e)pi(fh)ci(hv)én(hfhhfhhffihhfg)tes(e) (,)
-in(hj) ce(jijhjijjhjijifHGjvijhghFEfv)lum(fv) (,)
-hic(efhv) Je(iv)sus(hgivHFge) qui(e) as(fv)súmp(hv)tus(hv) est(hv) (,)
-a(ef) vo(fghf)bis(f) in(efhv) ce(hhffiHhfhe)lum(e) (,)
-sic(fcefghfghf) vé(fiGhf)ni(hfhe)et(e) (,)
-quem(fc)ád(ef)mo(fv)dum(fv) vi(fv)dís(fv)tis(fv) e(fghf)um(f) (,)
-as(e)cen(fvl)dén(fjlvIJkjkHIlvijlvIJjijlvhjHIhfhghivjljljji)tem(jv) (,)
-in(h) ce(ghivivGFhghf)lum(fhffe) (,)
-al(ef)le(hihjijHFefhghiihijvihhfhgfgf)lú(ef)ya.(fv) (::)
+(f3) Vi(hvhvhvFEfhhvjij)ri(ih) *() Ga(h)li(iji)lé(jh/ji)i(ijHG/0hvGFgf) (,)
+quid(hvhv) ad(hv)mi(hi)rá(ihhf)mi(f)ni(f) as(fg)pi(e)ci(fh)én(hvhf!hvhffvfvihhfgf~)tes(e) (,)
+in(hj~) ce(ji/jh/ji!jvjh!jvjiijjvHGhfggiHE/0fv)lum:(fv) (;)
+hic(ef!hvhv) Je(iv)sus(hvgih!ghf) qui(e) as(fv)súmp(hv)tus(hv) est(hg) a(ef) vo(fg/hf)bis(f) (^) in(e!fh~) ce(hvhf!hvhffvfvihhf/ge)lum:(e) (;)
+sic(fc!ef!ghf!ghf) vé(fihhf)ni(hf/he)et(e) (^) quem(fc~)ád(ef~)mo(fv)dum(fv) vi(fv)dís(fv)tis(fv) (c4) e(de/fd)um(d) (^) as(c)cen(dv)dén(ixdh!jvjh!gih/ig/fg!hv!jvjg!fhgh^fh/jg!fvfdf/eg!hjh/jhhvghg~)tem(j) (^) in(ef!gv) ce(gvEDfe/fd)lum(dfddc) (,)
+al(cd)le(fv/gfh/ghFDcd/fe!fggf!hvGFfd!fvEDed)lú(cd)ya.(dv) (::)

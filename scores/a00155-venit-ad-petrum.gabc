@@ -1,12 +1,13 @@
 name: Venit ad Petrum;
 cantus: a00155;
 commentary: Rylands-24:159; GS:97; 1555:unpaged\footnote{1555 has `dixit ei'. 1555 begins thus: \gabcsnippet{(c4) Ve(degvgv)nit(g) *() ad(ghjghg) Pe(fg)trum,(gv) di(jhij)cit(ji) e(h)i(jhij) Pe(ghg)trus,(g) (,)
-Non()} In GS:97 `ei' appears to be set AC.ABCBA. In 1555 `pondens' is set B.CDEDE. The flat appears in Rylands-24:159. In 1555 `Dómine' is set C.C.ABCCBDCDBBG. GS:97 has `solum pedes sed'. In Rylands-24:159 the final melisma is as follows: \gabcsnippet{ca(gihigjvlijgivivHFgvihigjvlijgivivHFgvihigfiiiivjklijklilijhijgefhvhvihihijgefhvhvihihijgefgvFEgfge) put.(e) (::)} In 1555 the final melisma is as follows: \gabcsnippet{ca(gihigjvlijgivivHFgvihigjvlijgivivHFgvihigfiiiivjklijklilijhijgfiiiivjkjgjklilijhijgefhvhvihihijgefgvFEgfge) put.(e) (::)} The edition follows GS:98 here.};
+Non()} In GS:97 `ei' appears to be set AC.ABCBA. In 1555 `pondens' is set B.CDEDE. The flat appears in Rylands-24:159. In 1555 `Dómine' is set C.C.ABCCBDCDBBG. GS:97 has `solum pedes sed'. In Rylands-24:159 the final melisma is as follows: \gabcsnippet{ca(gihigjvlijgivivHF/0gvihigjvlijgivivHF/0gvihigfiiiivjklijklilijhijgeF!hvhvihihijgeF!hvhvihihijgefgvFEgfge) put.(e) (::)} In 1555 the final melisma is as follows: \gabcsnippet{ca(gihigjvlijgivivHF/0gvihigjvlijgivivHF/0gvihigfiiiivjklijklilijhijgfiiiivjkjgjklilijhijgeF!hvhvihihijgefgvFEgfge) put.(e) (::)} The edition follows GS:98 here.};
 annotation: Ant.;
 annotation: VIII.;
 %%
-(c4) Ve(degvggghjg)nit(hg) *() ad(fg) Pe(gv)trum,(jvkvJI) dix(ij)it(h) e(jvkv)i(ij) la(gv)vá(hv)bis(iv) mi(h)chi(g) pe(hv)des(gf) in(gh) e(gh)tér(egge)num:(e) (;)
-(c3) re(hv)spon(ghi)dens(jij) Je(ivHF)sus(hijv) dix(giig)it,(g) (,)
-Si(e) non(fv) lá(hv)ve(hg)ro(fe) te(fv) non(e) ha(fv)bé(gv)bis(fe) par(fg)tem(fgg) me(e)cum:(e) (;)
-Dó(hv)mi(hvfghv)ne(hghivhigge) non(e) tan(hv)tum(hv) pe(hv)des(f) me(hv)os,(g) (,)
-sed(e) et(gv) ma(f)nus(gv) et(hii) ca(gihigjvlijgivivHFgvihigjvlijgivivHFgvihigfiiiivjklijklilijhijgfiiiivjklijklilijhijgefhvhvihihijgefhvhvihihijgefgvFEgfge) put.(e) (::)
+(c4) Ve(de!gvgv)nit(g) *() ad(gh/jg/hg) Pe(fg)trum,(gv) di(jh!ij)cit(ji) e(h)i(jh!ij) Pe(ghg)trus,(g) (,)
+Non(f) la(gv)vá(hv)bis(ixiv) mi(h)chi(g) pe(hv)des(gf) in(gh) e(gh)tér(egge)num:(e) (;)
+(c3) re(hv)spon(g!hi)dens(jij) Je(ivHF)sus(hi!jv) dix(giig)it,(g) (,)
+Si(e) non(fv) lá(hv)ve(hg)ro(fe) te(fv) non(e) ha(fv)bé(gv)bis(fe) par(fg)tem(fgf~) me(e)cum:(e) (;)
+Dó(hv)mi(hvfg!hv)ne(hgi/higge) non(e) tan(hv)tum(hv) pe(hv)des(f) me(hv)os,(g) (,)
+sed(e) et(gv) ma(f)nus(gv) et(hih~) ca(gih/igjvli/jgivivHF/0gv^ih/igjvli/jgivivHF/0gv^ih/ig/fiiiiv!jk/li!jk/li/li/jh!i^jg/fiiiivjk/li!jk/li/li/jh!i^jg/ef!hvhvih/ih/ijg/ef!hvhvih/ih/ijg/ef!gvFEgf/ge)put.(e) (::)

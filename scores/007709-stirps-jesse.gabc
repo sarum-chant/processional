@@ -2,20 +2,20 @@ name: Stirps Jesse;
 cantus: 007709;
 commentary: 1519:12r; AS:519; Ant-1520-S:105v; Brev-1531-S:8r\footnote{The barline and capital at `Almus' (also found in 1523:12v, 1528:11v, and 1544:15r) may indicate an optional repeat. 1519:12v has `Virgo Dei génitrix virga est'. In 1519:12v `ejus' is set thus:
 
-  \gabcsnippet{(f3) e(fhFEfvghf/ge/fhf/hjIFhvGECde)jus.(fhGEfv) (::)}};
+  \gabcsnippet{(f3) e(fhFE/0fvghf/ge/fhf/hjIF!hvGECde)jus.(fhGE/0fv) (::)}};
 annotation: Resp.;
 annotation: II.;
 %%
-(f3) Stirps(fvfef!ghGFghffv) *() Jes(ef!hvGFgvECgfh)se(gvFEfv) (,)
-vir(hf/hfg!hiHGhg~)gam(gvFEfg/hg) pro(gvFEfv)dúx(ced!ef)it(fv!ghf/gef) (,)
-vir(eg!ivHGivHGhg~)gá(fv!ghg)que(fe) flo(fv!gh)rem.(gf) (:)
+(f3) Stirps(fvfef!ghGFghffv) *() Jes(ef!hvGF/0gvECgfh)se(gvFE/0fv) (,)
+vir(hf/hfg!hiHGhg~)gam(gvFEfg/hg) pro(gvFE/0fv)dúx(ced!ef)it(fv!ghf/gef) (,)
+vir(eg!ivHG!ivHGhg~)gá(fv!ghg)que(fe) flo(fv!gh)rem.(gf) (:)
 
-†~Et(gig!hvGFfv) su(e)per(fg) hunc(gf!hvhg) flo(gvFEhv)rem,(gf) (,)
-re(f)qui(f)és(gh!ivHGhv)cit(fg) Spí(f)ri(fe)tus.(fg!hvGE) (:)
+†~Et(gig!hvGFfv) su(e)per(fg) hunc(gf!hvhg) flo(gvFE!hv)rem,(gf) (,)
+re(f)qui(f)és(gh!ivHG/0hv)cit(fg) Spí(f)ri(fe)tus.(fg!hvGE) (:)
 
-Al(fg!hvGFgig!hvGF^hjIHijg!hif!hvGEfv^cffvEDeffhg!fvEDefe~)mus.(fhGEfv) (::)
+Al(fg!hvGFgig!hvGF^hjIHijg!hif!hvGE/0fv^cffvEDeffhg!fvEDefe~)mus.(fhGE/0fv) (::)
 
 <c>℣.</c> Vir(ef!hvhi)ga(h) De(ij)i(i) gé(h)ni(hg)trix(hi) vir(ghg~)go(fv!ghg)est(gf) (;)
-flos(fc) Fí(ef)li(fv)us(fe) e(fhGEfv!hif/ge!fhf!hjIGhvGECefe~)jus.(fhGEfv) (::)
+flos(fc) Fí(ef)li(fv)us(fe) e(fhGE/0fv!hif/ge!fhf!hjIG/0hvGECefe~)jus.(fhGE/0fv) (::)
 
 †~Et(gig!hvGFfv) su(e)per.(fg) (::)
